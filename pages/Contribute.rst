@@ -35,7 +35,9 @@ Be creative, maybe you have an idea what kind of document would have helped you 
 Translations
 ------------
 
-`|Translation status|`_
+.. image:: http://hosted.weblate.org/widgets/sdaps-287x66-white.png
+   :target: http://hosted.weblate.org/engage/sdaps/?utm_source=widget
+   :alt: Translation Status
 
 For ease of translations SDAPS is hosted on `hosted.weblate.org`_. If you register there you can directly modify the translations for SDAPS and they will appear in the next release.
 
@@ -65,8 +67,6 @@ Found an issue in SDAPS? You can report it in the issue tracker, and if you are 
 
 .. ############################################################################
 
-.. _|Translation status|: http://hosted.weblate.org/engage/sdaps/?utm_source=widget
-
 .. _hosted.weblate.org: http://hosted.weblate.org/projects/sdaps
 
 .. _open an issue: https://github.com/benzea/sdaps/issues/new
@@ -76,6 +76,4 @@ Found an issue in SDAPS? You can report it in the issue tracker, and if you are 
 .. _weblate: http://weblate.org
 
 .. _Future: ../Future
-
-.. |Translation status| image:: http://hosted.weblate.org/widgets/sdaps-287x66-white.png
 
