@@ -22,7 +22,13 @@ Is it possible to do custom layouts in LaTeX?
 
 Of course it is, however you need to write out some metadata manually. That means using ``\immediate\write\sdapsoutfile{\unexpanded{STRING}}``. Have a look at the generated ``.sdaps`` file and the LaTeX class. You'll need to write out the questions and enough answers for the checkboxes.
 
-There is a `attachment:custom.tex`_small example document`attachment:None`_ with the `attachment:custom.pdf`_resulting questionnaire`attachment:None`_ and `attachment:custom_annotated.pdf`_a document with the metadata that SDAPS detected overlayed`attachment:None`_.
+There is a `
+small example document
+<custom.tex>`__ with the
+`resulting questionnaire
+<custom.pdf>`__ and
+`a document with the metadata that SDAPS detected overlayed
+<custom_annotated.pdf>`__.
 
 |{i}| You can visually check the assignment of checkboxes to answers/questions using the  ``annotate`` command. Alternatively read the output of the ``setup_tex`` command.
 

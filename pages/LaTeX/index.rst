@@ -20,7 +20,9 @@ A collection of examples can be found here_.
 Basic Example
 -------------
 
-The following example does not show all features, but can give an impression of how it all works. And the `attachment:example.pdf`_resulting PDF`attachment:None`_.
+The following example does not show all features, but can give an impression of how it all works. And the 
+`resulting PDF
+<example.pdf>`__.
 
 ::
 

@@ -3,7 +3,7 @@ Examinations using SDAPS
 
 Examinations seem to be relatively common theme for SDAPS users. There are a lot of different ways that examinations can be done, but a couple of important problems are common for all examinations.
 
-|/!/| Please also have a look at the FAQ_.
+.. attention:: Please also have a look at the FAQ_.
 
 .. contents::
 
@@ -170,7 +170,11 @@ Creating a printout with marks
 
 It is possible to use the internal SDAPS API to render a PDF with the original scan in the background and correction information overlayed. There are different ways that this could be done, the example script uses cairo to create the PDF which is already used for other purposes inside SDAPS (e.g. the GUI).
 
-One example of a script can be found in the distribution. A slightly more advanced version is also `attachment:sdaps-overlay.py`_attached here`attachment:None`_. And the `attachment:overlay-0001.pdf`_generated example document`attachment:None`_.
+One example of a script can be found in the distribution. A slightly more advanced version is also
+`attached here
+<sdaps-overlay.py>`__. And the
+`generated example document
+<overlay-0001.pdf>`__.
 
 Note that SDAPS does not have any way of knowing the grading mode. So this would need to be fed to the script in some other way (the example just has a list of correct answers).
 
@@ -187,3 +191,4 @@ SDAPS does not (and will not) support randomizing the order of questions. Some o
 
 .. _GUI: ../GUI
 
+.. _FAQ: /FAQ

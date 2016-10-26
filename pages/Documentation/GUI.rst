@@ -3,7 +3,7 @@ Graphical User Interface for manual corrections
 
 The graphical user interface is a GTK+ program that can be used to manually correct errors.
 
-`attachment:screenshot.png`_
+.. image:: screenshot.png
 
 Getting started
 ---------------

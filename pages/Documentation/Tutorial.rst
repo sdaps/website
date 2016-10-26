@@ -17,7 +17,11 @@ Creating the Questionnaire
 
 The first step to conduct a survey is to design the questionnaire itself. You'll need to take some time to first figure out what questions to ask before designing the questionnaire.
 
-We are going to use this `attachment:example.tex`_example questionnaire`attachment:None`_ (`attachment:example.pdf`_PDF Version`attachment:None`_) here. If you would like to play around a bit with it, you can compile the LaTeX document yourself. Note that you need to copy the SDAPS-LaTeX data into the directory before doing that. It lives in the ``tex`` Directory of the source code or in ``$PREFIX/share/sdaps/tex`` if it is installed. Where ``$PREFIX`` will usually be ``/usr`` or ``/usr/local``.
+We are going to use this
+`example questionnaire
+<example.tex>`__ (
+`PDF Version
+<example.pdf>`__) here. If you would like to play around a bit with it, you can compile the LaTeX document yourself. Note that you need to copy the SDAPS-LaTeX data into the directory before doing that. It lives in the ``tex`` Directory of the source code or in ``$PREFIX/share/sdaps/tex`` if it is installed. Where ``$PREFIX`` will usually be ``/usr`` or ``/usr/local``.
 
 You can familiarize yourself with the LaTeX-Document and the resulting PDF-file. Notice that the PDF has a "draft" text overlayed. This is because the barcode at the bottom is just an example and it will change once the project is created.
 
@@ -81,7 +85,9 @@ The rest of the output is a textual representation of the questionnaire. We can 
 Printing
 --------
 
-After the setup of the example we now have a `attachment:questionnaire.pdf`_questionnaire.pdf`attachment:None`_ in the project directory that can be printed. This depends on the setup of the survey (done using the documentclass options in the LaTeX document). If we make each printout unique using a "Questionnaire-ID" then we would need to use the "stamp" command to create the printable questionnaire. Please refer to the section at the bottom of the page for more information.
+After the setup of the example we now have a
+`questionnaire.pdf
+<questionnaire.pdf>`__ in the project directory that can be printed. This depends on the setup of the survey (done using the documentclass options in the LaTeX document). If we make each printout unique using a "Questionnaire-ID" then we would need to use the "stamp" command to create the printable questionnaire. Please refer to the section at the bottom of the page for more information.
 
 Simply print the created PDF file using your favorite PDF reader. It is a good idea to disable any "scale page to fit printable area" option.
 
@@ -90,7 +96,11 @@ Scanning
 
 After you have a couple of printed and filled in questionnaires you need to scan them. There is a whole `scanning section`_ about this. Please have a look there.
 
-You scan skip this step for now and instead use the provided `attachment:example.tif`_example.tif`attachment:None`_ or `attachment:example-2.tif`_example-2.tif`attachment:None`_ file (the second one is required if you have a newer version of the multicol package).
+You scan skip this step for now and instead use the provided
+`example.tif
+<example.tif>`__ or
+`example-2.tif
+<example-2.tif>`__ file (the second one is required if you have a newer version of the multicol package).
 
 Add the images to the project
 -----------------------------
@@ -159,7 +169,9 @@ To create a PDF report with the results simply run:
    - SDAPS -- report
    ------------------------------------------------------------------------------
 
-It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also `attachment:example_report.pdf`_download the report`attachment:None`_ that will be created for the example data.
+It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also
+`download the report
+<example_report.pdf>`__ that will be created for the example data.
 
 Note that we can also do partial reports by using filters. Just a quick example (please refer to the rest of the documentation for an explanation):
 
@@ -272,7 +284,11 @@ Using a camera for input
 
 It is possible to use a cell phone camera image instead of a scanner. Usually it is a lot faster to use a feed scanner, but there may be certain cases where this is useful.
 
-Some example images are in `attachment:cellphone.tar`_cellphone.tar`attachment:None`_ or `attachment:cellphone-2.tar`_cellphone-2.tar`attachment:None`_ (the second one is required if you have a newer version of the multicol package). To try it, extract the archive (in this example to /tmp/ and then run the following commands:
+Some example images are in
+`cellphone.tar
+<cellphone.tar>`__ or
+`cellphone-2.tar
+<cellphone-2.tar>`__ (the second one is required if you have a newer version of the multicol package). To try it, extract the archive (in this example to /tmp/ and then run the following commands:
 
 ::
 
