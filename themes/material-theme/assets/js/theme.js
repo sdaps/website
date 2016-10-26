@@ -19,12 +19,3 @@ function cleanSource(html) {
 
     return lines;
   }
-
-  $("#opensource").click(function() {
-    $.get(window.location.href, function(data){
-      var html = $(data).find(window.page).html();
-      html = cleanSource(html);
-      $("#source-modal pre").text(html);
-      $("#source-modal").modal();
-    });
-  });
