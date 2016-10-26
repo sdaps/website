@@ -9,6 +9,7 @@ Donations
 ---------
 
 .. raw:: html
+   
    <form style="display: inline" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
    Generally donating your time to improve SDAPS would be preferred, but not everyone has the time to spare for the project. If you would like to donate money then you can do so by sending it to the lead developer <a href="/BenjaminBerg">Benjamin Berg</a> via paypal:
    <input type="hidden" name="cmd" value="_donations" />

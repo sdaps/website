@@ -7,7 +7,7 @@ All releases are available from http://sdaps.org/releases/:
 
 * `sdaps-1.0.5.tar.gz`_ (latest stable version, it is currently better to use the unstable version)
 
-|/!/| Currently it is a good idea to use the latest development snapshot. This will become 1.2.0 soon and is actually more stable than the older version.
+.. attention:: Currently it is a good idea to use the latest development snapshot. This will become 1.2.0 soon and is actually more stable than the older version.
 
 Development Version
 -------------------
@@ -45,7 +45,7 @@ It should be possible to get SDAPS to work using MacPorts. However, there are cu
 
 See Dependencies_ for a list of packages that are required on OSX.
 
-|/!/| There are reports that the correction GUI is very slow on OSX. This is likely a bug in cairo. At least on Linux the GUI is very fast so that page switching is usually not perceptible.
+.. attention:: There are reports that the correction GUI is very slow on OSX. This is likely a bug in cairo. At least on Linux the GUI is very fast so that page switching is usually not perceptible.
 
 Windows
 -------
