@@ -155,7 +155,7 @@ Then, run this script to get the list.
 .mdi-ul {
   padding-left: 0;
   margin-left: 2.14285714em;
-  list-style-type: none;
+//  list-style-type: none;
 }
 .mdi-ul > li {
   position: relative;
