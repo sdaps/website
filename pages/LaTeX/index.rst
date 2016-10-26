@@ -75,7 +75,20 @@ Documentclass Options
 
 There are a number of options (SDAPS and standard LaTeX) that affect how SDAPS works. The following table lists these options.
 
-[Table not converted]
+====================== ============ ==
+Option(s)              Default      Note
+====================== ============ ==
+a4paper,letterpaper,…               Select paper size, normal LaTeX mechanism. Note that the default A4 paper size has a slightly different size than specifying "a4paper" (it is impossible to see, but SDAPS sees this as a form change).
+globalid=STRING        empty        The global ID. This string is written into a barcode at the bottom center. When the project is generated you can also change this by modifying the ``info`` file and running ``stamp``.<<BR>>The purpose of this barcode is user defined.
+print_questionnaire_id not set      If specified then a unique Questionnaire-ID is printed on each questionnaire. This ID can be either random or user defined. This can be useful for non-anonymous surveys or for questionnaires with a lot of pages and you want to use the ``reorder`` command.
+oneside,twoside        twoside      Select simplex or duplex, normal LaTeX mechanism. When selected the barcodes are printed on every page, and you can print the survey in simplex mode. Note that SDAPS assumes a simplex scan, if you scan duplex (scanning an empty page for every page of the questionnaire) then you need to specify the ``--duplex`` option when ``add`` ing the image to the project.
+checkmode              checkcorrect Select the mode for checkboxes. This can be either ``checkcorrect`` meaning check is selected, filled is again unselected. ``check`` meaning a check selects the box and unselecting is not possible and ``fill`` requiring a proper fill to select a box.
+style=STRING           code128      Select the style to use. May be ``code128``, ``qr``, ``classic``, or ``custom`` (if you really know what you are doing)
+no_print_survey_id     not set      Only works in ``classic`` mode. In that case you get marks in every corner identifying the page and its rotation. No further code is added.
+pagemark               not set      Specify to see corner marks. Always set this option for a more accurate preview.
+stamp                  not set      Specify to see barcodes. Always set this option for a more accurate preview.
+====================== ============ ==
+
 
 The options ``print_survey_id``, ``print_questionnaire_id`` both have their counterpart with the ``no_`` prefix to disable the option again. For ``stamp``and ``pagemark`` it is ``nostamp`` and ``nopagemark`` currently.
 
@@ -226,7 +239,11 @@ Defines/Counters
 
 These only works in SDAPS 1.1.2 and newer.
 
-[Table not converted]
+================= ======= ======= ======
+Name              Type    Default Purpose
+================= ======= ======= ======
+markcheckboxcount counter 5       The number of checkboxes in mark questions (singlemark and markgroup).
+================= ======= ======= ======
 
 There are more defines that configure the layout of the corner marks and barcodes. You should never change these (if you do, then you also need to modify ``defs.py``)!
 
@@ -235,14 +252,35 @@ Fonts
 
 Some of the fonts can be customized using the Komascript font setting routines. You can customize the following fonts:
 
-[Table not converted]
+
+===================== ========================== =====
+Font                  Default                    Purpose
+===================== ========================== =====
+barcodefont           ``\ttfamily\footnotesize`` The text underneath the barcodes. (code128 style)
+questionnaireidfont   ``\ttfamily\textbf``       The font for the questionnaire ID label (classic style)
+surveyidfont          ``\ttfamily\textbf``       The font for the questionnaire ID label (classic style)
+choicefont                                       The font answers
+singlemarkchoicefont  choicefont                 Font used in singlemark questions.
+marklinequestionfont                             Font used for the question with the markline command.
+marklinechoicefont    choicefont                 Font used for the answer with the markline command.
+choiceitemfont        choicefont                 Font for choiceitems
+choicegrouplinefont   choicefont                 Font for the question in choicegroups
+choicegroupchoicefont choicefont                 Font for the answers in choicegroups
+===================== ========================== =====
 
 Colors
 ------
 
 There are some colors that can be modified if required.
 
-[Table not converted]
+================= ======= ===
+Color             Default Purpose
+================= ======= ===
+sectionbgcolor    80%     gray The background for section headers
+sectionfgcolor    black   The text color for section headers
+groupevenrowcolor white   The background color for even rows in group environments (removed again due to issues with colortbl, see https://github.com/sdaps/sdaps/issues/25)
+groupoddrowcolor  white   The background color for odd rows in group environments (removed again due to issues with colortbl)
+================= ======= ===
 
 .. ############################################################################
 

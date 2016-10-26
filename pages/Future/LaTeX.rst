@@ -56,7 +56,10 @@ Choice
 
  ``\choice[options]{label}`` 
 
-[Table not converted]
+=============== ====
+**var=string**  Suffix to use for variable. Default is just to number them.
+**text=string** Replacement text for metadata (used instead of normal Label)
+=============== ====
 
 option
 ,,,,,,
@@ -65,7 +68,10 @@ option
 
 Command is only valid in Range and Option array. It is almost equivalent to the "choice".
 
-[Table not converted]
+=============== ====
+**val=int**     Value to use
+**text=string** Replacement text for metadata (used instead of normal Label)
+=============== ====
 
 range
 ,,,,,
@@ -89,7 +95,14 @@ Questions
 
 Defines a question as part of a question array. The arguments depend on the environment it is used in.
 
-[Table not converted]
+======================= =======
+**var=string**          Prefix for variable (or variable in option/range mode)
+**text=string**         Replacement text for metadata
+**lower text=string**   Replacement text for range lower bound (range only)
+**upper text=string**   Replacement text for range upper bound (range only)
+**invalid value=int**   Variable value if too many checkmarks were found (option/range only)
+**no answer value=int** Variable value if no checkmarks were found (option/range only)
+======================= =======
 
 In range question two additional mandatory arguments are used to pass over the upper and lower label that is part of the matrix itself.
 
@@ -110,7 +123,11 @@ Fixed arguments:
 
 Optional arguments:
 
-[Table not converted]
+============== ====
+**text**       Replacement text for metadata
+**horizontal** Use horizontal layout (questions are rows)
+**vertical**   Use vertical layout (questions are cols)
+============== ====
 
 Examples
 --------

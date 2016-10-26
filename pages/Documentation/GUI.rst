@@ -38,10 +38,19 @@ Keyboard Shortcuts
 
 Some of these shortcuts only work if the preview window is selected. ie. you need to click on the image before using them.
 
-[Table not converted]
+=========== =========
+Tab         Go to next Page
+Shift+Tab   Go to previous Page
+Enter       Go to next Page and set "Sheet Validated"
+Shift+Enter Go to previous Page and set "Sheet Validated"
+=========== =========
 
 Mouse Interaction
 :::::::::::::::::
 
-[Table not converted]
-
+============ =======
+Middle click Grab and scroll the view
+Click        Toggle the state of checkboxes and freeform fields
+Click+Drag   Change the size of freeform fields
+Right-Click  Focus the corresponding widget on the right (Version 1.1.0 and newer)
+============ =======
