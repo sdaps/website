@@ -94,9 +94,9 @@ Have a look at the links in the menu. Quite a lot is not yet documented. There a
 
 .. ############################################################################
 
-.. _Scanning: .././Scanning
+.. _Scanning: Scanning
 
-.. _gui: /GUI
+.. _gui: GUI
 
-.. _Documentation/Missing: /Missing
+.. _Documentation/Missing: Missing
 

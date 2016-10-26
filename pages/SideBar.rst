@@ -42,45 +42,45 @@ SDAPS_
 
 .. ############################################################################
 
-.. _SDAPS: ../SDAPS
+.. _SDAPS: /SDAPS
 
-.. _Contribute: ../Contribute
+.. _Contribute: /Contribute
 
-.. _Contact: ../Contact
+.. _Contact: /Contact
 
-.. _Download: ../Download
+.. _Download: /Download
 
-.. _FAQ: ../FAQ
+.. _FAQ: /FAQ
 
-.. _Support: ../Support
+.. _Support: /Support
 
 .. _Issue Tracker: https://github.com/sdaps/sdaps/issues
 
-.. _News: ../NEWS
+.. _News: /NEWS
 
-.. _Tutorial: ../Documentation/Tutorial
+.. _Tutorial: /Documentation/Tutorial
 
-.. _Documentation: ../Documentation
+.. _Documentation: /Documentation
 
-.. _Dependencies: ../Documentation/Dependencies
+.. _Dependencies: /Documentation/Dependencies
 
-.. _LaTeX: ../LaTeX
+.. _LaTeX: /LaTeX
 
-.. _LibreOffice: ../Documentation/LibreOffice
+.. _LibreOffice: /Documentation/LibreOffice
 
-.. _Scanning: ../Documentation/Scanning
+.. _Scanning: /Documentation/Scanning
 
-.. _GUI: ../Documentation/GUI
+.. _GUI: /Documentation/GUI
 
-.. _Recognition: ../Documentation/Recognition
+.. _Recognition: /Documentation/Recognition
 
-.. _Examinations: ../Documentation/Examinations
+.. _Examinations: /Documentation/Examinations
 
-.. _Developer Documentation: ../DeveloperDocumentation
+.. _Developer Documentation: /DeveloperDocumentation
 
-.. _Missing: ../Documentation/Missing
+.. _Missing: /Documentation/Missing
 
-.. _References: ../References
+.. _References: /References
 
-.. _Impressum: ../Impressum
+.. _Impressum: /Impressum
 

@@ -82,9 +82,9 @@ This document is licensed under the `Creative Commons License SA 4.0`_ and is ba
 
 .. _Summer of Code: https://summerofcode.withgoogle.com
 
-.. _mailing list: ../MailingList
+.. _mailing list: /MailingList
 
-.. _list of ideas: /Ideas
+.. _list of ideas: Ideas
 
 .. _Creative Commons License SA 4.0: http://creativecommons.org/licenses/by-sa/4.0/
 

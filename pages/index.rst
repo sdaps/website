@@ -5,9 +5,19 @@ Scripts for data acquisition with paper-based surveys
 
 SDAPS is an open source (GPLv3, LPPL) optical mark recognition (OMR) program. It is written in python and has an integrated workflow with both LibreOffice and LaTeX to create questionnaires.
 
-`attachment:sdaps.png`_
+.. image:: sdaps.png
 
-With SDAPS you create the questionnaire using either LibreOffice_ or LaTeX_. After this some processing is done to collect the information about the survey (questions, and answers) and a `attachment:Documentation/Tutorial/questionnaire.pdf`_printable PDF`attachment:None`_ is created. The filled out questionnaires only need to be scanned_ in (`attachment:Documentation/Tutorial/example.tif`_example`attachment:None`_). SDAPS will do the optical mark recognition and can create a PDF report (`attachment:example-report.pdf`_example`attachment:None`_) or export the data. Optionally it is possible to `manually correct the results`_ using a graphical user interface.
+With SDAPS you create the questionnaire using either LibreOffice_ or LaTeX_. After this some processing is done to collect the information about the survey (questions, and answers) and a
+`printable PDF`_ is created. The filled out questionnaires only need to be scanned in
+(`example
+<Documentation/Tutorial/example.tif>`__).
+
+
+
+SDAPS will do the optical mark recognition and can create a PDF report
+(`example
+<example-report.pdf>`__)
+or export the data. Optionally it is possible to `manually correct the results`_ using a graphical user interface.
 
 Possible use cases for SDAPS include:
 
@@ -67,10 +77,8 @@ Features
 
 * Written in Python using a modular and extensible design
 
-`[[Include(NEWS,"News",from="## start frontpage",to="## end frontpage")]]`_
-
 Similar Tools
-=============
+-------------
 
 Some similar free software projects in no specific order:
 
@@ -82,31 +90,31 @@ Some similar free software projects in no specific order:
 
 .. ############################################################################
 
-.. _LibreOffice: ../Documentation/LibreOffice
+.. _LibreOffice: /Documentation/LibreOffice
 
-.. _LaTeX: ../LaTeX
+.. _LaTeX: /LaTeX
 
-.. _scanned: ../Documentation/Scanning
+.. _scanned: /Documentation/Scanning
 
-.. _manually correct the results: ../Documentation/GUI
+.. _manually correct the results: /Documentation/GUI
 
-.. _mailing list: ../Contact#Mailing_List
+.. _mailing list: /Contact#Mailing_List
 
 .. _#sdaps on freenode: irc://freenode.net/sdaps
 
 .. _webchat: http://webchat.freenode.net/?channels=sdaps
 
-.. _Tutorial: ../Documentation/Tutorial
+.. _Tutorial: /Documentation/Tutorial
 
-.. _Documentation: ../Documentation
+.. _Documentation: /Documentation
 
 .. _Issue Tracker: https://github.com/benzea/sdaps/issues
 
-.. _contributing: ../Contribute
+.. _contributing: /Contribute
 
-.. _IRC channel: ../Contact#IRC
+.. _IRC channel: /Contact#IRC
 
-.. _arbitrary filters: ../Documentation#Filtering
+.. _arbitrary filters: /Documentation#Filtering
 
 .. _Auto Multiple Choice: http://auto-multiple-choice.net/
 
@@ -114,3 +122,4 @@ Some similar free software projects in no specific order:
 
 .. _queXF: http://quexf.sourceforge.net/
 
+.. _printable PDF: Documentation/Tutorial/questionnaire.pdf

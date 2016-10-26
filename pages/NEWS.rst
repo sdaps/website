@@ -1,8 +1,6 @@
 Major Changes
 =============
 
-.. start frontpage
-
 Overview of Changes in SDAPS 1.1.11 -- 27.12.2015
 -------------------------------------------------
 
@@ -58,8 +56,6 @@ New and updated languages:
 * Portuguese (Brazil)
 
 * Dutch
-
-.. end frontpage
 
 Overview of Changes in SDAPS 1.1.9 -- 22.01.2015
 ------------------------------------------------
@@ -348,7 +344,7 @@ Important changes:
 
 * GUI: Widget based view of the questionnaire
 
-* LaTex_ report: Allow the generated LaTeX to be stored
+* LaTeX_ report: Allow the generated LaTeX to be stored
 
 New and updated translations:
 
@@ -441,5 +437,5 @@ If combined these three barcodes will uniquely identify every page that exists.
 
 .. _github: http://github.com/sdaps/sdaps_web
 
-.. _LaTex: ../LaTex
+.. _LaTeX: /LaTeX
 

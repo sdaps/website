@@ -9,7 +9,7 @@ Feel free to add more examples to this page.
 
 .. ############################################################################
 
-.. _Tutorial: Documentation/Tutorial
+.. _Tutorial: /Documentation/Tutorial
 
 .. _Test document in german: http://git.sipsolutions.net/gitweb.cgi?p=sdaps.git;a=blob;f=test/data/tex/questionnaire_with_ids.tex;hb=HEAD
 
