@@ -3,7 +3,7 @@ Creating a questionnaire using LibreOffice
 
 SDAPS is able to read ODT Documents if they are formatted correctly. To find out everything about the questionnaire, SDAPS needs specially named styles in the document itself, and the PDF file to extract more information. This process is quite error prone unfortunately, so you might want to consider using LaTeX_ instead.
 
-|/!/| You need to run the "stamp" command of SDAPS to create a printable version of the document!
+.. attention:: You need to run the "stamp" command of SDAPS to create a printable version of the document!
 
 Examples
 --------
@@ -47,9 +47,9 @@ Boxes
 
 Checkboxes und freeform text fields are normal frames that are placed into the document. As said before, they need to have a special frame style.
 
-|/!/| SDAPS can only handle checkboxes that are exactly 3.5x3.5mm large. Textboxes need to be at least 6cm wide and 6mm heigh.
+.. attention:: SDAPS can only handle checkboxes that are exactly 3.5x3.5mm large. Textboxes need to be at least 6cm wide and 6mm heigh.
 
-|/!/| SDAPS reads the PDF file to find the corresponding boxes. You must not add frames to the file that have the same width of the outline! If you want to add instructions about how to handle checkboxes, than these need to be done for example using images.
+.. attention:: SDAPS reads the PDF file to find the corresponding boxes. You must not add frames to the file that have the same width of the outline! If you want to add instructions about how to handle checkboxes, than these need to be done for example using images.
 
 Debugging
 ---------
@@ -129,7 +129,7 @@ Important options are:
 
   * Automatically reorder multipage documents if pages might get separated during the scanning procedure. (See the ``reorder`` command in the Tutorial_)
 
-* ``--global-id``: This ID will be the same on every printout[1]_. The reason to allow for this barcode is that the "survey-id" (bottom right barcode) will be the same for all projects based on the same ODT file (ie. which have the same box positions). So if you need to hand out the same questionnaire in different places, you can use the "global-id" to organize this.
+* ``--global-id``: This ID will be the same on every printout [#printout]_. The reason to allow for this barcode is that the "survey-id" (bottom right barcode) will be the same for all projects based on the same ODT file (ie. which have the same box positions). So if you need to hand out the same questionnaire in different places, you can use the "global-id" to organize this.
 
 * ``--simplex``**/**``--duplex``: You need to specify whether you want to print the document in simplex or duplex mode. The main difference is that in duplex mode the barcodes are only printed on the back side. Obviously, if you specify ``--duplex`` it is very important to actually print everything in duplex mode!
 
@@ -200,7 +200,10 @@ would create one questionnaire with the ID "Hello". Another example would be cre
 
 .. ############################################################################
 
-.. [1] You can modify this ID later on by modifying the {{{info}}} file in the project directory.
+.. [#printout] You can modify this ID later on by modifying the {{{info}}} file in the project directory.
+
+.. _LaTeX: /LaTeX/
 
 .. _Test document in german: https://github.com/benzea/sdaps/blob/master/test/data/odt-3/debug.odt?raw=true
 
+.. _Tutorial: ../Tutorial/

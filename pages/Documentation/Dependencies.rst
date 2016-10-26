@@ -150,5 +150,5 @@ Required macports packages (this list is **not** complete):
 
 Manually installed packages:
 
-* zbar (there is a bug to get it into MacPorts_ https://trac.macports.org/ticket/45604)
-
+* zbar (there is a bug to get it into `MacPorts
+  <https://trac.macports.org/ticket/45604>`__)

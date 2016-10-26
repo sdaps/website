@@ -326,7 +326,7 @@ New and updated translations:
 Overview of Changes in SDAPS 1.1.0
 ----------------------------------
 
-This release brings a lot of new goodies. As a development release it may still be a bit rough in a few places, but everyone is invited to play with it and report any issues |:-)|
+This release brings a lot of new goodies. As a development release it may still be a bit rough in a few places, but everyone is invited to play with it and report any issues :-)
 
 Important changes:
 
@@ -428,7 +428,7 @@ Again the different IDs that are printed in Code-128 style. They are:
   This code is printed in the center.
 
 * Survey-ID/Page Number: This is the code that is used by SDAPS for tracking.
-   It is a pseudo random value that is based on the questionnaires layout, and cannot be changed by the user. It consists of the Survey ID + 4 digit page number.
+  It is a pseudo random value that is based on the questionnaires layout, and cannot be changed by the user. It consists of the Survey ID + 4 digit page number.
   This code is printed on the right side.
 
 If combined these three barcodes will uniquely identify every page that exists.

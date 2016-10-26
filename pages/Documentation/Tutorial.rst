@@ -30,7 +30,7 @@ Have a look at the LaTeX_ page for some more information about the different LaT
 Intializing Setup
 -----------------
 
-|/!/| It is best to use the ``example.tex`` from this page and not a modified version! If you modify the document the example scan will not work later on!
+.. attention:: It is best to use the ``example.tex`` from this page and not a modified version! If you modify the document the example scan will not work later on!
 
 Once we are happy with the questionnaire, we can create the survey directory that SDAPS uses to store all the data that belongs to the project.
 
@@ -120,7 +120,7 @@ If everything worked fine you will see no further output. The original file is c
 
 You can repeat this step if you have multiple scans.
 
-|/!/| Do **not** remove or modify the copied TIFF files. SDAPS stores information that references these files (ie. it creates a record for each page). If you accidentally added a file, you can recreate the project and start from scratch.
+.. attention:: Do **not** remove or modify the copied TIFF files. SDAPS stores information that references these files (ie. it creates a record for each page). If you accidentally added a file, you can recreate the project and start from scratch.
 
 Running the optical mark recognition
 ------------------------------------
@@ -252,7 +252,7 @@ As mentioned before, you can create a PDF to see if the values read from the des
 
 The file ``annotated_questionnaire.pdf`` is created. Might be a bit ugly, but one can easily check that everything is good.
 
-|/!/| This command requires the GObject Introspection binding information for poppler to be installed.
+.. attention:: This command requires the GObject Introspection binding information for poppler to be installed.
 
 Reorder
 ~~~~~~~
@@ -299,7 +299,7 @@ The ``--3d-transform`` is important as the SDAPS main Program only does a 2D tra
 
 After this, the normal recognize step is done.
 
-|/!/| This only works if the tolerance is large enough. You need a version above 1.1.4 or git, or you have to modify ``defs.py`` and change the value of ``corner_mark_min_length`` to something smaller (e.g. 15).
+.. attention:: This only works if the tolerance is large enough. You need a version above 1.1.4 or git, or you have to modify ``defs.py`` and change the value of ``corner_mark_min_length`` to something smaller (e.g. 15).
 
 LaTeX based report
 ------------------
@@ -310,11 +310,12 @@ You can create a report that is rendered using LaTeX.
 
    $ sdaps /tmp/project report_tex
 
-|/!/| This command requires the siunitx LaTeX package to work properly.
+.. attention:: This command requires the siunitx LaTeX package to work properly.
 
 .. ############################################################################
 
-.. _scanning section: ../Scanning
+.. _scanning section: ../Scanning/
 
-.. _complete section: ../GUI
+.. _complete section: ../GUI/
 
+.. _LaTeX: /LaTeX/

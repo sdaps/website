@@ -1,4 +1,4 @@
-|/!/| The notes here are rather old and parts of this (and a lot other things) have been implemented. Please see http://github.com/sdaps/sdaps-class and http://article.gmane.org/gmane.comp.statistics.sdaps/203 for some notes on the new work.
+.. attention:: The notes here are rather old and parts of this (and a lot other things) have been implemented. Please see http://github.com/sdaps/sdaps-class and http://article.gmane.org/gmane.comp.statistics.sdaps/203 for some notes on the new work.
 
 Specification
 =============

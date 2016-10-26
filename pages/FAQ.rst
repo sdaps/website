@@ -3,7 +3,7 @@ FAQ
 
 .. contents::
 
-|/!/| Please also have a look at `Documentation/Examinations`_ as it contains some tricks that might be relevant!
+.. attention:: Please also have a look at `Documentation/Examinations`_ as it contains some tricks that might be relevant!
 
 SDAPS is hard to install, is there any more documentation?
 ----------------------------------------------------------
@@ -30,7 +30,7 @@ small example document
 `a document with the metadata that SDAPS detected overlayed
 <custom_annotated.pdf>`__.
 
-|{i}| You can visually check the assignment of checkboxes to answers/questions using the  ``annotate`` command. Alternatively read the output of the ``setup_tex`` command.
+.. tip:: You can visually check the assignment of checkboxes to answers/questions using the  ``annotate`` command. Alternatively read the output of the ``setup_tex`` command.
 
 SDAPS complains that poppler is not installed, but it is!
 ---------------------------------------------------------
@@ -46,9 +46,9 @@ By default SDAPS assumes duplex printing. The barcode is only printed on the bac
 
 If you switch to simplex mode (``--simplex`` for ODT and ``onside`` document class option in LaTeX) then SDAPS renders a barcode on every page.
 
-|{i}| SDAPS automatically detects the case where the questionnaire only has a single page and switches to simplex mode automatically!
+.. tip:: SDAPS automatically detects the case where the questionnaire only has a single page and switches to simplex mode automatically!
 
-|/!/| If you use a simplex document then SDAPS needs to know how you scan it. By default SDAPS assumes a simplex scan! Scanning simplex is usually not a good idea because some pages **will** be flipped and missed that way. So if you can then **always scan the document in duplex mode and pass the** ``--duplex`` **option to the** ``add`` **command**!
+.. attention:: If you use a simplex document then SDAPS needs to know how you scan it. By default SDAPS assumes a simplex scan! Scanning simplex is usually not a good idea because some pages **will** be flipped and missed that way. So if you can then **always scan the document in duplex mode and pass the** ``--duplex`` **option to the** ``add`` **command**!
 
 Is it possible to put content inside a freeform textbox?
 --------------------------------------------------------
@@ -78,7 +78,7 @@ Use the macro to put content into the textbox:
    \textbox*{6cm}{Some textbox}
    \makenodeinlasttextbox{This will appear inside the textbox.}
 
-|/!/| If you use questionnaire IDs and would like to stamp multiple questionnaires at a time, then the above code does not work as is. We need to layer another hack around it.  This is because the class tries to conserve memory and breaks the hack at the same time. We need to enable output again, which needs two steps unfortunately. A new command[3]_:
+.. attention:: If you use questionnaire IDs and would like to stamp multiple questionnaires at a time, then the above code does not work as is. We need to layer another hack around it.  This is because the class tries to conserve memory and breaks the hack at the same time. We need to enable output again, which needs two steps unfortunately. A new command[3]_:
 
 ::
 
@@ -104,7 +104,9 @@ And then use this command to enable the output again. Best to put it all into br
 
 .. [1] The only exception is when e.g. a LaTeX package you use is upgraded and changes the layout. But that is the intended behavior as the questionnaire '''has''' changed in that case.
 
-.. [2] Actually, the next major release of SDAPS will natively support this. See [[Future/LaTeX]] and the linked resources for details.
+.. [2] Actually, the next major release of SDAPS will natively support this. See
+       `Future/LaTeX
+       </Future/LaTeX/>`__ and the linked resources for details.
 
 .. [3] This is required to as the parser cannot be reconfigured inside the questionnaire environment.
 

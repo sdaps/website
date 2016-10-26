@@ -26,7 +26,7 @@ In the second step different heuristics are applied to the image. These heuristi
 
 * **cov-min-size**: Uh, this one is a bit weird, it finds white areas above a certain threshold.
 
-Now, most people reading this that know more about image analysis algorithms probably wonder why SDAPS does not use other algorithms. The answer is that there is no good reason; it just needs to be implemented |:-)|
+Now, most people reading this that know more about image analysis algorithms probably wonder why SDAPS does not use other algorithms. The answer is that there is no good reason; it just needs to be implemented :-)
 
 In the last step a list for each of the heuristics is traversed and SDAPS selects the "best" solution.
 

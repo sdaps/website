@@ -83,7 +83,7 @@ SDAPS creates a project directory for every survey you create. This directory is
 
 * survey: Data storage (pickled python objects)
 
-* *.tif: The scanned images that have been added to the project
+* \*.tif: The scanned images that have been added to the project
 
 It is also used as the default output directory for commands that create new files.
 
