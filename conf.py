@@ -97,7 +97,7 @@ GENERATE_ATOM = False
 
 DISABLED_PLUGINS = ["render_indexes"]
 
-#FILTERS = {
-#  ".css": [cssmin],
-#  ".js": [uglifyjs],
-#}
+FILTERS = {
+  ".css": [cssmin],
+  ".js": [uglifyjs],
+}
