@@ -19,7 +19,7 @@ Donations
    <input type="hidden" name="no_note" value="0" />
    <input type="hidden" name="currency_code" value="EUR" />
    <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_SM.gif:NonHostedGuest" />
-   <input type="image" src="http://sdaps.org/Contribute?action=AttachFile&amp;do=get&amp;target=btn_donate_SM.gif" border="0" name="submit" alt="PayPal" />
+   <input type="image" src="btn_donate_SM.gif" border="0" name="submit" alt="PayPal" />
    </form>
    </p>
 
