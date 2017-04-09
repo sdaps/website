@@ -2,8 +2,8 @@ Impressum
 =========
 
 | Benjamin Berg
-| Durlacher Allee 19
-| 76131 Karlsruhe
+| Jagdfeldring 83
+| 85540 Haar
 |
 | E-Mail: `benjamin@sipsolutions.net`_
 | Tel: +49-176-41010091
