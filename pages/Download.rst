@@ -50,9 +50,29 @@ See Dependencies_ for a list of packages that are required on OSX.
 Windows
 -------
 
-There is **no** windows version for SDAPS. In theory it should be possible to get it running, but getting all the dependencies to work will be a big task.
+There is **no** windows version for SDAPS. However Windows 10 introduced the `Windows Subsystem for Linux`_ enabling you to run
+Linux applications natively on Windows. This means that you can run a full Linux system on Windows without the need
+for a virtual machine or similar. Once you have this the installation is almost identical to the Ubuntu one.
 
-It is likely much simpler to install a GNU/Linux distribution on the computer or inside a virtual machine.
+First follow the `Bash on Windows Installation Guide`_. Once you have bash working you can run the following commands (as on Ubuntu) to
+install SDAPS.
+
+::
+
+   # add-apt-repository ppa:benjamin-sipsolutions/sdaps
+   # apt-get update
+   # apt-get install sdaps
+
+To use the user interface you will need to install an X server such as Xming separately. If you do so, you will be
+able to run the user interface after setting the correct environment variables:
+
+::
+
+   $ export DISPLAY=:0
+   $ sdaps test-project gui
+
+.. image:: screenshot-windows.png
+   :width: 100%
 
 .. ############################################################################
 
@@ -70,3 +90,6 @@ It is likely much simpler to install a GNU/Linux distribution on the computer or
 
 .. _unresolved issues: https://github.com/sdaps/sdaps/issues/12
 
+.. _Windows Subsystem for Linux: https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/
+
+.. _Bash on Windows Installation Guide: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
