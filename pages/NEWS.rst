@@ -1,6 +1,41 @@
 Major Changes
 =============
 
+Unstable release SDAPS 1.9.0 -- 2017-07-16
+------------------------------------------
+
+The first release of a new unstable series is now available. This brings a
+lot of improvements, primarily with regard to LaTeX:
+
+* Entirely new LaTeX class and package set
+* Ability to specify variable names for questions and answers
+* New layouting possibilities using the LaTeX class
+
+See also the new `class repository`_ and its `documentation`_.
+
+Overview of Changes in SDAPS 1.2.0 -- 2017-07-16
+------------------------------------------------
+
+This is a stable release of the new existing unstable series. As the branch
+has long been more stable compared to the old "stable" branch this was a
+logical step to move forward. Also, most of the development has moved to a
+new branch and beta releases will now be published under the "unstable"
+series.
+
+Important changes:
+
+* Allow using LO 5.2, requires filling the background of checkboxes
+* Use python2 instead of python (#91)
+* Fix non-square checkboxes (#92)
+* Update TeX code and example for newer LaTeX versions
+* Fix encoding issues (#98)
+* Fix a recursion in the GUI
+
+New and updated languages:
+
+* French
+
+
 Overview of Changes in SDAPS 1.1.11 -- 27.12.2015
 -------------------------------------------------
 
@@ -439,3 +474,6 @@ If combined these three barcodes will uniquely identify every page that exists.
 
 .. _LaTeX: /LaTeX
 
+.. _class repository: http://github.com/sdaps/sdaps-class
+
+.. _documentation: http://sdaps.org/class-doc
