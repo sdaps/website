@@ -73,7 +73,7 @@ able to run the user interface after setting the correct environment variables:
 
 .. ############################################################################
 
-.. _sdaps-1.1.11.tar.gz: http://sdaps.org/releases/sdaps-1.1.11.tar.gz
+.. _sdaps-1.9.0.tar.gz: http://sdaps.org/releases/sdaps-1.9.0.tar.gz
 
 .. _sdaps-1.2.0.tar.gz: http://sdaps.org/releases/sdaps-1.2.0.tar.gz
 
