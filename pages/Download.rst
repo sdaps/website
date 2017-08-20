@@ -4,7 +4,7 @@ Download
 All releases are available from http://sdaps.org/releases/:
 
 * `sdaps-1.2.0.tar.gz`_ (latest stable version)
-* `sdaps-1.9.0.tar.gz`_ (experimental development snapshot for SDAPS 2.0)
+* `sdaps-1.9.1.tar.gz`_ (experimental development snapshot for SDAPS 2.0)
 
 Development Version
 -------------------
@@ -73,7 +73,7 @@ able to run the user interface after setting the correct environment variables:
 
 .. ############################################################################
 
-.. _sdaps-1.9.0.tar.gz: http://sdaps.org/releases/sdaps-1.9.0.tar.gz
+.. _sdaps-1.9.1.tar.gz: http://sdaps.org/releases/sdaps-1.9.1.tar.gz
 
 .. _sdaps-1.2.0.tar.gz: http://sdaps.org/releases/sdaps-1.2.0.tar.gz
 
