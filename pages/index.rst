@@ -33,7 +33,7 @@ Possible use cases for SDAPS include:
 
 If you have any questions or comments related to SDAPS (usage, development, or anything else) then the `mailing list`_ is a good place to post these. Please consider subscribing to this list if you are thinking about using SDAPS in the future or should you need some assistance. You can also look around on irc `#sdaps on freenode`_ (webchat_).
 
-For an introduction of how SDAPS is used and what can be done with it you can look at the Tutorial_ and Documentation_. Should you have any further questions about SDAPS you can use the Contact#Mailing_List|. If you find any issues, please report them in the `Issue Tracker`_.
+For an introduction of how SDAPS is used and what can be done with it you can look at the Tutorial_ and Documentation_. Should you have any further questions about SDAPS you can use the `mailing list`_. If you find any issues, please report them in the `Issue Tracker`_.
 
 Should you find SDAPS useful and use it for any survey or similar, then please consider contributing_ to the project. A good first start is to subscribe to the `mailing list`_ or to join the `IRC channel`_.
 
