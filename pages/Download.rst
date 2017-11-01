@@ -66,7 +66,12 @@ able to run the user interface after setting the correct environment variables:
 ::
 
    $ export DISPLAY=:0
+   $ export GTK_OVERLAY_SCROLLING=0
    $ sdaps test-project gui
+
+Setting `GTK_OVERLAY_SCROLLING` to 0 is a workaround for an issue where some control elements
+disappear. Setting it should not be neccessary and is an issue that may need
+to be fixed in GTK+ or elsewhere.
 
 .. image:: screenshot-windows.png
    :width: 100%
