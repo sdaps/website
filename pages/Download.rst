@@ -3,7 +3,7 @@ Download
 
 All releases are available from http://sdaps.org/releases/:
 
-* `sdaps-1.2.0.tar.gz`_ (latest stable version)
+* `sdaps-1.2.1.tar.gz`_ (latest stable version)
 * `sdaps-1.9.1.tar.gz`_ (experimental development snapshot for SDAPS 2.0)
 
 Development Version
@@ -80,7 +80,7 @@ to be fixed in GTK+ or elsewhere.
 
 .. _sdaps-1.9.1.tar.gz: http://sdaps.org/releases/sdaps-1.9.1.tar.gz
 
-.. _sdaps-1.2.0.tar.gz: http://sdaps.org/releases/sdaps-1.2.0.tar.gz
+.. _sdaps-1.2.1.tar.gz: http://sdaps.org/releases/sdaps-1.2.1.tar.gz
 
 .. _browse the repository on github: https://github.com/sdaps/sdaps
 

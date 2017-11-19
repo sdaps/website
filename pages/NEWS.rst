@@ -1,6 +1,13 @@
 Major Changes
 =============
 
+Overview of Changes in SDAPS 1.2.1 -- 2017-11-19
+------------------------------------------------
+
+Important changes:
+
+* Fix regression in questionnaire ID handling
+
 Unstable release SDAPS 1.9.1 -- 2017-08-20
 ------------------------------------------
 
