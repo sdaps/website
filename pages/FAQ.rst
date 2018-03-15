@@ -22,8 +22,7 @@ Is it possible to do custom layouts in LaTeX?
 
 Of course it is, however you need to write out some metadata manually. That means using ``\immediate\write\sdapsoutfile{\unexpanded{STRING}}``. Have a look at the generated ``.sdaps`` file and the LaTeX class. You'll need to write out the questions and enough answers for the checkboxes.
 
-There is a `
-small example document
+There is a `small example document
 <custom.tex>`__ with the
 `resulting questionnaire
 <custom.pdf>`__ and
