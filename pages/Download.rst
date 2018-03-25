@@ -4,7 +4,7 @@ Download
 All releases are available from http://sdaps.org/releases/:
 
 * `sdaps-1.2.1.tar.gz`_ (latest stable version)
-* `sdaps-1.9.1.tar.gz`_ (experimental development snapshot for SDAPS 2.0)
+* `sdaps-1.9.2.tar.gz`_ (experimental development snapshot for SDAPS 2.0)
 
 Development Version
 -------------------
@@ -29,6 +29,14 @@ There are two launchpad PPA repositories that contain SDAPS. One contains the la
 * unstable: https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/
 
 The packages are build for Ubuntu 'trusty' (only unstable currently, old ones are for 'precise'). The packages should work on other debian based systems.
+
+
+Fedora Packages
+---------------
+
+The unstable version can be grabbed from copr:
+
+ * https://copr.fedorainfracloud.org/coprs/benzea/sdaps/
 
 Gentoo Overlay
 --------------
@@ -78,7 +86,7 @@ to be fixed in GTK+ or elsewhere.
 
 .. ############################################################################
 
-.. _sdaps-1.9.1.tar.gz: http://sdaps.org/releases/sdaps-1.9.1.tar.gz
+.. _sdaps-1.9.2.tar.gz: http://sdaps.org/releases/sdaps-1.9.2.tar.gz
 
 .. _sdaps-1.2.1.tar.gz: http://sdaps.org/releases/sdaps-1.2.1.tar.gz
 
