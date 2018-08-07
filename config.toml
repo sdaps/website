@@ -22,27 +22,26 @@ theme = "hugo-material-docs"
     	accent  = "blue-grey"
 
 [[menu.main]]
+    name   = "Overview"
+    url    = "/"
+    weight = 10
+
+[[menu.main]]
 	name   = "Getting started"
 	url    = "pages/Download.md"
-	weight = 10
+	weight = 20
 
 [[menu.main]]
 	name   = "Contribute"
-	url    = "pages/Contribute.md"
-	weight = 20
+	url    = "contribute/"
+	weight = 30
 
 [[menu.main]]
 	name   = "Roadmap"
 	url    = "pages/FAQ.md"
-	weight = 30
+	weight = 40
 
 [[menu.main]]
 	name   = "Imprint"
-	url    = "pages/Impressum.md"
-	weight = 40
-
-[blackfriday]
-	smartypants	= true
-	fractions = true
-	smartDashes = true
-	plainIDAnchors = true
+	url    = "imprint/"
+	weight = 50
