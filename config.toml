@@ -1,3 +1,48 @@
 baseURL = "http://sdaps.org/"
 languageCode = "en-us"
 title = "SDAPS"
+theme = "hugo-material-docs"
+
+[params]
+	# General information
+	author = "Benjamin Berg"
+	description = "Scripts for data acquisition with paper-based surveys."
+	copyright = "Released under GPLv3+/LPPLv1.3c+"
+
+	# Repository
+	provider = "GitHub"
+	repo_url = "https://github.com/sdaps/sdaps"
+
+	version = "1.9.2"
+	logo = "images/logo.png"
+	favicon = ""
+
+	[params.palette]
+    	primary = "teal"
+    	accent  = "blue-grey"
+
+[[menu.main]]
+	name   = "Getting started"
+	url    = "pages/Download.md"
+	weight = 10
+
+[[menu.main]]
+	name   = "Contribute"
+	url    = "pages/Contribute.md"
+	weight = 20
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "pages/FAQ.md"
+	weight = 30
+
+[[menu.main]]
+	name   = "Imprint"
+	url    = "pages/Impressum.md"
+	weight = 40
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true
