@@ -2,6 +2,9 @@ baseURL = "http://sdaps.org/"
 languageCode = "en-us"
 title = "SDAPS"
 theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+disableKinds = ["taxonomyTerm", "taxonomy"]
 
 [params]
 	# General information

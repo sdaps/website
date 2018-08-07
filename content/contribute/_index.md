@@ -1,5 +1,6 @@
 ---
 title: Contribute
+layout: single
 ---
 
 No matter what your existing knowledge is, there are always ways to further

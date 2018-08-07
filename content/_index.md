@@ -1,6 +1,7 @@
 ---
 title: Scripts for data acquisition with paper-based surveys
 type: index
+layout: single
 ---
 
 SDAPS is an open source (GPLv3, LPPL) optical mark recognition (OMR) program.
@@ -12,14 +13,15 @@ and LaTeX to create questionnaires.
 With SDAPS you create the questionnaire using either [LibreOffice]() or
 [LaTeX](). After this some processing is done to collect the information
 about the survey (questions, and answers) and a [printable PDF]() is created.
-The filled out questionnaires only need to be scanned in ([example]
-(Documentation/Tutorial/example.tif>)).
+The filled out questionnaires only need to be scanned in
+([example](Documentation/Tutorial/example.tif)).
 
 SDAPS will do the optical mark recognition and can create a PDF report
 ([example](/example-report.pdf)) or export the data. Optionally it is
 possible to [manually correct the results]() using a graphical user interface.
 
 Possible use cases for SDAPS include:
+
 * anonymous surveys
 * non-anonymous surveys
 * evaluation of lectures
@@ -40,7 +42,9 @@ Should you find SDAPS useful and use it for any survey or similar, then please
 consider [contributing](/contribute) to the project. A good first start is to subscribe to
 the [mailing list]() or to join the [IRC channel]().
 
-# Features
+
+## Features
+
 * Open Source Software; use and modify it as you like (subject to the GPLv3+/LPPLv1.3c+)
 * Optical mark recognition (OMR) from scanned data
 * Imports most formats including PDF and even photographs (version 1.1.7)
@@ -63,8 +67,10 @@ with "code128" and "qr" style)
 * A GUI application to check the recognition and correct errors
 * Written in Python using a modular and extensible design
 
-# Similar Tools
+
+## Similar Tools
 Some similar free software projects in no specific order:
+
 * [Auto Multiple Choice]() (Perl, supports randomized forms, optimized for
 examinations)
 * [G'n'T Eval]() (Ruby, used for evaluations in Heidelberg, Germany)
