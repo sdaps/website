@@ -1,31 +1,79 @@
-LaTeX Support
-=============
+---
+title: Ideas for future developments
+layout: single
+---
 
-With the LaTeX support SDAPS provides an easy way to build questionnaires. Using this class together with SDAPS you can create and analyse a survey in a breeze.
+If you are interested in helping with any of these developments, then please
+write to Benjamin Berg or drop by on IRC.
 
-This LaTeX class not only makes it less error prone to create surveys for SDAPS (instead of using LibreOffice or OpenOffice), but also gives you more features. The features are:
+## Common questionnaire description format
+
+See also `Future/LaTeX`_.
+
+Some people started to work on a description format for questionnaires. Some of
+the features that you can expect from such a format:
+
+* Versioning information
+* Metadata for question layout
+* Metadata for data analysis (e.g. hidden variables)
+* Translation support
+* Automatic survey creation (both online and offline; e.g. SDAPS and
+limesurvey, but it is not specific to these)
+* XML based?
+
+This project is not specific to SDAPS. However a close collaboration is planned
+so that SDAPS will work with it.
+
+## New/Improved LaTeX class
+
+There are some shortcomings in the current LaTeX class (i.e. the layout is not
+flexible enough). There are some ideas for new features and changes:
+
+* Possibility to create LaTeX code from description file (see above)
+* Both horizontal and vertical layout of questions
+* Single/Multiple answer question types
+  * Requires improvements in SDAPS internally
+  * Single answer exported as one variable; multiple choice as multiple variables
+  * Use circles for single answer and boxes for multiple choice fields (this
+  is a metaphor that is familiar from computers)
+* Specifying variable names for the export (requires core changes)
+* A "no answer" choice for range questions
+* Standardized question type names. i.e. probably recycle the names from limesurvey.
+
+## Python 3 Port
+
+The goal is to port SDAPS to python 3.x in the long run. There are some things
+that need to happen for this:
+
+* The C module needs to be either ported to the cpython 3 API, or to GLib to
+use introspection bindings.
+* The LibreOffice importer needs to be rewritten using python-uno.
+* The OpenCV based package ("convert", import of other image formats and camera
+image deskewing) requires python 3 bindings to become available.
+
+## LaTeX Support
+
+With the LaTeX support SDAPS provides an easy way to build questionnaires.
+Using this class together with SDAPS you can create and analyse a survey in
+a breeze.
+
+This LaTeX class not only makes it less error prone to create surveys for
+SDAPS (instead of using LibreOffice or OpenOffice), but also gives you more
+features. The features are:
 
 * Create a questionnaire with only a couple of easy LaTeX macros
-
 * Get a preview of what the final version looks like, without running the main SDAPS program
-
 * Translations are supported (english and german are provided currently)
-
 * Creates a complete machine readable description of the questionnaire. This contains exact positions of boxes and questions with answers.
 
-A collection of examples can be found here_.
+A collection of examples can be found here.
 
-.. contents::
+### Basic Example
 
-Basic Example
--------------
+The following example does not show all features, but can give an impression of
+how it all works. And the [resulting PDF](/static/file/example.pdf)
 
-The following example does not show all features, but can give an impression of how it all works. And the 
-`resulting PDF
-<example.pdf>`__.
-
-::
-
+<pre>
    \documentclass[draft,english,pdf,pagemark,stamp]{sdaps}
    \usepackage[utf8]{inputenc}
 
@@ -62,18 +110,24 @@ The following example does not show all features, but can give an impression of 
 
      \end{questionnaire}
    \end{document}
+</pre>
 
-Getting Started
----------------
+### Getting Started
 
-To create a new questionnaire it makes sense to copy the files from the ``sdaps/tex`` directory into the same directory of the questionnaire. This way you can compile the document using ``pdflatex`` for testing purposes.
+To create a new questionnaire it makes sense to copy the files from the
+``sdaps/tex`` directory into the same directory of the questionnaire.
+This way you can compile the document using ``pdflatex`` for testing purposes.
 
-If you installed SDAPS, then the files should be in ``/usr/share/sdaps/tex`` or ``/usr/local/share/sdaps/tex``. If you decided to not install SDAPS then the translation files need to be copied separately. They are created when building SDAPS and need to be copied from the ``build/share/sdaps/tex`` subdirectory.
+If you installed SDAPS, then the files should be in ``/usr/share/sdaps/tex``
+or ``/usr/local/share/sdaps/tex``. If you decided to not install SDAPS then
+the translation files need to be copied separately. They are created when
+building SDAPS and need to be copied from the ``build/share/sdaps/tex``
+subdirectory.
 
-Documentclass Options
----------------------
+### Documentclass Options
 
-There are a number of options (SDAPS and standard LaTeX) that affect how SDAPS works. The following table lists these options.
+There are a number of options (SDAPS and standard LaTeX) that affect how
+SDAPS works. The following table lists these options.
 
 ====================== ============ ==
 Option(s)              Default      Note
@@ -90,73 +144,78 @@ stamp                  not set      Specify to see barcodes. Always set this opt
 ====================== ============ ==
 
 
-The options ``print_survey_id``, ``print_questionnaire_id`` both have their counterpart with the ``no_`` prefix to disable the option again. For ``stamp``and ``pagemark`` it is ``nostamp`` and ``nopagemark`` currently.
+The options ``print_survey_id``, ``print_questionnaire_id`` both have their
+counterpart with the ``no_`` prefix to disable the option again. For ``stamp``
+and ``pagemark`` it is ``nostamp`` and ``nopagemark`` currently.
 
-Commands
---------
+### Commands
 
-questionnaire environment
-~~~~~~~~~~~~~~~~~~~~~~~~~
+#### questionnaire environment
 
-Main environment that everything needs to be wrapped in. An optional argument ``[noinfo]`` is supported to suppress the default information message about filling out the questoinnaire.
+Main environment that everything needs to be wrapped in. An optional argument
+``[noinfo]`` is supported to suppress the default information message about
+filling out the questoinnaire.
 
-info environment
-~~~~~~~~~~~~~~~~
+#### info environment
 
-Adds a section for information. This is simply surrounded by a line at the top/bottom.
+Adds a section for information. This is simply surrounded by a line at the
+top/bottom.
 
-addinfo
-~~~~~~~
+#### addinfo
 
-Using ``addinfo`` you can add information that SDAPS will later put on the printed report. The command has to arguments a key and a value.
+Using ``addinfo`` you can add information that SDAPS will later put on the
+printed report. The command has to arguments a key and a value.
 
 For example:
 
-::
+``\addinfo{Date}{06.06.2012}``
 
-   \addinfo{Date}{06.06.2012}
+#### singlemark
 
-singlemark
-~~~~~~~~~~
+The ``singlemark`` can be used for range questions. You pass it a question
+and description for the lower and upper bounds.
 
-The ``singlemark`` can be used for range questions. You pass it a question and description for the lower and upper bounds.
+``\singlemark{What do you think of this LaTeX class?}{nothing}{looks great}``
 
-::
+#### choicequestion environment
 
-   \singlemark{What do you think of this LaTeX class?}{nothing}{looks great}
+This environment is used to create a question with a set of arbitrary answers.
+The answers are put into a tabular environment and with a specified amount of
+columns.
 
-choicequestion environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This environment is used to create a question with a set of arbitrary answers. The answers are put into a tabular environment and with a specified amount of columns.
-
-Inside this environment you add a new choice simply using the ``choiceitem`` macro. If one of the possible answers is too long, you can also use ``choicemulticolitem``. In addition it is possible to add a freeform text box. This can be accomplished using the ``choiceitemtext`` macro.
+Inside this environment you add a new choice simply using the ``choiceitem``
+macro. If one of the possible answers is too long, you can also use
+``choicemulticolitem``. In addition it is possible to add a freeform text box.
+This can be accomplished using the ``choiceitemtext`` macro.
 
 choiceitem
 ::::::::::
 
-A possible choice in a choicequestion environment. Only has one argument, that is the description.
+A possible choice in a choicequestion environment. Only has one argument, that
+is the description.
 
 choicemulticolitem
 ::::::::::::::::::
 
-The same as ``choiceitem`` but takes an extra argument to specify the number of columns to use.
+The same as ``choiceitem`` but takes an extra argument to specify the number
+of columns to use.
 
 choiceitemtext
 ::::::::::::::
 
-Adds a freeform text field to a choice question. Often it is impossible to add all the possible answers, so this gives the interviewee the possibility to add an arbitrary answer.
+Adds a freeform text field to a choice question. Often it is impossible to
+add all the possible answers, so this gives the interviewee the possibility
+to add an arbitrary answer.
 
-The command has three arguments. That is the height (eg. 1.2cm) then the width in columns (the textbox is automatically stretched to fill the horizontal space) and a description string for the box as the last argument.
+The command has three arguments. That is the height (eg. 1.2cm) then the
+width in columns (the textbox is automatically stretched to fill the
+horizontal space) and a description string for the box as the last argument.
 
 For example:
 
-::
+``\choiceitemtext{1.2cm}{3}{Other:}``
 
-     \choiceitemtext{1.2cm}{3}{Other:}
-
-markgroup environment
-~~~~~~~~~~~~~~~~~~~~~
+#### markgroup environment
 
 A markgroup can be used if you have a set of similar "mark" style questions. This command uses a lot less space on the paper compared to using ``singlemark``. The environment has one argument which is a header for everything. ``markline`` is then used inside this environment.
 
@@ -167,15 +226,14 @@ This command is used in the same way as ``singlemark`` but can only be used insi
 
 Example of ``markgroup`` and ``markline``:
 
-::
-
+<pre>
    \begin{markgroup}{What do you think about the following aspects of the SDAPS questionnaire LaTeX class?}
      \markline{ease of use}{very easy}{very hard}
      \markline{quality of the generated questionnaire}{good}{bad}
    \end{markgroup}
+</pre>
 
-choicegroup
-~~~~~~~~~~~
+#### choicegroup
 
 Similar to ``markgroup`` for ``markline`` there is a ``choicegroup`` command for the ``choicequestion`` environment. For all of the questions inside a ``choicegroup`` the answers possible choices need to be the same. Another difference is that it is not possible to add freeform text fields.
 
@@ -191,8 +249,7 @@ This command is then used to add a single question.
 
 An example of all this in action would be the following:
 
-::
-
+<pre>
    \begin{choicegroup}{Which program do you prefer for the following tasks?}
      \groupaddchoice{\LaTeX}
      \groupaddchoice{LibreOffice}
@@ -202,9 +259,9 @@ An example of all this in action would be the following:
      \choiceline{Formula typesetting}
      \choiceline{Creating questionnaires}
    \end{choicegroup}
+</pre>
 
-textbox
-~~~~~~~
+#### textbox
 
 The ``textbox`` command adds a freeform text box for the interviewee to fill out. It has two arguments. The first is the minimum height and the second a description which is printed on top.
 
@@ -212,12 +269,9 @@ The textbox will be expanded automatically to fill all available vertical space!
 
 Example:
 
-::
+``\textbox{5cm}{You can use the following box to write down any additional comments:}``
 
-   \textbox{5cm}{You can use the following box to write down any additional comments:}
-
-Other commands
-~~~~~~~~~~~~~~
+#### Other commands
 
 checkbox
 ::::::::
@@ -234,8 +288,7 @@ correctedbox
 
 ``\correctedbox`` draws a filled and checked checkbox for instructions.
 
-Defines/Counters
-----------------
+### Defines/Counters
 
 These only works in SDAPS 1.1.2 and newer.
 
@@ -247,11 +300,9 @@ markcheckboxcount counter 5       The number of checkboxes in mark questions (si
 
 There are more defines that configure the layout of the corner marks and barcodes. You should never change these (if you do, then you also need to modify ``defs.py``)!
 
-Fonts
------
+### Fonts
 
 Some of the fonts can be customized using the Komascript font setting routines. You can customize the following fonts:
-
 
 ===================== ========================== =====
 Font                  Default                    Purpose
@@ -268,8 +319,7 @@ choicegrouplinefont   choicefont                 Font for the question in choice
 choicegroupchoicefont choicefont                 Font for the answers in choicegroups
 ===================== ========================== =====
 
-Colors
-------
+### Colors
 
 There are some colors that can be modified if required.
 
@@ -282,7 +332,10 @@ groupevenrowcolor white   The background color for even rows in group environmen
 groupoddrowcolor  white   The background color for odd rows in group environments (removed again due to issues with colortbl)
 ================= ======= ===
 
-.. ############################################################################
+## Collection of LaTeX example documents
 
-.. _here: Examples
+Feel free to add more examples to this page.
 
+* The example from the [Tutorial](/getting-started#Usage). This example uses most features that SDAPS has.
+* [Test document in german]
+(http://git.sipsolutions.net/gitweb.cgi?p=sdaps.git;a=blob;f=test/data/tex/questionnaire_with_ids.tex;hb=HEAD).

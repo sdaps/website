@@ -1,5 +1,5 @@
 ---
-title: Scripts for data acquisition with paper-based surveys
+title: "SDAPS: Scripts for data acquisition with paper-based surveys"
 type: index
 layout: single
 ---
@@ -29,18 +29,20 @@ Possible use cases for SDAPS include:
 * examinations
 
 If you have any questions or comments related to SDAPS (usage, development, or
-anything else) then the [mailing list]() is a good place to post these. Please
-consider subscribing to this list if you are thinking about using SDAPS in the
-future or should you need some assistance. You can also look around on irc
-[#sdaps on freenode]() [webchat]()).
+anything else) then the [mailing list](/contribute#mailing-list) is a good
+place to post these. Please consider subscribing to this list if you are
+thinking about using SDAPS in the future or should you need some assistance.
+You can also look around on irc [#sdaps on freenode]() [webchat]()).
 
 For an introduction of how SDAPS is used and what can be done with it you can
-look at the [Tutorial]() and [Documentation](). Should you have any further questions
-about SDAPS you can use the [mailing list](). *If you find any issues, please
+look at the [Tutorial](/getting-started) and [Documentation](/documentation).
+Should you have any further questions about SDAPS you can use the
+[mailing list](/contribute#mailing-list). *If you find any issues, please
 report them in the [Issue Tracker]().*
 Should you find SDAPS useful and use it for any survey or similar, then please
-consider [contributing](/contribute) to the project. A good first start is to subscribe to
-the [mailing list]() or to join the [IRC channel]().
+consider [contributing](/contribute) to the project. A good first start is to
+subscribe to the [mailing list](/contribute#mailing-list) or to join the [IRC
+channel](/contribute#irc).
 
 
 ## Features

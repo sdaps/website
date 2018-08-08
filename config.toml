@@ -31,7 +31,7 @@ disableKinds = ["taxonomyTerm", "taxonomy"]
 
 [[menu.main]]
 	name   = "Getting started"
-	url    = "pages/Download.md"
+	url    = "getting-started/"
 	weight = 20
 
 [[menu.main]]
@@ -40,11 +40,21 @@ disableKinds = ["taxonomyTerm", "taxonomy"]
 	weight = 30
 
 [[menu.main]]
-	name   = "Roadmap"
-	url    = "pages/FAQ.md"
+	name   = "Documentation"
+	url    = "documentation/"
 	weight = 40
+
+[[menu.main]]
+	name   = "Used by"
+	url    = "used-by/"
+	weight = 50
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 60
 
 [[menu.main]]
 	name   = "Imprint"
 	url    = "imprint/"
-	weight = 50
+	weight = 200
