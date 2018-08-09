@@ -61,15 +61,15 @@ Debug output (annotate):
 
 On Debian Wheezy/Jessie you should install the following packages:
 
-``python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev
-libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo
-gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18
-python-opencv`` and ``pdftk`` (or ``python-pypdf``)
+```bash
+python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18 python-opencv pdftk # (pdftk or python-pypdf)
+```
 
 for the LaTeX class:
 
-``texlive texlive-latex-extra texlive-latex-recommended pgf`` and
-``latex-beamer`` (used for translations)
+```bash
+texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer # latex-beamer: (used for translations)
+```
 
 Other debian based distributions (Ubuntu, Mint) should have very similar
 package names. For some packages there are also alternatives:
@@ -121,17 +121,26 @@ bad idea for any real project.
 
 ### Creating the Questionnaire
 
-The first step to conduct a survey is to design the questionnaire itself. You'll need to take some time to first figure out what questions to ask before designing the questionnaire.
+The first step to conduct a survey is to design the questionnaire itself.
+You'll need to take some time to first figure out what questions to ask
+before designing the questionnaire.
 
-We are going to use this
-`example questionnaire
-<example.tex>`__ (
-`PDF Version
-<example.pdf>`__) here. If you would like to play around a bit with it, you can compile the LaTeX document yourself. Note that you need to copy the SDAPS-LaTeX data into the directory before doing that. It lives in the ``tex`` Directory of the source code or in ``$PREFIX/share/sdaps/tex`` if it is installed. Where ``$PREFIX`` will usually be ``/usr`` or ``/usr/local``.
+We are going to use this [example questionnaire](/static/files/example.tex)
+[PDF Version](/static/files/example.pdf) here. If you would like to play
+around a bit with it, you can compile the LaTeX document yourself. Note
+that you need to copy the SDAPS-LaTeX data into the directory before doing
+that. It lives in the ``tex`` Directory of the source code or in
+``$PREFIX/share/sdaps/tex`` if it is installed. Where ``$PREFIX`` will
+usually be ``/usr`` or ``/usr/local``.
 
-You can familiarize yourself with the LaTeX-Document and the resulting PDF-file. Notice that the PDF has a "draft" text overlayed. This is because the barcode at the bottom is just an example and it will change once the project is created.
+You can familiarize yourself with the LaTeX-Document and the resulting
+PDF-file. Notice that the PDF has a "draft" text overlayed. This is because
+the barcode at the bottom is just an example and it will change once the
+project is created.
 
-Have a look at the LaTeX_ page for some more information about the different LaTeX macros that exists in SDAPS. You can also change the size of the paper using the normal LaTeX methods.
+Have a look at the [LaTeX]() page for some more information about the
+different LaTeX macros that exists in SDAPS. You can also change the
+size of the paper using the normal LaTeX methods.
 
 ### Intializing Setup
 
@@ -156,7 +165,7 @@ You can always get a help by running:
 So we create the project using the provided ``example.tex``. The tutorial
 assumes that the LaTeX file is in the current directory.
 
-<pre>
+``` bash
    $ sdaps /tmp/project setup_tex example.tex
    ------------------------------------------------------------------------------
    - SDAPS -- setup_tex
@@ -184,7 +193,7 @@ assumes that the LaTeX file is in the current directory.
            never - daily
            0(Checkbox)  87.8  78.4   3.5   3.5
    [SNIP]
-</pre>
+```
 
 Now, what does the output tell us? First the document is compiled four times.
 After the first two compiles SDAPS reads all the metadata and calculates the
@@ -224,14 +233,14 @@ if you have a newer version of the multicol package).
 Once you have a scan in the correct format you can add it to survey directory
 that was created earlier. This is done using the ``add`` command:
 
-<pre>
-   $ sdaps /tmp/project add example.tif
-   ----------------------------------------
-   - SDAPS -- add
-   ----------------------------------------
-   Processing example.tif
-   Done
-</pre>
+``` bash
+$ sdaps /tmp/project add example.tif
+----------------------------------------
+- SDAPS -- add
+----------------------------------------
+Processing example.tif
+Done
+```
 
 If everything worked fine you will see no further output. The original file is
 copied into the project directory as ``1.tif``.
@@ -249,15 +258,15 @@ and start from scratch.
 The next step is to run the optical mark recognition. This works using the
 ``recognize`` command. So from the command line again we run:
 
-<pre>
-   $ sdaps /tmp/project recognize
-   -------------------------------------------------
-   - SDAPS -- recognize
-   -------------------------------------------------
-   3 sheets
-   |#################################| 100% 00:00:02
-   0.887902 seconds per sheet
-</pre>
+``` bash
+$ sdaps /tmp/project recognize
+-------------------------------------------------
+- SDAPS -- recognize
+-------------------------------------------------
+3 sheets
+|#################################| 100% 00:00:02
+0.887902 seconds per sheet
+```
 
 This step takes longer as the recognition algorithm needs to do its work for
 each image. The progress bar shows how much time it is expected to take.
@@ -271,12 +280,12 @@ filling it out).
 
 Tocorrect any errors we can use the graphical user interface. We start it using
 
-<pre>
-   $ sdaps /tmp/project gui
-   ----------------------------------
-   - SDAPS -- gui
-   ----------------------------------
-</pre>
+``` bash
+$ sdaps /tmp/project gui
+----------------------------------
+- SDAPS -- gui
+----------------------------------
+```
 
 There is a much more [complete section]() about it. You can quickly go trough
 all images and correct any errors using the mouse. When the view is focused
@@ -290,12 +299,13 @@ amount of time to spend on this will depend on the required accuracy.
 
 To create a PDF report with the results simply run:
 
-<pre>
+```
    $ sdaps /tmp/project report
    ----------------------------------
    - SDAPS -- report
    ----------------------------------
-</pre>
+```
+```
 
 It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also
 [download the report](/static/files/example_report.pdf) that will be created
@@ -304,12 +314,13 @@ for the example data.
 Note that we can also do partial reports by using filters. Just a quick
 example (please refer to the rest of the documentation for an explanation):
 
-<pre>
+```
    $ sdaps /tmp/project report -f '_1_2_3 == 5'
    --------------------------------------------
    - SDAPS -- report
    --------------------------------------------
-</pre>
+```
+```
 
 This filters for question 1.2.3 (ease of use of LaTeX) and the rightmost
 choice "easy".
@@ -319,12 +330,13 @@ choice "easy".
 Obviously sometimes it might be necessary to feed the data into another
 program. For this the CSV export command was created:
 
-<pre>
+```
    $ sdaps /tmp/project csv export
    --------------------------------------------
    - SDAPS -- csvdata
    --------------------------------------------
-</pre>
+```
+```
 
 A file called ``data_1.csv`` will be created in the project directory.
 
@@ -352,17 +364,18 @@ For example, to create 15 questionnaires with randomized IDs you can run
 To specify non-random IDs create a file with one ID per line. It might look
 like the following. Lets call it ``ids.txt``:
 
-<pre>
-   First ID
-   Second ID
-   Some Name
-</pre>
+```
+First ID
+Second ID
+Some Name
+```
 
 Then run the stamp command, with the created file as an argument:
 
 ``$ sdaps /tmp/project stamp -f ids.txt``
 
-Both commands will create a new ``stamp_X.pdf`` file (where X is a number) which can be printed.
+Both commands will create a new ``stamp_X.pdf`` file (where X is a number)
+which can be printed.
 
 #### Global-ID
 
@@ -390,9 +403,12 @@ information for poppler to be installed.
 
 #### Reorder
 
-To try out this command we need a questionnaire that is printed on multiple pages, and unique Questionnaire-IDs.
+To try out this command we need a questionnaire that is printed on multiple
+pages, and unique Questionnaire-IDs.
 
-If the questionnaire has multiple pages it can happen that the pages get mixed before the scan happens. The "reorder" command will sort all pages so that everything is together again.
+If the questionnaire has multiple pages it can happen that the pages get
+mixed before the scan happens. The "reorder" command will sort all pages
+so that everything is together again.
 
 First identify all pages ie. read all the barcodes:
 
@@ -412,14 +428,15 @@ It is possible to use a cell phone camera image instead of a scanner. Usually
 it is a lot faster to use a feed scanner, but there may be certain cases where
 this is useful.
 
-Some example images are in
-[cellphone.tar](/static/files/cellphone.tar) or
+Some example images are in [cellphone.tar](/static/files/cellphone.tar) or
 [cellphone-2.tar](/static/files/cellphone-2.tar) (the second one is required
 if you have a newer version of the multicol package). To try it, extract the
 archive (in this example to /tmp/ and then run the following commands:
 
-``$ sdaps /tmp/project convert --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif``
-``$ sdaps /tmp/project add /tmp/out.tif``
+``` bash
+$ sdaps /tmp/project convert --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif
+$ sdaps /tmp/project add /tmp/out.tif
+```
 
 The ``--3d-transform`` is important as the SDAPS main Program only does a
 2D transformation which is not good enough for camera images (as they usually
