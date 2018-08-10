@@ -44,7 +44,7 @@ LaTeX based reports:
 
 * siunitx
 
-Import of other image formats (convert, add --convert):
+Import of other image formats (convert, add ``--convert``):
 
 * python-opencv
 * Poppler and introspection data
@@ -100,7 +100,7 @@ Required macports packages (this list is **not** complete):
 Manually installed packages:
 
 * zbar (there is a bug to get it into
-[MacPorts](https://trac.macports.org/ticket/45604)
+[MacPorts](https://trac.macports.org/ticket/45604))
 
 ## Usage
 
@@ -144,9 +144,9 @@ size of the paper using the normal LaTeX methods.
 
 ### Intializing Setup
 
-**Attention:** It is best to use the ``example.tex`` from this page and not a
+{{% warning title="Attention" %}}It is best to use the ``example.tex`` from this page and not a
 modified version! If you modify the document the example scan will not work
-later on!
+later on!{{% /warning %}}
 
 Once we are happy with the questionnaire, we can create the survey directory
 that SDAPS uses to store all the data that belongs to the project.
@@ -154,45 +154,49 @@ that SDAPS uses to store all the data that belongs to the project.
 This is the first time that we need to run an SDAPS command. The syntax for
 the command is generally the following:
 
-``$ sdaps PROJECT_DIR COMMAND [arguments]``
+```bash
+$ sdaps PROJECT_DIR COMMAND [arguments]
+```
 
 Where ``PROJECT_DIR`` is the directory for the survey, and command is the
 SDAPS command that is executed. Most commands will require some arguments.
 You can always get a help by running:
 
-``$ sdaps PROJECT_DIR COMMAND --help``
+```bash
+$ sdaps PROJECT_DIR COMMAND --help
+```
 
 So we create the project using the provided ``example.tex``. The tutorial
 assumes that the LaTeX file is in the current directory.
 
 ``` bash
-   $ sdaps /tmp/project setup_tex example.tex
-   ------------------------------------------------------------------------------
-   - SDAPS -- setup_tex
-   ------------------------------------------------------------------------------
-   Running pdflatex now twice to generate the questionnaire.
-   This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
-    restricted \write18 enabled.
-   entering extended mode
-   This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
-    restricted \write18 enabled.
-   entering extended mode
-   Running pdflatex now twice to generate the questionnaire.
-   This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
-    restricted \write18 enabled.
-   entering extended mode
-   This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
-    restricted \write18 enabled.
-   entering extended mode
-   The Title
-   Date: 10.03.2013
-   Author: The Author
-   Questionnaire
-   1(Head) Range Questions
-   1.1(Mark) How often do you use SDAPS? {1}
-           never - daily
-           0(Checkbox)  87.8  78.4   3.5   3.5
-   [SNIP]
+$ sdaps /tmp/project setup_tex example.tex
+------------------------------------------------------------------------------
+- SDAPS -- setup_tex
+------------------------------------------------------------------------------
+Running pdflatex now twice to generate the questionnaire.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+Running pdflatex now twice to generate the questionnaire.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+The Title
+Date: 10.03.2013
+Author: The Author
+Questionnaire
+1(Head) Range Questions
+1.1(Mark) How often do you use SDAPS? {1}
+        never - daily
+        0(Checkbox)  87.8  78.4   3.5   3.5
+[SNIP]
 ```
 
 Now, what does the output tell us? First the document is compiled four times.
@@ -224,7 +228,7 @@ scan them. There is a whole `scanning section`_ about this. Please have a look
 there.
 
 You scan skip this step for now and instead use the provided
-[example.tif](/static/files/example.tif>) or
+[example.tif](/static/files/example.tif) or
 [example-2.tif](/static/files/example-2.tif) file (the second one is required
 if you have a newer version of the multicol package).
 
@@ -247,10 +251,10 @@ copied into the project directory as ``1.tif``.
 
 You can repeat this step if you have multiple scans.
 
-**Attention:** Do **not** remove or modify the copied TIFF files. SDAPS
-stores information that references these files (ie. it creates a record for
-each page). If you accidentally added a file, you can recreate the project
-and start from scratch.
+{{% warning title="Attention" %}}Do **not** remove or modify the copied TIFF
+files. SDAPS stores information that references these files (ie. it creates a
+record for each page). If you accidentally added a file, you can recreate the
+project and start from scratch.{{% /warning %}}
 
 
 ### Running the optical mark recognition
@@ -299,12 +303,11 @@ amount of time to spend on this will depend on the required accuracy.
 
 To create a PDF report with the results simply run:
 
-```
-   $ sdaps /tmp/project report
-   ----------------------------------
-   - SDAPS -- report
-   ----------------------------------
-```
+``` bash
+$ sdaps /tmp/project report
+----------------------------------
+- SDAPS -- report
+----------------------------------
 ```
 
 It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also
@@ -314,12 +317,11 @@ for the example data.
 Note that we can also do partial reports by using filters. Just a quick
 example (please refer to the rest of the documentation for an explanation):
 
-```
-   $ sdaps /tmp/project report -f '_1_2_3 == 5'
-   --------------------------------------------
-   - SDAPS -- report
-   --------------------------------------------
-```
+``` bash
+$ sdaps /tmp/project report -f '_1_2_3 == 5'
+--------------------------------------------
+- SDAPS -- report
+--------------------------------------------
 ```
 
 This filters for question 1.2.3 (ease of use of LaTeX) and the rightmost
@@ -330,12 +332,11 @@ choice "easy".
 Obviously sometimes it might be necessary to feed the data into another
 program. For this the CSV export command was created:
 
-```
-   $ sdaps /tmp/project csv export
-   --------------------------------------------
-   - SDAPS -- csvdata
-   --------------------------------------------
-```
+``` bash
+$ sdaps /tmp/project csv export
+--------------------------------------------
+- SDAPS -- csvdata
+--------------------------------------------
 ```
 
 A file called ``data_1.csv`` will be created in the project directory.
@@ -359,12 +360,14 @@ choice of either creating numeric random IDs, or supplying a set of IDs
 
 For example, to create 15 questionnaires with randomized IDs you can run
 
-``$ sdaps /tmp/project stamp -r 15``
+``` bash
+$ sdaps /tmp/project stamp -r 15
+```
 
 To specify non-random IDs create a file with one ID per line. It might look
 like the following. Lets call it ``ids.txt``:
 
-```
+``` plaintext
 First ID
 Second ID
 Some Name
@@ -372,7 +375,9 @@ Some Name
 
 Then run the stamp command, with the created file as an argument:
 
-``$ sdaps /tmp/project stamp -f ids.txt``
+``` bash
+$ sdaps /tmp/project stamp -f ids.txt
+```
 
 Both commands will create a new ``stamp_X.pdf`` file (where X is a number)
 which can be printed.
@@ -393,13 +398,16 @@ questionnaire in different lectures. You could encode the lecture in the
 As mentioned before, you can create a PDF to see if the values read from the
 designed questionnaire are all correct (checkbox positions, etc.). To use run:
 
-``$ sdaps /tmp/project annotate``
+``` bash
+$ sdaps /tmp/project annotate
+```
 
 The file ``annotated_questionnaire.pdf`` is created. Might be a bit ugly,
 but one can easily check that everything is good.
 
-**Attention:** This command requires the GObject Introspection binding
-information for poppler to be installed.
+{{% warning title="Attention" %}}This command requires the GObject
+Introspection binding information for poppler to be installed.
+{{% /warning %}}
 
 #### Reorder
 
@@ -412,15 +420,21 @@ so that everything is together again.
 
 First identify all pages ie. read all the barcodes:
 
-``$ sdaps /tmp/project recognize --identify``
+```bash
+$ sdaps /tmp/project recognize --identify
+```
 
 Then reorder the pages:
 
-``$ sdaps /tmp/project reorder``
+```bash
+$ sdaps /tmp/project reorder
+```
 
 And when that is done you can do the normal "recognize" step:
 
-``$ sdaps /tmp/project recognize``
+```bash
+$ sdaps /tmp/project recognize
+```
 
 #### Using a camera for input
 
@@ -444,14 +458,18 @@ will not be taken exactly from above).
 
 After this, the normal recognize step is done.
 
-**Attention:** This only works if the tolerance is large enough. You need
-a version above 1.1.4 or git, or you have to modify ``defs.py`` and change
-the value of ``corner_mark_min_length`` to something smaller (e.g. 15).
+{{% warning title="Attention" %}}This only works if the tolerance is large
+enough. You need a version above 1.1.4 or git, or you have to modify
+``defs.py`` and change the value of ``corner_mark_min_length`` to
+something smaller (e.g. 15).{{% /warning %}}
 
 ### LaTeX based report
 
 You can create a report that is rendered using LaTeX.
 
-``$ sdaps /tmp/project report_tex``
+```bash
+$ sdaps /tmp/project report_tex
+```
 
-**Attention:** This command requires the siunitx LaTeX package to work properly.
+{{% warning title="Attention" %}}This command requires the siunitx LaTeX
+package to work properly.{{% /warning %}}
