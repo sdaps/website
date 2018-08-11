@@ -1,6 +1,11 @@
 ---
-title: Documentation
+title: Overview
 layout: single
+menu:
+  main:
+    parent: Documentation
+    identifier: docs_main
+    weight: 10
 ---
 
 ## Interface
@@ -17,21 +22,16 @@ any string, it just needs to be there as SDAPS expects a path to a project
 directory.
 
 ### Important Commands
-
-* **setup** or **setup_tex**: Creates a new project directory for the given
-questionnaire
-* **stamp**: Create printable PDF
-* **add**: Adds scanned image data. From version 1.1.7 onwards SDAPS will
-automatically convert files to the appropriate format if the ``--convert``
-option is given. Only use this option if the scan is not already in the
-appropriate format for SDAPS (monochrome multipage tiff). See also [Scanning]().
-* **recognize**: Runs the optical mark recognition
-* **reorder**: Group pages using their (unique) questionnaire ID. (ie. fix
-order after pages have been mixed up)
-* [gui](): Starts a graphical user interface that can be used to correct
-errors in the automatic recognition.
-* **report** (and **report_tex**): Creates a report of the results as PDF.
-* **csv**: Can be used to export the data to a CSV file.
+Commands                   | Explanation
+---------------------------|-------------------------------------
+**setup** or **setup_tex** | Creates a new project directory for the given questionnaire
+**stamp**                  | Create printable PDF
+**add**                    | Adds scanned image data. From version 1.1.7 onwards SDAPS will automatically convert files to the appropriate format if the ``--convert`` option is given. Only use this option if the scan is not already in the appropriate format for SDAPS (monochrome multipage tiff). See also [Scanning]().
+**recognize**              | Runs the optical mark recognition
+**reorder**                | Group pages using their (unique) questionnaire ID. (ie. fix order after pages have been mixed up)
+[gui](/doc_gui)            | Starts a graphical user interface that can be used to correct errors in the automatic recognition.
+**report** (and **report_tex**)| Creates a report of the results as PDF.
+**csv**                    | Can be used to export the data to a CSV file.
 
 ### Filtering
 Some commands can work only on a subset of the data (eg. report, csv export).
@@ -269,4 +269,3 @@ How it is generated (md5 sum of: checkbox position, paper size, ...).
 The only change is that two steps are inserted before the normal recognize
 step. The first is the ``recognize --identify`` command, and the second the
 reorder command which correctly reorders the data.
-

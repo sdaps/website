@@ -44,7 +44,6 @@ canonifyurls = true
 
 [[menu.main]]
 	name   = "Documentation"
-	url    = "documentation/"
 	weight = 40
 
 [[menu.main]]
