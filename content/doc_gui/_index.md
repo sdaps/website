@@ -12,7 +12,7 @@ menu:
 
 The graphical user interface is a GTK+ program that can be used to manually correct errors.
 
-![](/static/files/screenshot.png)
+![](/files/screenshot.png)
 
 Getting started
 ---------------

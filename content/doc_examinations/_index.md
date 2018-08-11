@@ -213,8 +213,8 @@ to create the PDF which is already used for other purposes inside SDAPS
 (e.g. the GUI).
 
 One example of a script can be found in the distribution. A slightly more
-advanced version is also [attached here](/static/files/sdaps-overlay.py).
-And the [generated example document](/static/files/overlay-0001.pdf).
+advanced version is also [attached here](/files/sdaps-overlay.py).
+And the [generated example document](/files/overlay-0001.pdf).
 
 Note that SDAPS does not have any way of knowing the grading mode. So this
 would need to be fed to the script in some other way (the example just has

@@ -125,8 +125,8 @@ The first step to conduct a survey is to design the questionnaire itself.
 You'll need to take some time to first figure out what questions to ask
 before designing the questionnaire.
 
-We are going to use this [example questionnaire](/static/files/example.tex)
-[PDF Version](/static/files/example.pdf) here. If you would like to play
+We are going to use this [example questionnaire](/files/example.tex)
+[PDF Version](/files/example.pdf) here. If you would like to play
 around a bit with it, you can compile the LaTeX document yourself. Note
 that you need to copy the SDAPS-LaTeX data into the directory before doing
 that. It lives in the ``tex`` Directory of the source code or in
@@ -211,7 +211,7 @@ view of everything.
 ### Printing
 
 After the setup of the example we now have a
-[questionnaire.pdf](/static/files/questionnaire.pdf) in the project directory
+[questionnaire.pdf](/files/questionnaire.pdf) in the project directory
 that can be printed. This depends on the setup of the survey (done using the
 documentclass options in the LaTeX document). If we make each printout unique
 using a "Questionnaire-ID" then we would need to use the "stamp" command to
@@ -228,8 +228,8 @@ scan them. There is a whole `scanning section`_ about this. Please have a look
 there.
 
 You scan skip this step for now and instead use the provided
-[example.tif](/static/files/example.tif) or
-[example-2.tif](/static/files/example-2.tif) file (the second one is required
+[example.tif](/files/example.tif) or
+[example-2.tif](/files/example-2.tif) file (the second one is required
 if you have a newer version of the multicol package).
 
 ### Add the images to the project
@@ -311,7 +311,7 @@ $ sdaps /tmp/project report
 ```
 
 It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also
-[download the report](/static/files/example_report.pdf) that will be created
+[download the report](/files/example_report.pdf) that will be created
 for the example data.
 
 Note that we can also do partial reports by using filters. Just a quick
@@ -442,8 +442,8 @@ It is possible to use a cell phone camera image instead of a scanner. Usually
 it is a lot faster to use a feed scanner, but there may be certain cases where
 this is useful.
 
-Some example images are in [cellphone.tar](/static/files/cellphone.tar) or
-[cellphone-2.tar](/static/files/cellphone-2.tar) (the second one is required
+Some example images are in [cellphone.tar](/files/cellphone.tar) or
+[cellphone-2.tar](/files/cellphone-2.tar) (the second one is required
 if you have a newer version of the multicol package). To try it, extract the
 archive (in this example to /tmp/ and then run the following commands:
 

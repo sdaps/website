@@ -26,7 +26,7 @@ A collection of examples can be found here.
 ### Basic Example
 
 The following example does not show all features, but can give an impression of
-how it all works. And the [resulting PDF](/static/file/latex_example.pdf)
+how it all works. And the [resulting PDF](/file/latex_example.pdf)
 
 ``` latex
 \documentclass[draft,english,pdf,pagemark,stamp]{sdaps}
