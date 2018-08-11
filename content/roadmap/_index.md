@@ -73,44 +73,44 @@ A collection of examples can be found here.
 The following example does not show all features, but can give an impression of
 how it all works. And the [resulting PDF](/static/file/example.pdf)
 
-<pre>
-   \documentclass[draft,english,pdf,pagemark,stamp]{sdaps}
-   \usepackage[utf8]{inputenc}
+``` latex
+\documentclass[draft,english,pdf,pagemark,stamp]{sdaps}
+\usepackage[utf8]{inputenc}
 
-   \author{The Author}
-   \title{The Title}
+\author{The Author}
+\title{The Title}
 
-   \begin{document}
-     \begin{questionnaire}
-       \begin{info}
-         Some information here. Nothing special, just adds a line above/below.
-       \end{info}
+\begin{document}
+  \begin{questionnaire}
+    \begin{info}
+      Some information here. Nothing special, just adds a line above/below.
+    \end{info}
 
-       \section{Section Heading}
+    \section{Section Heading}
 
-       \begin{markgroup}{This is a group of mark questions}
-         \markline{first}{lower bound}{upper bound}
-         \markline{second}{lower bound}{upper bound}
-       \end{markgroup}
+    \begin{markgroup}{This is a group of mark questions}
+      \markline{first}{lower bound}{upper bound}
+      \markline{second}{lower bound}{upper bound}
+    \end{markgroup}
 
-       \singlemark{Mark Question}{lower bound}{upper bound}
+    \singlemark{Mark Question}{lower bound}{upper bound}
 
-       \section{Section Heading}
+    \section{Section Heading}
 
-       \begin{choicequestion}[4]{Some choices}
-         \choiceitem{first}
-         \choiceitem{second}
-         \choiceitem{third}
-         \choiceitem{fourth}
-         \choicemulticolitem{2}{one with a very long text}
-         \choiceitemtext{1.2cm}{2}{Other:}
-       \end{choicequestion}
+    \begin{choicequestion}[4]{Some choices}
+      \choiceitem{first}
+      \choiceitem{second}
+      \choiceitem{third}
+      \choiceitem{fourth}
+      \choicemulticolitem{2}{one with a very long text}
+      \choiceitemtext{1.2cm}{2}{Other:}
+    \end{choicequestion}
 
-       \textbox{5cm}{A Textbox}
+    \textbox{5cm}{A Textbox}
 
-     \end{questionnaire}
-   \end{document}
-</pre>
+  \end{questionnaire}
+\end{document}
+```
 
 ### Getting Started
 
@@ -129,19 +129,17 @@ subdirectory.
 There are a number of options (SDAPS and standard LaTeX) that affect how
 SDAPS works. The following table lists these options.
 
-====================== ============ ==
-Option(s)              Default      Note
-====================== ============ ==
-a4paper,letterpaper,…               Select paper size, normal LaTeX mechanism. Note that the default A4 paper size has a slightly different size than specifying "a4paper" (it is impossible to see, but SDAPS sees this as a form change).
-globalid=STRING        empty        The global ID. This string is written into a barcode at the bottom center. When the project is generated you can also change this by modifying the ``info`` file and running ``stamp``.<<BR>>The purpose of this barcode is user defined.
-print_questionnaire_id not set      If specified then a unique Questionnaire-ID is printed on each questionnaire. This ID can be either random or user defined. This can be useful for non-anonymous surveys or for questionnaires with a lot of pages and you want to use the ``reorder`` command.
-oneside,twoside        twoside      Select simplex or duplex, normal LaTeX mechanism. When selected the barcodes are printed on every page, and you can print the survey in simplex mode. Note that SDAPS assumes a simplex scan, if you scan duplex (scanning an empty page for every page of the questionnaire) then you need to specify the ``--duplex`` option when ``add`` ing the image to the project.
-checkmode              checkcorrect Select the mode for checkboxes. This can be either ``checkcorrect`` meaning check is selected, filled is again unselected. ``check`` meaning a check selects the box and unselecting is not possible and ``fill`` requiring a proper fill to select a box.
-style=STRING           code128      Select the style to use. May be ``code128``, ``qr``, ``classic``, or ``custom`` (if you really know what you are doing)
-no_print_survey_id     not set      Only works in ``classic`` mode. In that case you get marks in every corner identifying the page and its rotation. No further code is added.
-pagemark               not set      Specify to see corner marks. Always set this option for a more accurate preview.
-stamp                  not set      Specify to see barcodes. Always set this option for a more accurate preview.
-====================== ============ ==
+Option(s)             | Default     | Note
+----------------------|-------------|---------------------------
+a4paper,letterpaper,… |             | Select paper size, normal LaTeX mechanism. Note that the default A4 paper size has a slightly different size than specifying "a4paper" (it is impossible to see, but SDAPS sees this as a form change).
+globalid=STRING       | empty       | The global ID. This string is written into a barcode at the bottom center. When the project is generated you can also change this by modifying the ``info`` file and running ``stamp``.<<BR>>The purpose of this barcode is user defined.
+print_questionnaire_id| not set     | If specified then a unique Questionnaire-ID is printed on each questionnaire. This ID can be either random or user defined. This can be useful for non-anonymous surveys or for questionnaires with a lot of pages and you want to use the ``reorder`` command.
+oneside,twoside       | twoside     | Select simplex or duplex, normal LaTeX mechanism. When selected the barcodes are printed on every page, and you can print the survey in simplex mode. Note that SDAPS assumes a simplex scan, if you scan duplex (scanning an empty page for every page of the questionnaire) then you need to specify the ``--duplex`` option when ``add`` ing the image to the project.
+checkmode             | checkcorrect| Select the mode for checkboxes. This can be either ``checkcorrect`` meaning check is selected, filled is again unselected. ``check`` meaning a check selects the box and unselecting is not possible and ``fill`` requiring a proper fill to select a box.
+style=STRING          | code128     | Select the style to use. May be ``code128``, ``qr``, ``classic``, or ``custom`` (if you really know what you are doing)
+no_print_survey_id    | not set     | Only works in ``classic`` mode. In that case you get marks in every corner identifying the page and its rotation. No further code is added.
+pagemark              | not set     | Specify to see corner marks. Always set this option for a more accurate preview.
+stamp                 | not set     | Specify to see barcodes. Always set this option for a more accurate preview.
 
 
 The options ``print_survey_id``, ``print_questionnaire_id`` both have their
