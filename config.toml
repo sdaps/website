@@ -43,18 +43,23 @@ canonifyurls = true
 	weight = 30
 
 [[menu.main]]
-	name   = "Documentation"
+	name   = "News"
+	url    = "news/"
 	weight = 40
+
+[[menu.main]]
+	name   = "Documentation"
+	weight = 50
 
 [[menu.main]]
 	name   = "Used by"
 	url    = "used-by/"
-	weight = 50
+	weight = 60
 
 [[menu.main]]
 	name   = "Roadmap"
 	url    = "roadmap/"
-	weight = 60
+	weight = 70
 
 [[menu.main]]
 	name   = "Imprint"
