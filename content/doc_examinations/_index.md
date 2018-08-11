@@ -45,10 +45,10 @@ In general there are different ways to identify students:
   using the SDAPS GUI.
   * Use a matrix of choice questions to ask for a student ID digit by digit
 * Field to place a barcode sticker, and hand out barcodes separately
-(not implemented, see [issue #2](https://github.com/sdaps/sdaps/issues/2)
+(not implemented, see [issue #2](https://github.com/sdaps/sdaps/issues/2)).
 * Use a student specific Questionnaire-ID. If you want to, use a hack to
 print e.g. the students name to other places on the paper (see
-[issue #11](https://github.com/sdaps/sdaps/issues/11).
+[issue #11](https://github.com/sdaps/sdaps/issues/11)).
 
 ### Freeform Text Field
 
@@ -159,7 +159,7 @@ $ sdaps PROJECT stamp -f STUDENT_IDS
 where STUDENT_IDS is a file containing the barcode value for each student.
 
 If you want to put the student name somewhere else on the paper, then
-please have a look at [issue #11]() (if anyone has a nicer example,
+please have a look at [issue #11](https://github.com/sdaps/sdaps/issues/2) (if anyone has a nicer example,
 please post it here!).
 
 ## Checkbox recognition mode
