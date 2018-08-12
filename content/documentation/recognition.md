@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: recognition
     weight: 30
+    pre: <i class="fas fa-expand"></i>
 ---
 
 Some notes about how SDAPS handles the recognition part.

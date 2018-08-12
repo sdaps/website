@@ -54,7 +54,9 @@ canonifyurls = true
 	weight = 40
 
 [[menu.main]]
+	pre    = "<i class='fas fa-book'></i>"
 	name   = "Documentation"
+	url	   = "documentation/"
 	weight = 50
 
 [[menu.main]]
@@ -72,6 +74,7 @@ canonifyurls = true
 [[menu.main]]
 	name   = "Imprint"
 	url    = "imprint/"
+	pre    = "<i class='far fa-address-card'></i>"
 	weight = 200
 
 [blackfriday]

@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: latex
     weight: 50
+    pre: <i class="far fa-file-code"></i>
 ---
 
 With the LaTeX support SDAPS provides an easy way to build questionnaires.
