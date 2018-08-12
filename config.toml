@@ -19,6 +19,8 @@ canonifyurls = true
 	logo = "images/logo.png"
 	favicon = ""
 
+    custom_css = ['fa/css/all.css']
+
 	[params.palette]
     	primary = "teal"
     	accent  = "blue-grey"
@@ -28,22 +30,26 @@ canonifyurls = true
     email = "benjamin@sipsolutions.net"
 
 [[menu.main]]
+	pre    = "<i class='fas fa-sticky-note'></i> "
     name   = "Overview"
     url    = "/"
     weight = 10
 
 [[menu.main]]
-	name   = "Getting started"
+    pre    = "<i class='fas fa-clipboard-list'></i> "
+    name   = "Getting started"
 	url    = "getting-started/"
 	weight = 20
 
 [[menu.main]]
+    pre    = "<i class='fas fa-users'></i> "
 	name   = "Contribute"
 	url    = "contribute/"
 	weight = 30
 
 [[menu.main]]
-	name   = "News"
+	pre    = "<i class='fas fa-newspaper'></i> "
+    name   = "News"
 	url    = "news/"
 	weight = 40
 
@@ -52,11 +58,13 @@ canonifyurls = true
 	weight = 50
 
 [[menu.main]]
+	pre	   = "<i class='fas fa-handshake'></i> "
 	name   = "Used by"
 	url    = "used-by/"
 	weight = 60
 
 [[menu.main]]
+	pre	   = "<i class='fas fa-bullseye'></i> "
 	name   = "Roadmap"
 	url    = "roadmap/"
 	weight = 70
