@@ -1,0 +1,73 @@
+baseURL = "http://sdaps.org/"
+languageCode = "en-us"
+title = "SDAPS"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+
+[params]
+	# General information
+	author = "Benjamin Berg"
+	description = "Scripts for data acquisition with paper-based surveys."
+	copyright = "Released under GPLv3+/LPPLv1.3c+"
+
+	# Repository
+	provider = "GitHub"
+	repo_url = "https://github.com/sdaps/sdaps"
+
+	version = "1.9.2"
+	logo = "images/logo.png"
+	favicon = ""
+
+	[params.palette]
+    	primary = "teal"
+    	accent  = "blue-grey"
+
+[social]
+	github  = "sdaps"
+    email = "benjamin@sipsolutions.net"
+
+[[menu.main]]
+    name   = "Overview"
+    url    = "/"
+    weight = 10
+
+[[menu.main]]
+	name   = "Getting started"
+	url    = "getting-started/"
+	weight = 20
+
+[[menu.main]]
+	name   = "Contribute"
+	url    = "contribute/"
+	weight = 30
+
+[[menu.main]]
+	name   = "News"
+	url    = "news/"
+	weight = 40
+
+[[menu.main]]
+	name   = "Documentation"
+	weight = 50
+
+[[menu.main]]
+	name   = "Used by"
+	url    = "used-by/"
+	weight = 60
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 70
+
+[[menu.main]]
+	name   = "Imprint"
+	url    = "imprint/"
+	weight = 200
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+    plainIDAnchors = true
