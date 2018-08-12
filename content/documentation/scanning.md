@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: scanning
     weight: 30
+    pre: <i class="fas fa-barcode"></i>
 ---
 
 ## Scanning for SDAPS

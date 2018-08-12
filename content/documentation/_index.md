@@ -1,11 +1,6 @@
 ---
 title: Introduction
 layout: single
-menu:
-  main:
-    parent: Documentation
-    identifier: introduction
-    weight: 10
 ---
 
 ## Interface

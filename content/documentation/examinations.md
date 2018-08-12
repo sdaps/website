@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: examinations
     weight: 30
+    pre: <i class="fas fa-search"></i>
 ---
 
 ## Examinations using SDAPS

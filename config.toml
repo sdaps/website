@@ -16,7 +16,7 @@ canonifyurls = true
 	repo_url = "https://github.com/sdaps/sdaps"
 
 	version = "1.9.2"
-	logo = "images/logo.png"
+	logo = "images/sdaps.png"
 	favicon = ""
 
     custom_css = ['fa/css/all.css']
@@ -54,7 +54,9 @@ canonifyurls = true
 	weight = 40
 
 [[menu.main]]
+	pre    = "<i class='fas fa-book'></i>"
 	name   = "Documentation"
+	url	   = "documentation/"
 	weight = 50
 
 [[menu.main]]
@@ -72,6 +74,7 @@ canonifyurls = true
 [[menu.main]]
 	name   = "Imprint"
 	url    = "imprint/"
+	pre    = "<i class='far fa-address-card'></i>"
 	weight = 200
 
 [blackfriday]
