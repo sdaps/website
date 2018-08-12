@@ -17,7 +17,7 @@ canonifyurls = true
 
 	version = "1.9.2"
 	logo = "images/sdaps.png"
-	favicon = ""
+	favicon = "images/sdaps.svg"
 
     custom_css = ['fa/css/all.css']
 
