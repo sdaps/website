@@ -294,6 +294,5 @@ groupoddrowcolor | white  | The background color for odd rows in group environme
 
 Feel free to add more examples to this page.
 
-* The example from the [Tutorial](/getting-started#Usage). This example uses most features that SDAPS has.
-* [Test document in german]
-(http://git.sipsolutions.net/gitweb.cgi?p=sdaps.git;a=blob;f=test/data/tex/questionnaire_with_ids.tex;hb=HEAD).
+* The example from the [Tutorial](/getting-started#usage). This example uses most features that SDAPS has.
+* [Test document in german](https://raw.githubusercontent.com/sdaps/sdaps/bea1fab37408f5b4392b3d58d969b6641b6bca04/test/data/tex/questionnaire_with_ids.tex)

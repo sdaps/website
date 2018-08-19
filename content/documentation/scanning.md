@@ -103,7 +103,7 @@ code, but it should work fine under most conditions.
 $ sdaps PROJECT convert input_file1.jpg input_file2.jpg [...] -o output.tif
 ```
 
-To enable de-skew, add the ``'--3d-transform'`` option.
+To enable de-skew, add the ``--3d-transform`` option.
 
 ``` bash
 $ sdaps PROJECT convert --3d-transform input_file1.jpg input_file2.jpg [...] -o output.tif

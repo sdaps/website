@@ -31,15 +31,16 @@ faculties and campus wide.
 
 ![](/files/ufc.png)
 
-The TU Dortmund has a Uni-Film-Club, that uses sdpads for customer evaluation
+The TU Dortmund has a Uni-Film-Club, that uses sdaps for customer evaluation
 of what to improve in the coming semester.
 
 ## Netherlands
 
 ![](/files/uva-logo_en.jpg)
 
-The Faculty of Science at the [University of Amsterdam](http://www.uva.nl/en/about-the-uva/organisation/faculties/faculties/faculties/content/folder/faculteit-der-natuurwetenschappen-wiskunde-en-informatica/faculty-of-science.html) is (as of 2014)
-using it automatically correct multiple choice examinations.
+The Faculty of Science at the
+[University of Amsterdam](http://www.uva.nl/en/about-the-uva/organisation/faculties/faculties/faculties/content/folder/faculteit-der-natuurwetenschappen-wiskunde-en-informatica/faculty-of-science.html)
+is (as of 2014) using it automatically correct multiple choice examinations.
 
 ## Spain
 
@@ -53,5 +54,5 @@ for investigation purposes (automatic survey processing).
 ![](/files/gptools.gif)
 
 GPTools uses SDAPS to help general practitioners
-[receive patient feedback](https://www.gptools.org/feedback.html) for
+[receive patient feedback](https://www.gptools.org/feedback_template.html) for
 revalidation purposes.
