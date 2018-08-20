@@ -62,7 +62,7 @@ definitions), you can modify ``defs.py`` in the source directory.
 For example, if you would like to consider any box that has markings in it
 as "checked" you could put there
 
-``` latex
+```python
 checkbox_metrics['coverage'] = \
   [(0, 0, 1.0), (0.02, 0, 0.9), (0.03, 0, 0.5), (0.03, 1, 0.5),
     (0.09, 1, 1.0), (0.4, 1, 1.0), (1.0, 1, 1.0)]

@@ -145,7 +145,7 @@ macros inside to query the size.
 This is quite a hack, but it should work fine (just copy it into the header,
 and use the command directly after a ``\textbox``).
 
-``` latex
+``` tex
 \makeatletter
 \newcommand{\makenodeinlasttextbox}[1]{%
   \begin{tikzpicture}[remember picture, overlay]%
@@ -161,7 +161,7 @@ and use the command directly after a ``\textbox``).
 
 Use the macro to put content into the textbox:
 
-``` latex
+``` tex
 \textbox*{6cm}{Some textbox}
 \makenodeinlasttextbox{This will appear inside the textbox.}
 ```

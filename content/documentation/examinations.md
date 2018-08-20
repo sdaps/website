@@ -60,12 +60,12 @@ However, you need to manually transcribe the ID at a later point
 
 LaTeX code might look like
 
-```latex
+```tex
 \textbox*{2cm}{Enter your student ID below.}
 ```
 or (requires unstable release)
 
-``` latex
+``` tex
 \begin{choicequestion}[1]{}
    \choiceitemtext{1.2cm}{1}{Student ID:}
 \end{choicequestion}
@@ -85,7 +85,7 @@ checkbox.
 
 The choiceitem way might look like:
 
-``` latex
+``` tex
 \begin{choicegroup}{Please write your student ID into the $\sqcup$
 and check the corresponding cross.\\ \textbf{Only check one box in each
 column.}}
@@ -113,7 +113,7 @@ column.}}
 
 The range way (note that we can't put headers with the digit on top):
 
-``` latex
+``` tex
 \setcounter{markcheckboxcount}{10}
 \begin{markgroup}{Please write your student ID into the $\sqcup$
 and check the corresponding cross.\\ \textbf{Only check one box in each
