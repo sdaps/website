@@ -23,11 +23,15 @@ canonifyurls = true
 
 	[params.palette]
     	primary = "teal"
-    	accent  = "blue-grey"
+    	accent  = "orange"
 
 [social]
 	github  = "sdaps"
     email = "benjamin@sipsolutions.net"
+    matrix = "https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org"
+    irc = "freenode.net/sdaps"
+    mailinglist = "https://dir.gmane.org/gmane.comp.statistics.sdaps"
+
 
 [[menu.main]]
 	pre    = "<i class='fas fa-sticky-note'></i> "

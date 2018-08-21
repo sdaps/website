@@ -4,9 +4,16 @@ type: index
 layout: single
 ---
 
-
 SDAPS is an open source (GPLv3, LPPL) optical mark recognition (OMR) program.
 It is written in python and has an integrated workflow with LaTeX to create questionnaires.
+
+<center>
+Watch the presentation at FrOSCon 2015 to get to know sdaps more (does of
+course not include the latest novelties):
+[![](files/video_froscon15_thumb.png)](https://media.ccc.de/v/froscon2015-1606-sdaps)
+{{% button href="/getting-started/#dependencies" icon="fas fa-exclamation" %}}Install{{% /button %}} {{% button icon="fas fa-pen" href="/getting-started/#usage" %}}Usage{{% /button %}} {{% button icon="fas fa-brush" href="/documentation/gui" %}}Screenshots{{% /button %}} {{% button icon="fas fa-hashtag" href="/contribute" %}}Community{{% /button %}}
+</center>
+
 
 ![SDAPS Overview](/files/sdaps.png")
 
@@ -74,8 +81,8 @@ with "code128" and "qr" style)
 
 
 ## Similar Tools
-{{% note title="TEST" %}}
-Some similar free software projects in no specific order:
+{{% note title="Other like-minded free software projects" %}}
+In no specific order:
 
 * [Auto Multiple Choice](http://auto-multiple-choice.net/) (Perl, supports randomized forms, optimized for
 examinations)
