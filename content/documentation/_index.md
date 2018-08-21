@@ -1,11 +1,6 @@
 ---
 title: Introduction
 layout: single
-menu:
-  main:
-    parent: Documentation
-    identifier: introduction
-    weight: 10
 ---
 
 ## Interface
@@ -29,7 +24,7 @@ Commands                   | Explanation
 **add**                    | Adds scanned image data. From version 1.1.7 onwards SDAPS will automatically convert files to the appropriate format if the ``--convert`` option is given. Only use this option if the scan is not already in the appropriate format for SDAPS (monochrome multipage tiff). See also [Scanning]().
 **recognize**              | Runs the optical mark recognition
 **reorder**                | Group pages using their (unique) questionnaire ID. (ie. fix order after pages have been mixed up)
-[gui](/doc_gui)            | Starts a graphical user interface that can be used to correct errors in the automatic recognition.
+[gui](/documentation/gui)            | Starts a graphical user interface that can be used to correct errors in the automatic recognition.
 **report** (and **report_tex**)| Creates a report of the results as PDF.
 **csv**                    | Can be used to export the data to a CSV file.
 
@@ -69,8 +64,9 @@ Other variables that can be queried
 sheet. (new since 1.1.2)
 
 Example call of the "report" command:
-``$ sdaps some_project report --filter "(0 in _1_2 or _2_1 == 1) and
-global_id=='some name'"``
+``` bash
+$ sdaps some_project report --filter "(0 in _1_2 or _2_1 == 1) and global_id=='some name'"
+```
 
 ## SDAPS Project Directory
 
@@ -103,12 +99,9 @@ means using ``\immediate\write\sdapsoutfile{\unexpanded{STRING}}``. Have a
 look at the generated ``.sdaps`` file and the LaTeX class. You'll need to
 write out the questions and enough answers for the checkboxes.
 
-There is a `small example document
-<custom.tex>`__ with the
-`resulting questionnaire
-<custom.pdf>`__ and
-`a document with the metadata that SDAPS detected overlayed
-<custom_annotated.pdf>`__.
+There is a [small example document](/files/custom.tex) with the
+[resulting questionnaire](/files/custom.pdf) and
+[a document with the metadata that SDAPS detected overlayed](/files/custom_annotated.pdf).
 
 Tip: You can visually check the assignment of checkboxes to answers/questions
 using the  ``annotate`` command. Alternatively read the output of the
@@ -152,26 +145,26 @@ macros inside to query the size.
 This is quite a hack, but it should work fine (just copy it into the header,
 and use the command directly after a ``\textbox``).
 
-<pre>
-   \makeatletter
-   \newcommand{\makenodeinlasttextbox}[1]{%
-     \begin{tikzpicture}[remember picture, overlay]%
-       \setlength\textheight{\@sdaps@height}
-       \advance\textheight by -2pt
-       \node[outer sep=1pt, inner sep=0pt, align=center, text width=\@sdaps@width-2pt, minimum height=\textheight, shift={($(\@sdaps@x,\@sdaps@y) + 0.5*(\@sdaps@width, -\@sdaps@height)$)}, anchor=center] at (current page.south west) {%
-         #1%
-       };
-     \end{tikzpicture}
-   }
-   \makeatother
-</pre>
+``` tex
+\makeatletter
+\newcommand{\makenodeinlasttextbox}[1]{%
+  \begin{tikzpicture}[remember picture, overlay]%
+    \setlength\textheight{\@sdaps@height}
+    \advance\textheight by -2pt
+    \node[outer sep=1pt, inner sep=0pt, align=center, text width=\@sdaps@width-2pt, minimum height=\textheight, shift={($(\@sdaps@x,\@sdaps@y) + 0.5*(\@sdaps@width, -\@sdaps@height)$)}, anchor=center] at (current page.south west) {%
+      #1%
+    };
+  \end{tikzpicture}
+}
+\makeatother
+```
 
 Use the macro to put content into the textbox:
 
-<pre>
-   \textbox*{6cm}{Some textbox}
-   \makenodeinlasttextbox{This will appear inside the textbox.}
-</pre>
+``` tex
+\textbox*{6cm}{Some textbox}
+\makenodeinlasttextbox{This will appear inside the textbox.}
+```
 
 **Attention:** If you use questionnaire IDs and would like to stamp multiple
 questionnaires at a time, then the above code does not work as is. We need to
@@ -179,30 +172,29 @@ layer another hack around it.  This is because the class tries to conserve
 memory and breaks the hack at the same time. We need to enable output again,
 which needs two steps unfortunately. A new command[3.]:
 
-<pre>
-   \makeatletter
-   \let\enableoutput\@sdaps@outputtrue
-   \makeatother
-</pre>
+```
+\makeatletter
+\let\enableoutput\@sdaps@outputtrue
+\makeatother
+```
 
 And then use this command to enable the output again. Best to put it all into
 braces, so that it will not be enabled for all the other boxes (especially all
 the checkboxes)
 
-<pre>
-   {
-     \enableoutput
-     \textbox*{6cm}{Some textbox}
-     \makenodeinlasttextbox{This will appear inside the textbox.}
-   }
-</pre>
+```
+{
+  \enableoutput
+  \textbox*{6cm}{Some textbox}
+  \makenodeinlasttextbox{This will appear inside the textbox.}
+}
+```
 
 ### FAQ-Footnotes
 
 1. The only exception is when e.g. a LaTeX package you use is upgraded and changes the layout. But that is the intended behavior as the questionnaire '''has''' changed in that case.
 2. Actually, the next major release of SDAPS will natively support this. See
-       `Future/LaTeX
-       </Future/LaTeX/>`__ and the linked resources for details.
+       [Roadmap (LaTeX)](/roadmap/#new-improved-latex-class) and the linked resources for details
 3. This is required to as the parser cannot be reconfigured inside the questionnaire environment.
 
 

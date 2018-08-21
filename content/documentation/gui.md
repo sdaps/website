@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: gui
     weight: 30
+    pre: <i class="fas fa-desktop"></i>
 ---
 
 ## Graphical User Interface for manual corrections

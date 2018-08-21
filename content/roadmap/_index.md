@@ -101,7 +101,7 @@ Layout options:
 
 #### <u>Choice</u>
 
-``` latex
+``` tex
 \choice[options]{label}
 ```
 
@@ -112,7 +112,7 @@ Argument       | Meaning
 
 #### <u>Option</u>
 
-``` latex
+``` tex
 \option[options]{label}
 ```
 
@@ -126,7 +126,7 @@ Argument       | Meaning
 
 #### <u>Range</u>
 
-``` latex
+``` tex
 \rangelower{lower bound header}
 [...]
 \rangeupper{upper bound header}
@@ -138,7 +138,7 @@ not part of the range.
 
 ### Questions
 
-```latex
+``` tex
 \question[var=string,text=blubber]{question text}
 
 \question[var=string,text=blubber,range lower=blub,range upper=bluber]{question text}{lower label}{upper label}
@@ -185,7 +185,7 @@ Argument      | Meaning
 
 Examples follow here in a bit.
 
-``` latex
+``` tex
 \begin{choicearray}[horizontal,var=tool]{Which of these tool do you think is appropriate for the following tasks (multiple answers are allowed)}
   \choice[var=latex,text=LaTeX]{\LaTeX}
   \choice[var=lo]{LibreOffice}
@@ -198,7 +198,7 @@ Examples follow here in a bit.
 \end{choicearray}
 ```
 
-```
+``` bash
 QObject-Head=X.Y Which of these tool do you think is appropriate for the following tasks (multiple answers are allowed)
 QObject-Choice=X.Y.Z Writing Letters
 Answer[X.Y.Z]=LaTeX
@@ -226,7 +226,7 @@ text.
 * All aspects of this format can be modified if need be. The important part
 is only that the information can be read back in some way.
 
-``` latex
+``` tex
 \begin{optionarray}[horizontal]{Which tool would you use for the following tasks (choose one)}
   \option[val=1]{\LaTeX}
   \option[val=2]{LibreOffice}
@@ -241,7 +241,7 @@ is only that the information can be read back in some way.
 
 Hmm, do we really want to restrict values to always be integers?
 
-``` latex
+``` tex
 \begin{rangearray}[horizontal,var=mathlayout]{How good do you think are the following tools for writing documents containing mathematical formulas?)}
   \rangelower{}
   \option[val=1] {1}

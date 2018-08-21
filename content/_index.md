@@ -7,16 +7,26 @@ layout: single
 SDAPS is an open source (GPLv3, LPPL) optical mark recognition (OMR) program.
 It is written in python and has an integrated workflow with LaTeX to create questionnaires.
 
+<center>
+Watch the presentation at FrOSCon 2015 to get to know sdaps more (does of
+course not include the latest novelties):
+[![](files/video_froscon15_thumb.png)](https://media.ccc.de/v/froscon2015-1606-sdaps)
+{{% button href="/getting-started/#dependencies" icon="fas fa-exclamation" %}}Install{{% /button %}} {{% button icon="fas fa-pen" href="/getting-started/#usage" %}}Usage{{% /button %}} {{% button icon="fas fa-brush" href="/documentation/gui" %}}Screenshots{{% /button %}} {{% button icon="fas fa-hashtag" href="/contribute" %}}Community{{% /button %}}
+</center>
+
+
 ![SDAPS Overview](/files/sdaps.png")
 
-With SDAPS you create the questionnaire using [LaTeX](doc_latex/). After this some processing is done to collect the information
-about the survey (questions, and answers) and a [printable PDF](files/questionnaire.pdf) is created.
+With SDAPS you create the questionnaire using [LaTeX](documentation/latex/).
+After this some processing is done to collect the information
+about the survey (questions, and answers) and a
+[printable PDF](files/questionnaire.pdf) is created.
 The filled out questionnaires only need to be scanned in
 ([example](files/example.tif)).
 
 SDAPS will do the optical mark recognition and can create a PDF report
 ([example](files/example-report.pdf)) or export the data. Optionally it is
-possible to [manually correct the results](doc_gui/) using a graphical user interface.
+possible to [manually correct the results](documentation/gui/) using a graphical user interface.
 
 Possible use cases for SDAPS include:
 
@@ -30,7 +40,9 @@ If you have any questions or comments related to SDAPS (usage, development, or
 anything else) then the [mailing list](/contribute#mailing-list) is a good
 place to post these. Please consider subscribing to this list if you are
 thinking about using SDAPS in the future or should you need some assistance.
-You can also look around on irc [#sdaps on freenode](irc://freenode.net/sdaps) [webchat](http://webchat.freenode.net/?channels=sdaps)).
+You can also look around on irc [#sdaps on freenode](irc://freenode.net/sdaps)
+([webchat](http://webchat.freenode.net/?channels=sdaps),
+[matrix](https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org)) .
 
 For an introduction of how SDAPS is used and what can be done with it you can
 look at the [Tutorial](/getting-started) and [Documentation](/documentation).
@@ -49,7 +61,7 @@ channel](/contribute#irc).
 * Optical mark recognition (OMR) from scanned data
 * Imports most formats including PDF and even photographs (version 1.1.7)
 * OpenDocument text (ODT) for creating questionnaires
-* [LaTeX](doc_latex/) class for creating questionnaires
+* [LaTeX](documentation/latex/) class for creating questionnaires
 * Supports any paper size
 * Multipage questionnaires, both simplex and duplex printing (up to 9999 pages
 with "code128" and "qr" style)
@@ -60,7 +72,7 @@ with "code128" and "qr" style)
   * The LaTeX class also supports more compact matrix configurations for these.
 * Creation of PDF reports for printout
   * Also supports creating reports of only partial result sets with
-  [arbitrary filters](documentation/#Filtering)
+  [arbitrary filters](documentation/#filtering)
 * Export of data to CSV files for further analysis (excluding image data)
 * Import of additional results from other sources.
   With this it is for example possible to merge data aquired via a webpage at a later point.
@@ -69,10 +81,11 @@ with "code128" and "qr" style)
 
 
 ## Similar Tools
-Some similar free software projects in no specific order:
+{{% note title="Other like-minded free software projects" %}}
+In no specific order:
 
 * [Auto Multiple Choice](http://auto-multiple-choice.net/) (Perl, supports randomized forms, optimized for
 examinations)
 * [G'n'T Eval](https://github.com/breunigs/gnt-eval) (Ruby, used for evaluations in Heidelberg, Germany)
 * [queXF](http://quexf.sourceforge.net/) (PHP)
-
+{{% /note %}}

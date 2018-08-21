@@ -11,8 +11,10 @@ Don't hesitate to write an e-mail or drop by on IRC if you are thinking about
 contributing!
 
 ### IRC
-For real time communication you can join our IRC in [#sdaps on freenode]()
-([webchat]()). Please keep in mind that while IRC is a real time communication
+For real time communication you can join our IRC in [#sdaps on freenode](irc://freenode.net/sdaps)
+([webchat](http://webchat.freenode.net/?channels=sdaps),
+[matrix](https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org)).
+Please keep in mind that while IRC is a real time communication
 system, people may not be around or simply might not have any time to reply
 immediately.
 
@@ -27,9 +29,9 @@ discuss improvements to the core software and help with further developments
 or documentation.
 
 * **Posting**: Please subscribe first, and then send an e-mail to
-[sdaps@sdaps.org]().
+[sdaps@sdaps.org](mailto:sdaps@sdaps.org).
 * **Subscribe**: You can subscribe by sending an e-mail to
-[sdaps-subscribe@sdaps.org](sdaps-subscribe@sdaps.org).
+[sdaps-subscribe@sdaps.org](mailto:sdaps-subscribe@sdaps.org).
 * **Unsubscribe**: If you are already subscribed and want to unsubscribe again,
 please send an e-mail to
 [sdaps-unsubscribe@sdaps.org](mailto:sdaps-unsubscribe@sdaps.org).
@@ -44,7 +46,7 @@ method="post" target="_top">-->
 Generally donating your time to improve SDAPS would be preferred, but not
 everyone has the time to spare for the project. If you would like to donate
 money then you can do so by sending it to the lead developer
-[Benjamin Berg](/imprint) via paypal: ![](/files/btn_donate_SM.gif)
+[Benjamin Berg](/imprint) via paypal: ![](/files/btn_donate_SM.gif) (benjamin-pp[at]sipsolutions.net)
 <!--<input type="hidden" name="cmd" value="_donations" />
 <input type="hidden" name="business" value="benjamin-pp@sipsolutions.net" />
 <input type="hidden" name="lc" value="US" />
@@ -72,16 +74,18 @@ you to get you started more quickly.
 [![Translation Status](http://hosted.weblate.org/widgets/sdaps-287x66-white.png)
 ](http://hosted.weblate.org/engage/sdaps/?utm_source=widget )
 
-For ease of translations SDAPS is hosted on `hosted.weblate.org`. If you
+For ease of translations SDAPS is hosted on
+[hosted.weblate.org](https://hosted.weblate.org/projects/sdaps/). If you
 register there you can directly modify the translations for SDAPS and they
 will appear in the next release.
 
 It is likely that the language is not yet listed in weblate. If that is the
-case you should notify us about it and it will be added. You can `open an
-issue` or write an email to the mailinglist or directly to
-`benjamin@sipsolutions.net`
+case you should notify us about it and it will be added. You can [open an
+issue](https://github.com/sdaps/sdaps/issues/new) or write an email to the
+mailinglist or directly to [benjamin@sipsolutions.net](mailto:benjamin@sipsolutions.net).
 
 Note that there are two subprojects that should be translated
+
 * **master**: This is the main part of SDAPS and is licensed under the terms of
 the GPL version 3 or any later version.
 * **tex**: These are translations for the LaTeX classes. These are licensed
@@ -111,7 +115,8 @@ are up to the task even fix it yourself!
 
 ### Instructions for students
 
-Students wishing to participate in [Summer of Code]() must realise this is
+Students wishing to participate in
+[Summer of Code](https://summerofcode.withgoogle.com/) must realise this is
 more than a mere formality. You will be required to produce code for SDAPS
 in 3 months. You will also take some resources from SDAPS developers, who
 will dedicate a portion of their time to mentoring you. Therefore, we'd
@@ -123,7 +128,7 @@ However, experience in coding (in Python) is welcome.
 
 You should start familiarising yourself with the components that you plan on
 working on before the start date. SDAPS developers are available on the
-[mailing list]() and on IRC for help. Note that the timeline from
+[mailing list](/contribute/#mailing-list) and on IRC for help. Note that the timeline from
 Google reserves a lot of time for bonding periods: use those periods wisely.
 
 ### General instructions
@@ -134,7 +139,7 @@ Eligibility section of the FAQ.
 ### Recommended steps
 
 * Read Google's instructions for participating
-* Take a look at the `list of ideas`_
+* Take a look at the [list of ideas](/contribute/#project-ideas)
 * Come up with project that you're interested in
 * Make a small contribution
 * Write a first draft proposal and get someone to review it for you

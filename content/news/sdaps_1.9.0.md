@@ -10,4 +10,5 @@ lot of improvements, primarily with regard to LaTeX:
 * Ability to specify variable names for questions and answers
 * New layouting possibilities using the LaTeX class
 
-See also the new `class repository`_ and its `documentation`_.
+See also the new [class repository](https://github.com/sdaps/sdaps-class/)
+and its [documentation](/documentation/latex).

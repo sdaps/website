@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: latex
     weight: 50
+    pre: <i class="far fa-file-code"></i>
 ---
 
 With the LaTeX support SDAPS provides an easy way to build questionnaires.
@@ -28,7 +29,7 @@ A collection of examples can be found here.
 The following example does not show all features, but can give an impression of
 how it all works. And the [resulting PDF](/file/latex_example.pdf)
 
-``` latex
+``` tex
 \documentclass[draft,english,pdf,pagemark,stamp]{sdaps}
 \usepackage[utf8]{inputenc}
 
@@ -128,7 +129,9 @@ For example:
 The ``singlemark`` can be used for range questions. You pass it a question
 and description for the lower and upper bounds.
 
-``\singlemark{What do you think of this LaTeX class?}{nothing}{looks great}``
+``` tex
+\singlemark{What do you think of this LaTeX class?}{nothing}{looks great}
+```
 
 #### choicequestion environment
 
@@ -163,7 +166,9 @@ horizontal space) and a description string for the box as the last argument.
 
 For example:
 
-``\choiceitemtext{1.2cm}{3}{Other:}``
+``` tex
+\choiceitemtext{1.2cm}{3}{Other:}
+```
 
 #### markgroup environment
 
@@ -179,7 +184,7 @@ inside a ``markgroup`` environment.
 
 Example of ``markgroup`` and ``markline``:
 
-``` latex
+``` tex
 \begin{markgroup}{What do you think about the following aspects of the SDAPS questionnaire LaTeX class?}
   \markline{ease of use}{very easy}{very hard}
   \markline{quality of the generated questionnaire}{good}{bad}
@@ -204,7 +209,7 @@ This command is then used to add a single question.
 
 An example of all this in action would be the following:
 
-``` latex
+``` tex
 \begin{choicegroup}{Which program do you prefer for the following tasks?}
   \groupaddchoice{\LaTeX}
   \groupaddchoice{LibreOffice}
@@ -226,7 +231,7 @@ space! If you do not want this, you can use the starred version ``\textbox*``.
 
 Example:
 
-```latex
+```tex
 \textbox{5cm}{You can use the following box to write down any additional comments:}
 ```
 
@@ -293,6 +298,5 @@ groupoddrowcolor | white  | The background color for odd rows in group environme
 
 Feel free to add more examples to this page.
 
-* The example from the [Tutorial](/getting-started#Usage). This example uses most features that SDAPS has.
-* [Test document in german]
-(http://git.sipsolutions.net/gitweb.cgi?p=sdaps.git;a=blob;f=test/data/tex/questionnaire_with_ids.tex;hb=HEAD).
+* The example from the [Tutorial](/getting-started#usage). This example uses most features that SDAPS has.
+* [Test document in german](https://raw.githubusercontent.com/sdaps/sdaps/bea1fab37408f5b4392b3d58d969b6641b6bca04/test/data/tex/questionnaire_with_ids.tex)

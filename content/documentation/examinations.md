@@ -6,6 +6,7 @@ menu:
     parent: Documentation
     idenitifier: examinations
     weight: 30
+    pre: <i class="fas fa-search"></i>
 ---
 
 ## Examinations using SDAPS
@@ -23,15 +24,15 @@ If you don't have a single (duplex) answer sheet, then it is important to
 keep the paper for one student together. SDAPS can help you by printing a
 "Questionnaire-ID" on every page. If the sole purpose is to keep all the
 pages together, then the ID can be random. You can also assign an ID for
-your own purposes (see "Identifying Students" section). See the "``stamp``"
+your own purposes (see "Identifying Students" section). See the ``stamp``
 command for more details.
 
 Note that by default SDAPS assumes that all pages for one student are
 scanned in a batch and the page count is correct. If for whatever reason
 pages may have gotten shuffled around before scanning (or additional
-scratch paper may be inserted) then you will need to use the "``--force``"
-options for the "``add``" command (wrong page count) and then use the
-"``reorder``" command so that the data is interpreted correctly!
+scratch paper may be inserted) then you will need to use the ``--force``
+options for the ``add`` command (wrong page count) and then use the
+``reorder`` command so that the data is interpreted correctly!
 
 The above is important, or else the answers of one student may get
 assigned to another student!
@@ -59,12 +60,12 @@ However, you need to manually transcribe the ID at a later point
 
 LaTeX code might look like
 
-```latex
+```tex
 \textbox*{2cm}{Enter your student ID below.}
 ```
 or (requires unstable release)
 
-``` latex
+``` tex
 \begin{choicequestion}[1]{}
    \choiceitemtext{1.2cm}{1}{Student ID:}
 \end{choicequestion}
@@ -84,7 +85,7 @@ checkbox.
 
 The choiceitem way might look like:
 
-``` latex
+``` tex
 \begin{choicegroup}{Please write your student ID into the $\sqcup$
 and check the corresponding cross.\\ \textbf{Only check one box in each
 column.}}
@@ -112,7 +113,7 @@ column.}}
 
 The range way (note that we can't put headers with the digit on top):
 
-``` latex
+``` tex
 \setcounter{markcheckboxcount}{10}
 \begin{markgroup}{Please write your student ID into the $\sqcup$
 and check the corresponding cross.\\ \textbf{Only check one box in each
@@ -159,8 +160,8 @@ $ sdaps PROJECT stamp -f STUDENT_IDS
 where STUDENT_IDS is a file containing the barcode value for each student.
 
 If you want to put the student name somewhere else on the paper, then
-please have a look at [issue #11](https://github.com/sdaps/sdaps/issues/2) (if anyone has a nicer example,
-please post it here!).
+please have a look at [issue #11](https://github.com/sdaps/sdaps/issues/2)
+(if anyone has a nicer example, please post it here!).
 
 ## Checkbox recognition mode
 
@@ -188,7 +189,7 @@ Whatever mode you use, please make sure that the students are aware of it!
 ## Correction
 
 You might want to manually check that SDAPS correctly detected all the
-checkmarks. Please use the [GUI](/doc_gui) for this.
+checkmarks. Please use the [GUI](/documentation/gui) for this.
 
 ## Data Export
 
