@@ -3,7 +3,18 @@ title: Getting Started
 layout: single
 ---
 
-## Dependencies
+## Install
+  Operating System | Software
+  ---------------- | -------------
+  ![](/images/ubuntu.png)         | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps-stable` or `/sdaps`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
+  ![](/images/debian.png)         | Look into **"From Source"**<br>under this table
+  ![](/images/fedora.png)         | [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)<br><br>{{% spoiler Commands %}}`dnf copr enable benzea/sdaps`{{% /spoiler %}}
+  ![](/images/arch.png)           | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
+  ![](/images/gentoo.png)         | [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay )<br><br>{{% spoiler Commands %}}Install [layman](https://wiki.gentoo.org/wiki/Layman):<br>`layman -o https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml -f -a sdaps-overlay`{{% /spoiler %}}
+  ![](/images/macos.png)          | We'll need help with that.<br>Please contribute to<br>related [Github Issues](https://github.com/sdaps/sdaps/issues)<br><br>{{% spoiler Commands %}}Required macports packages<br>(this list is **not** complete):<br>`py27-gobject3 gtk3 py27-distutils-extra poppler cairo-devel cairo py27-cairo opencv #(opencv with python27 variant)`<br>`tiff pdftk py27-reportlab py27-Pillow # (or py27-pil)`<br>Manually installed packages: `zbar`<br>(there is a bug to get it into [MacPorts](https://trac.macports.org/ticket/45604)){{% /spoiler %}}
+
+{{% spoiler "From Source" %}}<br>
+### General Dependencies
 
 SDAPS has a number of dependencies. In some circumstances not all of them will
 be needed, but it is probably a good idea to just install everything.
@@ -44,7 +55,7 @@ LaTeX based reports:
 
 * siunitx
 
-Import of other image formats (convert, add ``--convert``):
+Import of other image formats (convert, add `--convert`):
 
 * python-opencv
 * Poppler and introspection data
@@ -55,18 +66,15 @@ Debug output (annotate):
 * Poppler and introspection data
 * python-gi
 
-## Distributions
 
-### Debian wheezy/jessie
+#### Debian Wheezy/Jessie
 
 On Debian Wheezy/Jessie you should install the following packages:
-
 ```bash
 python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18 python-opencv pdftk # (pdftk or python-pypdf)
 ```
 
 for the LaTeX class:
-
 ```bash
 texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer # latex-beamer: (used for translations)
 ```
@@ -74,33 +82,32 @@ texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer # latex-b
 Other debian based distributions (Ubuntu, Mint) should have very similar
 package names. For some packages there are also alternatives:
 
-* ``libtiff4`` development files instead of libtiff5
-* ``python-gobject`` instead of python-gi
-* ``gir1.0-gtk-3.0`` or similar (different GObject Introspection version)
+* `libtiff4` development files instead of libtiff5
+* `python-gobject` instead of python-gi
+* `gir1.0-gtk-3.0` or similar (different GObject Introspection version)
 
-### ArchLinux
-There is a [PKGBUILD](https://aur.archlinux.org/packages/sdaps-git) in the
-'Arch User Repository' called ``sdaps-git``.
 
-### OS X
+### Setup
 
-Required macports packages (this list is **not** complete):
+Clone the repo while installing the submodules with `--recursive`:
+```bash
+git clone --recursive https://github.com/sdaps/sdaps.git
+```
 
-* py27-gobject3
-* gtk3
-* py27-distutils-extra
-* poppler
-* cairo-devel, cairo, py27-cairo
-* opencv (with python27 variant)
-* tiff
-* py27-reportlab
-* py27-Pillow (or py27-pil)
-* pdftk
+If you want to install sdaps, so you can use it from the general command line,
+then change in the cloned repo folder:
+```bash
+./setup.py install
+```
+or if you want to run it directly from the cloned folder:
+```bash
+./setup.py build
+```
+{{< /spoiler >}}
 
-Manually installed packages:
+<hr>
 
-* zbar (there is a bug to get it into
-[MacPorts](https://trac.macports.org/ticket/45604))
+Please run sdaps with `--help` after installing it for a list of commands.
 
 ## Usage
 
@@ -112,11 +119,11 @@ scanner and printer ready right away.
 ### Preface
 
 In the example we need to call the SDAPS executable. It will be called using
-``sdaps`` as if it installed on the system. You can also use the ``sdaps.py``
-script from the source directory instead. The ``$``  denotes the shells
+`sdaps` as if it installed on the system. You can also use the `sdaps.py`
+script from the source directory instead. The `$`  denotes the shells
 prompt, everything else is output from the program.
 
-We are going to use ``/tmp/project`` as the surveys path. This is obviously a
+We are going to use `/tmp/project` as the surveys path. This is obviously a
 bad idea for any real project.
 
 ### Creating the Questionnaire
@@ -129,22 +136,22 @@ We are going to use this [example questionnaire](/files/example.tex)
 [PDF Version](/files/example.pdf) here. If you would like to play
 around a bit with it, you can compile the LaTeX document yourself. Note
 that you need to copy the SDAPS-LaTeX data into the directory before doing
-that. It lives in the ``tex`` Directory of the source code or in
-``$PREFIX/share/sdaps/tex`` if it is installed. Where ``$PREFIX`` will
-usually be ``/usr`` or ``/usr/local``.
+that. It lives in the `tex` Directory of the source code or in
+`$PREFIX/share/sdaps/tex` if it is installed. Where `$PREFIX` will
+usually be `/usr` or `/usr/local`.
 
 You can familiarize yourself with the LaTeX-Document and the resulting
 PDF-file. Notice that the PDF has a "draft" text overlayed. This is because
 the barcode at the bottom is just an example and it will change once the
 project is created.
 
-Have a look at the [LaTeX]() page for some more information about the
-different LaTeX macros that exists in SDAPS. You can also change the
-size of the paper using the normal LaTeX methods.
+Have a look at the [LaTeX](/documentation/latex) page for some more
+information about the different LaTeX macros that exists in SDAPS. You
+can also change the size of the paper using the normal LaTeX methods.
 
 ### Intializing Setup
 
-{{% warning title="Attention" %}}It is best to use the ``example.tex`` from this page and not a
+{{% warning title="Attention" %}}It is best to use the `example.tex` from this page and not a
 modified version! If you modify the document the example scan will not work
 later on!{{% /warning %}}
 
@@ -158,7 +165,7 @@ the command is generally the following:
 $ sdaps PROJECT_DIR COMMAND [arguments]
 ```
 
-Where ``PROJECT_DIR`` is the directory for the survey, and command is the
+Where `PROJECT_DIR` is the directory for the survey, and command is the
 SDAPS command that is executed. Most commands will require some arguments.
 You can always get a help by running:
 
@@ -166,10 +173,10 @@ You can always get a help by running:
 $ sdaps PROJECT_DIR COMMAND --help
 ```
 
-So we create the project using the provided ``example.tex``. The tutorial
+So we create the project using the provided `example.tex`. The tutorial
 assumes that the LaTeX file is in the current directory.
 
-``` bash
+```bash
 $ sdaps /tmp/project setup_tex example.tex
 ------------------------------------------------------------------------------
 - SDAPS -- setup_tex
@@ -224,8 +231,8 @@ idea to disable any "scale page to fit printable area" option.
 ### Scanning
 
 After you have a couple of printed and filled in questionnaires you need to
-scan them. There is a whole `scanning section`_ about this. Please have a look
-there.
+scan them. There is a whole [scanning section](/documentation/scanning)
+about this. Please have a look there.
 
 You scan skip this step for now and instead use the provided
 [example.tif](/files/example.tif) or
@@ -235,7 +242,7 @@ if you have a newer version of the multicol package).
 ### Add the images to the project
 
 Once you have a scan in the correct format you can add it to survey directory
-that was created earlier. This is done using the ``add`` command:
+that was created earlier. This is done using the `add` command:
 
 ``` bash
 $ sdaps /tmp/project add example.tif
@@ -247,7 +254,7 @@ Done
 ```
 
 If everything worked fine you will see no further output. The original file is
-copied into the project directory as ``1.tif``.
+copied into the project directory as `1.tif`.
 
 You can repeat this step if you have multiple scans.
 
@@ -260,7 +267,7 @@ project and start from scratch.{{% /warning %}}
 ### Running the optical mark recognition
 
 The next step is to run the optical mark recognition. This works using the
-``recognize`` command. So from the command line again we run:
+`recognize` command. So from the command line again we run:
 
 ``` bash
 $ sdaps /tmp/project recognize
@@ -291,7 +298,7 @@ $ sdaps /tmp/project gui
 ----------------------------------
 ```
 
-There is a much more [complete section]() about it. You can quickly go trough
+There is a much more [complete section](/documentation/gui) about it. You can quickly go trough
 all images and correct any errors using the mouse. When the view is focused
 you can go forward/backward using Enter and Shift+Enter.
 
@@ -310,7 +317,7 @@ $ sdaps /tmp/project report
 ----------------------------------
 ```
 
-It creates a PDF file ``report_1.pdf``. Have a look at the file; you can also
+It creates a PDF file `report_1.pdf`. Have a look at the file; you can also
 [download the report](/files/example_report.pdf) that will be created
 for the example data.
 
@@ -339,7 +346,7 @@ $ sdaps /tmp/project csv export
 --------------------------------------------
 ```
 
-A file called ``data_1.csv`` will be created in the project directory.
+A file called `data_1.csv` will be created in the project directory.
 
 ### Other things to try
 
@@ -348,13 +355,13 @@ A file called ``data_1.csv`` will be created in the project directory.
 If it is required, you can put a unique barcode on every created questionnaire.
 This is internally called the "Questionnaire-ID" by SDAPS.
 
-To do this, you need to add the ``print_questionnaire_id`` to the document
+To do this, you need to add the `print_questionnaire_id` to the document
 class before running the setup routine. The document will now also contain a
 barcode for the "Questionnaire-ID" which will be located in the bottom left
 corner of the page.
 
 In this setup it is now necessary to generate the required amount of unique
-documents. This is done using the ``stamp`` command in SDAPS. You have the
+documents. This is done using the `stamp` command in SDAPS. You have the
 choice of either creating numeric random IDs, or supplying a set of IDs
 (anything that can be encoded in CODE128 is allowed) in a file.
 
@@ -365,7 +372,7 @@ $ sdaps /tmp/project stamp -r 15
 ```
 
 To specify non-random IDs create a file with one ID per line. It might look
-like the following. Lets call it ``ids.txt``:
+like the following. Lets call it `ids.txt`:
 
 ``` plaintext
 First ID
@@ -379,7 +386,7 @@ Then run the stamp command, with the created file as an argument:
 $ sdaps /tmp/project stamp -f ids.txt
 ```
 
-Both commands will create a new ``stamp_X.pdf`` file (where X is a number)
+Both commands will create a new `stamp_X.pdf` file (where X is a number)
 which can be printed.
 
 #### Global-ID
@@ -402,7 +409,7 @@ designed questionnaire are all correct (checkbox positions, etc.). To use run:
 $ sdaps /tmp/project annotate
 ```
 
-The file ``annotated_questionnaire.pdf`` is created. Might be a bit ugly,
+The file `annotated_questionnaire.pdf` is created. Might be a bit ugly,
 but one can easily check that everything is good.
 
 {{% warning title="Attention" %}}This command requires the GObject
@@ -452,7 +459,7 @@ $ sdaps /tmp/project convert --3d-transform /tmp/cellphone/*.jpg --output /tmp/o
 $ sdaps /tmp/project add /tmp/out.tif
 ```
 
-The ``--3d-transform`` is important as the SDAPS main Program only does a
+The `--3d-transform` is important as the SDAPS main Program only does a
 2D transformation which is not good enough for camera images (as they usually
 will not be taken exactly from above).
 
@@ -460,7 +467,7 @@ After this, the normal recognize step is done.
 
 {{% warning title="Attention" %}}This only works if the tolerance is large
 enough. You need a version above 1.1.4 or git, or you have to modify
-``defs.py`` and change the value of ``corner_mark_min_length`` to
+`defs.py` and change the value of `corner_mark_min_length` to
 something smaller (e.g. 15).{{% /warning %}}
 
 ### LaTeX based report
