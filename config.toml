@@ -67,6 +67,14 @@ canonifyurls = true
 	weight = 50
 
 [[menu.main]]
+    parent = "Documentation"
+    pre = "<i class='far fa-file-code'></i>"
+    name = "LaTeX Class"
+    url = "/class-doc"
+    weight = 55
+
+
+[[menu.main]]
 	pre	   = "<i class='fas fa-handshake'></i> "
 	name   = "Used by"
 	url    = "used-by/"
