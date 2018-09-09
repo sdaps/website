@@ -6,12 +6,12 @@ layout: single
 ## Install
   Operating System | Software
   ---------------- | -------------
-  ![](/images/ubuntu.png)         | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps-stable` or `/sdaps`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
-  ![](/images/debian.png)         | Look into **"From Source"**<br>under this table
-  ![](/images/fedora.png)         | [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)<br><br>{{% spoiler Commands %}}`dnf copr enable benzea/sdaps`{{% /spoiler %}}
-  ![](/images/arch.png)           | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
-  ![](/images/gentoo.png)         | [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay )<br><br>{{% spoiler Commands %}}Install [layman](https://wiki.gentoo.org/wiki/Layman):<br>`layman -o https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml -f -a sdaps-overlay`{{% /spoiler %}}
-  ![](/images/macos.png)          | We'll need help with that.<br>Please contribute to<br>related [Github Issues](https://github.com/sdaps/sdaps/issues)<br><br>{{% spoiler Commands %}}Required macports packages<br>(this list is **not** complete):<br>`py27-gobject3 gtk3 py27-distutils-extra poppler cairo-devel cairo py27-cairo opencv #(opencv with python27 variant)`<br>`tiff pdftk py27-reportlab py27-Pillow # (or py27-pil)`<br>Manually installed packages: `zbar`<br>(there is a bug to get it into [MacPorts](https://trac.macports.org/ticket/45604)){{% /spoiler %}}
+  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )  | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
+  ![](/images/debian.png)                                                                          | Install the PPA<br> for ubuntu<br>**or**<br>click **"From Source"**<br>under this table
+  [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)                 | [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)<br><br>{{% spoiler Commands %}}`sudo dnf copr enable benzea/sdaps`<br>`sudo dnf install sdaps`{{% /spoiler %}}
+  [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)                            | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
+  [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)                               | [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)<br><br>{{% spoiler Commands %}}Install [layman](https://wiki.gentoo.org/wiki/Layman):<br>`layman -o https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml -f -a sdaps-overlay`{{% /spoiler %}}
+  ![](/images/macos.png)                                                                           | We'll try to bring it to<br>you via [homebrew](https://brew.sh/).<br>[Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
 
 {{% spoiler "From Source" %}}<br>
 ### General Dependencies
@@ -21,7 +21,7 @@ be needed, but it is probably a good idea to just install everything.
 
 general (including recognize):
 
-* Python 2.7
+* Python 3
 * distutils and distutils-extra
 * python-cairo (including development files)
 * libtiff (including development files)
