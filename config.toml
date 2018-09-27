@@ -12,7 +12,9 @@ canonifyurls = true
 	copyright = "Released under GPLv3+/LPPLv1.3c+"
 
 	# Repository
-	provider = "GitHub"
+	# Setting provider to github results in a broken download link,
+	# so don't for now.
+	#provider = "GitHub"
 	repo_url = "https://github.com/sdaps/sdaps"
 
 	version = "1.9.2"
