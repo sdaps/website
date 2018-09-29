@@ -14,8 +14,9 @@ canonifyurls = true
 	# Repository
 	# Setting provider to github results in a broken download link,
 	# so don't for now.
-	#provider = "GitHub"
+	use_github_star = "true"
 	repo_url = "https://github.com/sdaps/sdaps"
+	custom_download_url = "https://sdaps.org/releases/"
 
 	version = "1.9.3"
 	logo = "images/sdaps.png"
