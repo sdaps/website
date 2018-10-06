@@ -10,6 +10,7 @@ canonifyurls = true
 	author = "Benjamin Berg"
 	description = "Scripts for data acquisition with paper-based surveys."
 	copyright = "Released under GPLv3+/LPPLv1.3c+"
+    build_date_format = "2nd Jan 2006, 15:04"
 
 	# Repository
 	# Setting provider to github results in a broken download link,
