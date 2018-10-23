@@ -1,5 +1,5 @@
 ---
-title: Contributor Meeting Oct '19
+title: Contributor Meeting Oct '18
 date: 2018-10-23
 ---
 
