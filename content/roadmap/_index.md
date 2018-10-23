@@ -8,8 +8,6 @@ write to Benjamin Berg or drop by on IRC.
 
 ## Common questionnaire description format
 
-See also [Specification](#specification).
-
 Some people started to work on a description format for questionnaires. Some of
 the features that you can expect from such a format:
 
