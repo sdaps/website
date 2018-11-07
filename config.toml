@@ -19,7 +19,7 @@ canonifyurls = true
 	repo_url = "https://github.com/sdaps/sdaps"
 	custom_download_url = "https://sdaps.org/getting-started/"
 
-	version = "1.9.3"
+	version = "1.9.4"
 	logo = "images/sdaps.png"
 	favicon = "images/sdaps.svg"
 
