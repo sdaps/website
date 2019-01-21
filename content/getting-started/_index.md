@@ -12,7 +12,7 @@ layout: single
   [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)                            | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
   [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)                               | [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)<br><br>{{% spoiler Commands %}}Install [layman](https://wiki.gentoo.org/wiki/Layman):<br>`layman -o https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml -f -a sdaps-overlay`{{% /spoiler %}}
   ![](/images/macos.png)                                                                           | We'll try to bring it to<br>you via [homebrew](https://brew.sh/).<br>[Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
-<i class="fas fa-file-archive fa-5x" style="text-align: center; background-color: white; width: 76px;"></i>                                                                           | You can find sdaps tarballs [here](releases/).
+<i class="fas fa-file-archive fa-5x" style="text-align: center; background-color: white; width: 76px;"></i>                                                                           | You can find sdaps tarballs [here](/releases/).
 
 {{% spoiler "From Source" %}}<br>
 ### General Dependencies
