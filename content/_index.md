@@ -11,7 +11,7 @@ It is written in python and has an integrated workflow with LaTeX to create ques
 Watch the presentation at FrOSCon 2015 to get to know sdaps more (does of
 course not include the latest novelties):
 [![](files/video_froscon15_thumb.png)](https://media.ccc.de/v/froscon2015-1606-sdaps)
-{{% button href="/getting-started/#dependencies" icon="fas fa-exclamation" %}}Install{{% /button %}} {{% button icon="fas fa-pen" href="/getting-started/#usage" %}}Usage{{% /button %}} {{% button icon="fas fa-brush" href="/documentation/gui" %}}Screenshots{{% /button %}} {{% button icon="fas fa-hashtag" href="/contribute" %}}Community{{% /button %}}
+{{% button href="/getting-started/#dependencies" icon="fas fa-exclamation" %}}Install{{% /button %}} {{% button href="https://demo.sdaps.org" icon="fas fa-desktop" %}}Demo of web interface{{% /button %}} {{% button icon="fas fa-pen" href="/getting-started/#usage" %}}Usage{{% /button %}} {{% button icon="fas fa-brush" href="/documentation/gui" %}}Screenshots{{% /button %}} {{% button icon="fas fa-hashtag" href="/contribute" %}}Community{{% /button %}}
 </center>
 
 
