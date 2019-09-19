@@ -25,7 +25,7 @@
   % The following options make sense so that we can get a better feel for the
   % final look.
   pagemark,
-  stamp]{sdaps}
+  stamp]{sdapsclassic}
 \usepackage[utf8]{inputenc}
 % For demonstration purposes
 \usepackage{multicol}
@@ -41,7 +41,10 @@
   \begin{questionnaire}
     % There is a predefined "info" style to hilight some text.
     \begin{info}
-      Some information here. Nothing special, just adds a line above/below.
+      You can create a customized information element similar to the standard
+      one using the \texttt{info} environment. By adding \texttt{[noinfo]} to
+      the \texttt{questionaire} environment you can replace the predefined
+      information field with your own.
     \end{info}
 
     % Use \addinfo to add metadata (which is printed on the report later on)
@@ -69,9 +72,9 @@
     of choices is typesetted using a tabularx environment with equally
     sized columns. Items can span multiple columns.
 
-    \begin{choicequestion}[3]{Which of the following Open Source
-                              Optical Mark Recognition software
-                              packages have you heard about?}
+    \begin{choicequestion}[cols=3]{Which of the following Open Source
+                                   Optical Mark Recognition software
+                                   packages have you heard about?}
       \choiceitem{SDAPS}
       \choicemulticolitem{2}{Auto Multiple Choice}
       \choiceitem{QueXF}
@@ -126,7 +129,7 @@
 
       Lets put some more questions here, just because we can.
 
-      \begin{choicequestion}[1]{A choice question!}
+      \begin{choicequestion}[cols=1]{A choice question!}
         \choiceitem{first choice}
         \choiceitem{second choice}
         \choiceitem{third choice}
@@ -145,7 +148,10 @@
 
     There are some more special commands. You can draw \checkedbox{} crossed
     checkboxes, \filledbox{} filled or \correctedbox{} filled and crossed ones. Finally there is
-    also the plain \checkbox*{} checkbox using {\ttfamily \textbackslash{}checkbox*}.
+    also the plain \checkbox{} checkbox using {\ttfamily \textbackslash{}checkbox}
+    or the starred versions showing single choice items \checkbox*{}
+    \checkedbox*{}. These are for decoration purposes only and do not affect
+    further processing in any way.
 
     \textbox*{2cm}{And textboxes with a fixed height. This one is exactly 2\,cm high.}
 
