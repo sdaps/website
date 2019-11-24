@@ -5,6 +5,25 @@ layout: single
 
 Some of the users of SDAPS. Feel free to add yourself if you are using it!
 
+## India
+
+### <img src="/files/sikshana-logo.png" width="50px" alt="Logo" align="middle"/>&nbsp; Sikshana Foundation
+
+The Sikshana Foundation is supporting over 50&nbsp;thousand schools in India with
+their programs, as part of this they use SDAPS in their infrastructure. In
+addition to this work, they are also cooperating with the Karnataka state
+Government on a State Achievement Survey (SAS) which has been run twice as of
+2019. This unique data collection effort was powered by SDAPS at its core. In
+2018, 4.2&nbsp;million students from grade 4&nbsp;to&nbsp;10 were assessed for their performance
+in different subjects. Using this information, the Sikshana Foundation was able
+to send colorful motivating report cards with feedback to each individual
+student student. In addition to this the collaboration resulted in valuable
+data for the Government of Karnataka to improve the quality of
+education in the future. For their collaboration with the Karnataka Government
+the Sikshana Foundation has been recognized as the “IT Backbone to Edu Dept”.
+
+[Newspaper Article from 2017](/files/sikshana-news-2017.jpg)
+
 ## United States
 
 ![](/files/nationbuider-logo-black.png)
