@@ -17,7 +17,7 @@ Government on a State Achievement Survey (SAS) which has been run twice as of
 2018, 4.2&nbsp;million students from grade 4&nbsp;to&nbsp;10 were assessed for their performance
 in different subjects. Using this information, the Sikshana Foundation was able
 to send colorful motivating report cards with feedback to each individual
-student student. In addition to this the collaboration resulted in valuable
+student. In addition to this the collaboration resulted in valuable
 data for the Government of Karnataka to improve the quality of
 education in the future. For their collaboration with the Karnataka Government
 the Sikshana Foundation has been recognized as the “IT Backbone to Edu Dept”.
