@@ -6,7 +6,7 @@ layout: single
 ## Install
   Operating System | Software
   ---------------- | -------------
-  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )  | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
+  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )  | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps-stable` or `/sdaps`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
   ![](/images/debian.png)                                                                          | Install the PPA<br> for ubuntu<br>**or**<br>click **"From Source"**<br>under this table
   [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)                 | [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)<br><br>{{% spoiler Commands %}}`sudo dnf copr enable benzea/sdaps`<br>`sudo dnf install sdaps`{{% /spoiler %}}
   [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)                            | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
@@ -163,22 +163,21 @@ This is the first time that we need to run an SDAPS command. The syntax for
 the command is generally the following:
 
 ```bash
-$ sdaps PROJECT_DIR COMMAND [arguments]
+$ sdaps COMMAND [ARGUMENTS]
 ```
 
-Where `PROJECT_DIR` is the directory for the survey, and command is the
-SDAPS command that is executed. Most commands will require some arguments.
-You can always get a help by running:
+Where command is the SDAPS command that is executed. Most commands will 
+require some arguments. You can always get a help by running:
 
 ```bash
-$ sdaps PROJECT_DIR COMMAND --help
+$ sdaps COMMAND -h
 ```
 
 So we create the project using the provided `example.tex`. The tutorial
 assumes that the LaTeX file is in the current directory.
 
 ```bash
-$ sdaps /tmp/project setup_tex example.tex
+$ sdaps setup /tmp/project example.tex
 ------------------------------------------------------------------------------
 - SDAPS -- setup_tex
 ------------------------------------------------------------------------------
@@ -246,7 +245,7 @@ Once you have a scan in the correct format you can add it to survey directory
 that was created earlier. This is done using the `add` command:
 
 ``` bash
-$ sdaps /tmp/project add example.tif
+$ sdaps add /tmp/project example.tif
 ----------------------------------------
 - SDAPS -- add
 ----------------------------------------
@@ -271,7 +270,7 @@ The next step is to run the optical mark recognition. This works using the
 `recognize` command. So from the command line again we run:
 
 ``` bash
-$ sdaps /tmp/project recognize
+$ sdaps recognize /tmp/project
 -------------------------------------------------
 - SDAPS -- recognize
 -------------------------------------------------
@@ -293,7 +292,7 @@ filling it out).
 Tocorrect any errors we can use the graphical user interface. We start it using
 
 ``` bash
-$ sdaps /tmp/project gui
+$ sdaps gui /tmp/project
 ----------------------------------
 - SDAPS -- gui
 ----------------------------------
@@ -312,7 +311,7 @@ amount of time to spend on this will depend on the required accuracy.
 To create a PDF report with the results simply run:
 
 ``` bash
-$ sdaps /tmp/project report
+$ sdaps report /tmp/project
 ----------------------------------
 - SDAPS -- report
 ----------------------------------
@@ -326,7 +325,7 @@ Note that we can also do partial reports by using filters. Just a quick
 example (please refer to the rest of the documentation for an explanation):
 
 ``` bash
-$ sdaps /tmp/project report -f '_1_2_3 == 5'
+$ sdaps report /tmp/project -f '_1_2_3 == 5'
 --------------------------------------------
 - SDAPS -- report
 --------------------------------------------
@@ -341,7 +340,7 @@ Obviously sometimes it might be necessary to feed the data into another
 program. For this the CSV export command was created:
 
 ``` bash
-$ sdaps /tmp/project csv export
+$ sdaps csv export /tmp/project
 --------------------------------------------
 - SDAPS -- csvdata
 --------------------------------------------
@@ -369,7 +368,7 @@ choice of either creating numeric random IDs, or supplying a set of IDs
 For example, to create 15 questionnaires with randomized IDs you can run
 
 ``` bash
-$ sdaps /tmp/project stamp -r 15
+$ sdaps stamp -r 15 /tmp/project
 ```
 
 To specify non-random IDs create a file with one ID per line. It might look
@@ -384,7 +383,7 @@ Some Name
 Then run the stamp command, with the created file as an argument:
 
 ``` bash
-$ sdaps /tmp/project stamp -f ids.txt
+$ sdaps stamp -f ids.txt /tmp/project
 ```
 
 Both commands will create a new `stamp_X.pdf` file (where X is a number)
@@ -407,7 +406,7 @@ As mentioned before, you can create a PDF to see if the values read from the
 designed questionnaire are all correct (checkbox positions, etc.). To use run:
 
 ``` bash
-$ sdaps /tmp/project annotate
+$ sdaps annotate /tmp/project
 ```
 
 The file `annotated_questionnaire.pdf` is created. Might be a bit ugly,
@@ -429,19 +428,19 @@ so that everything is together again.
 First identify all pages ie. read all the barcodes:
 
 ```bash
-$ sdaps /tmp/project recognize --identify
+$ sdaps recognize --identify /tmp/project
 ```
 
 Then reorder the pages:
 
 ```bash
-$ sdaps /tmp/project reorder
+$ sdaps reorder /tmp/project
 ```
 
 And when that is done you can do the normal "recognize" step:
 
 ```bash
-$ sdaps /tmp/project recognize
+$ sdaps recognize /tmp/project
 ```
 
 #### Using a camera for input
@@ -456,8 +455,8 @@ if you have a newer version of the multicol package). To try it, extract the
 archive (in this example to /tmp/ and then run the following commands:
 
 ``` bash
-$ sdaps /tmp/project convert --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif
-$ sdaps /tmp/project add /tmp/out.tif
+$ sdapsconvert --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif /tmp/project 
+$ sdaps add /tmp/out.tif /tmp/project
 ```
 
 The `--3d-transform` is important as the SDAPS main Program only does a
@@ -476,7 +475,7 @@ something smaller (e.g. 15).{{% /warning %}}
 You can create a report that is rendered using LaTeX.
 
 ```bash
-$ sdaps /tmp/project report_tex
+$ sdaps report_tex /tmp/project
 ```
 
 {{% warning title="Attention" %}}This command requires the siunitx LaTeX
