@@ -57,18 +57,18 @@ the rotation of the monitor to have a larger screen area.
 Some of these shortcuts only work if the preview window is selected.
 ie. you need to click on the image before using them.
 
-Key        | Function
------------|---------------------------------------------
-Tab        | Go to next Page
-Shift+Tab  | Go to previous Page
-Enter      | Go to next Page and set "Sheet Validated"
-Shift+Enter| Go to previous Page and set "Sheet Validated"
+| Key        | Function
+| -----------|---------------------------------------------
+| Tab        | Go to next Page
+| Shift+Tab  | Go to previous Page
+| Enter      | Go to next Page and set "Sheet Validated"
+| Shift+Enter| Go to previous Page and set "Sheet Validated"
 
 #### Mouse Interaction
 
-Key         | Function
-------------|-----------
-Middle click| Grab and scroll the view
-Click       | Toggle the state of checkboxes and freeform fields
-Click+Drag  | Change the size of freeform fields
-Right-Click | Focus the corresponding widget on the right (Version 1.1.0 and newer)
+| Key          | Function
+| -------------|-----------
+| Middle click | Grab and scroll the view
+| Click        | Toggle the state of checkboxes and freeform fields
+| Click+Drag   | Change the size of freeform fields
+| Right-Click  | Focus the corresponding widget on the right (Version 1.1.0 and newer)
