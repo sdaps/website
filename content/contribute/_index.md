@@ -44,7 +44,9 @@ had some problems in the past.
 Generally donating your time to improve SDAPS would be preferred, but not
 everyone has the time to spare for the project. If you would like to donate
 money then you can do so by sending it to the lead developer
-[Benjamin Berg](/imprint) via paypal: ![](/files/btn_donate_SM.gif) (benjamin-pp[at]sipsolutions.net)
+[Benjamin Berg](/imprint) via paypal.
+
+{{% paypal "benjamin-pp@sipsolutions.net" %}}
 
 ## Documentation
 
