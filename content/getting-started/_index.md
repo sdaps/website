@@ -4,47 +4,46 @@ layout: single
 ---
 
 ## Install
+| Ubuntu
+| ----------------
+| [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )
+| [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or [**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/) and other Debian-based Distros like LinuxMint.
+| {{< spoiler "Commands" >}}
+   `sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable` \
+   `sudo apt-get update` \
+   `sudo apt-get install sdaps`
+   {{< /spoiler >}}
 
-  Ubuntu | 
-  ---------------- | 
-  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) 
-  [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or [**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/) and other Debian-based Distros like LinuxMint.
-  {{< spoiler "Commands" >}}
-  `sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable` \
-  `sudo apt-get update` \
-  `sudo apt-get install sdaps`
-  {{< /spoiler >}}
+| Debian
+| ----------------
+| ![](/images/debian.png)
+| Install the PPA for **ubuntu** or click on the instructions to build it from source under the tables.
 
-  Debian | 
-  ---------------- | 
-  ![](/images/debian.png)
-  Install the PPA for **ubuntu** or click on the instructions to build it from source under the tables.
-
-  Fedora | 
-  ---------------- | 
-  [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
-  [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
-  {{< spoiler Commands >}}
+| Fedora
+| ----------------
+| [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
+| [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
+| {{< spoiler Commands >}}
   `sudo dnf copr enable benzea/sdaps` \
   `sudo dnf install sdaps`
   {{< /spoiler >}}
 
-  ArchLinux | 
-  ---------------- | 
-  [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)
-  [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git) latest master branch via [AUR](https://aur.archlinux.org/)
-  {{< spoiler Commands >}}
+| ArchLinux
+| ----------------
+| [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)
+| [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git) latest master branch via [AUR](https://aur.archlinux.org/)
+| {{< spoiler Commands >}}
   To install AUR packages we recommend [`yay`](https://github.com/Jguer/yay ).
   Install that and then type
 
   `yay -S sdaps-git`
   {{< /spoiler >}}
 
-  Gentoo | 
-  ---------------- | 
-  [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)
-  [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)
-  {{< spoiler Commands >}}
+| Gentoo
+| ----------------
+| [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)
+| [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)
+| {{< spoiler Commands >}}
   Install [layman](https://wiki.gentoo.org/wiki/Layman):
 
   ```
@@ -54,14 +53,14 @@ layout: single
   ```
   {{< /spoiler >}}
 
-  MacOS | 
-  ---------------- | 
-  ![](/images/macos.png)
-  We'll try to bring it to you via [homebrew](https://brew.sh/). [Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
+| MacOS
+| ----------------
+| ![](/images/macos.png)
+| We'll try to bring it to you via [homebrew](https://brew.sh/). [Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
 
-  From Source |
-  ---------------- |
-  You can find sdaps tarballs [here](/releases/) and the instructions down below.
+| From Source
+| ----------------
+| You can find sdaps tarballs [here](/releases/) and the instructions down below.
 
 {{< spoiler "Open instructions for building from source" >}}
 
