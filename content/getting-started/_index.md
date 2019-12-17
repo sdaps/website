@@ -4,17 +4,69 @@ layout: single
 ---
 
 ## Install
-  Operating System | Software
-  ---------------- | -------------
-  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )  | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or <br>[**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/)<br>and other Debian-based<br>Distros like LinuxMint.<br><br>{{% spoiler "Commands" %}}`sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable`<br>`sudo apt-get update`<br>`sudo apt-get install sdaps`{{% /spoiler %}}
-  ![](/images/debian.png)                                                                          | Install the PPA<br> for ubuntu<br>**or**<br>click **"From Source"**<br>under this table
-  [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)                 | [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)<br><br>{{% spoiler Commands %}}`sudo dnf copr enable benzea/sdaps`<br>`sudo dnf install sdaps`{{% /spoiler %}}
-  [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)                            | [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git)<br>latest master branch<br>via [AUR](https://aur.archlinux.org/)<br><br>{{% spoiler Commands %}}To install AUR packages<br>we recommend [`aurman`](https://github.com/polygamma/aurman ).<br>Install that and then type<br>`aurman -S sdaps-git`{{% /spoiler %}}
-  [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)                               | [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)<br><br>{{% spoiler Commands %}}Install [layman](https://wiki.gentoo.org/wiki/Layman):<br>`layman -o https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml -f -a sdaps-overlay`{{% /spoiler %}}
-  ![](/images/macos.png)                                                                           | We'll try to bring it to<br>you via [homebrew](https://brew.sh/).<br>[Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
-<i class="fas fa-file-archive fa-5x" style="text-align: center; background-color: white; width: 76px;"></i>                                                                           | You can find sdaps tarballs [here](/releases/).
 
-{{% spoiler "From Source" %}}<br>
+  Ubuntu | 
+  ---------------- | 
+  [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) 
+  [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or [**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/) and other Debian-based Distros like LinuxMint.
+  {{< spoiler "Commands" >}}
+  `sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable` \
+  `sudo apt-get update` \
+  `sudo apt-get install sdaps`
+  {{< /spoiler >}}
+
+  Debian | 
+  ---------------- | 
+  ![](/images/debian.png)
+  Install the PPA for **ubuntu** or click on the instructions to build it from source under the tables.
+
+  Fedora | 
+  ---------------- | 
+  [![](/images/fedora.png)](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
+  [**COPR (unstable)**](https://copr.fedorainfracloud.org/coprs/benzea/sdaps/)
+  {{< spoiler Commands >}}
+  `sudo dnf copr enable benzea/sdaps` \
+  `sudo dnf install sdaps`
+  {{< /spoiler >}}
+
+  ArchLinux | 
+  ---------------- | 
+  [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)
+  [**'sdaps-git' (unstable)**](https://aur.archlinux.org/packages/sdaps-git) latest master branch via [AUR](https://aur.archlinux.org/)
+  {{< spoiler Commands >}}
+  To install AUR packages we recommend [`yay`](https://github.com/Jguer/yay ).
+  Install that and then type
+
+  `yay -S sdaps-git`
+  {{< /spoiler >}}
+
+  Gentoo | 
+  ---------------- | 
+  [![](/images/gentoo.png)](https://github.com/sdaps/gentoo-overlay)
+  [**Gentoo-Overlay (unstable)**](https://github.com/sdaps/gentoo-overlay)
+  {{< spoiler Commands >}}
+  Install [layman](https://wiki.gentoo.org/wiki/Layman):
+
+  ```
+  layman -o \
+  https://raw.githubusercontent.com/sdaps/gentoo-overlay/master/overlay.xml \
+  -f -a sdaps-overlay
+  ```
+  {{< /spoiler >}}
+
+  MacOS | 
+  ---------------- | 
+  ![](/images/macos.png)
+  We'll try to bring it to you via [homebrew](https://brew.sh/). [Github Issue #140](https://github.com/sdaps/sdaps/issues/140)
+
+  From Source |
+  ---------------- |
+  You can find sdaps tarballs [here](/releases/) and the instructions down below.
+
+{{< spoiler "Open instructions for building from source" >}}
+
+Instructions:
+
 ### General Dependencies
 
 SDAPS has a number of dependencies. In some circumstances not all of them will
@@ -48,9 +100,9 @@ ODT based questionnaires (setup/stamp):
 LaTeX based questionnaires (setup_tex/stamp):
 
 * pdflatex and packages:
-  * PGF/TikZ
-  * translator (part of beamer)
-  * and more
+* PGF/TikZ
+* translator (part of beamer)
+* and more
 
 LaTeX based reports:
 
@@ -72,12 +124,16 @@ Debug output (annotate):
 
 On Debian Wheezy/Jessie you should install the following packages:
 ```bash
-python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18 python-opencv pdftk # (pdftk or python-pypdf)
+python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev \
+libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo \
+gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18 \
+python-opencv pdftk # (pdftk or python-pypdf)
 ```
 
 for the LaTeX class:
 ```bash
-texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer # latex-beamer: (used for translations)
+texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer \
+# latex-beamer: (used for translations)
 ```
 
 Other debian based distributions (Ubuntu, Mint) should have very similar
@@ -104,9 +160,10 @@ or if you want to run it directly from the cloned folder:
 ```bash
 ./setup.py build
 ```
+
 {{< /spoiler >}}
 
-<hr>
+---
 
 Please run sdaps with `--help` after installing it for a list of commands.
 

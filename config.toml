@@ -4,6 +4,7 @@ title = "SDAPS"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
+enableInlineShortcodes = true
 
 [params]
 	# General information
@@ -98,3 +99,4 @@ canonifyurls = true
 	fractions = true
 	smartDashes = true
     plainIDAnchors = true
+    extensionsmask = ['backslashLineBreak']
