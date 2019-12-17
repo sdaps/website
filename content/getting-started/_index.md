@@ -9,10 +9,10 @@ layout: single
 | [![](/images/ubuntu.png)](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ )
 | [**PPA (stable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps-stable/ ) or [**PPA (unstable)**](https://launchpad.net/~benjamin-sipsolutions/+archive/sdaps/) and other Debian-based Distros like LinuxMint.
 | {{< spoiler "Commands" >}}
-   `sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable` \
-   `sudo apt-get update` \
-   `sudo apt-get install sdaps`
-   {{< /spoiler >}}
+  `sudo add-apt-repository ppa:benjamin-sipsolutions/sdaps` or `/sdaps-unstable` \
+  `sudo apt-get update` \
+  `sudo apt-get install sdaps`
+  {{< /spoiler >}}
 
 | Debian
 | ----------------
