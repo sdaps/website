@@ -99,4 +99,3 @@ enableInlineShortcodes = true
 	fractions = true
 	smartDashes = true
     plainIDAnchors = true
-    extensionsmask = ['backslashLineBreak']
