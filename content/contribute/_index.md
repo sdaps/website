@@ -41,21 +41,10 @@ had some problems in the past.
 
 ## Donations
 
-<!--<form style="display: inline" action="https://www.paypal.com/cgi-bin/webscr"
-method="post" target="_top">-->
 Generally donating your time to improve SDAPS would be preferred, but not
 everyone has the time to spare for the project. If you would like to donate
 money then you can do so by sending it to the lead developer
 [Benjamin Berg](/imprint) via paypal: ![](/files/btn_donate_SM.gif) (benjamin-pp[at]sipsolutions.net)
-<!--<input type="hidden" name="cmd" value="_donations" />
-<input type="hidden" name="business" value="benjamin-pp@sipsolutions.net" />
-<input type="hidden" name="lc" value="US" />
-<input type="hidden" name="item_name" value="SDAPS" />
-<input type="hidden" name="no_note" value="0" />
-<input type="hidden" name="currency_code" value="EUR" />
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_SM.gif:NonHostedGuest" />
-<input type="image" src="btn_donate_SM.gif" border="0" name="submit" alt="PayPal" />
-</form>-->
 
 ## Documentation
 
