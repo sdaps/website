@@ -46,7 +46,7 @@ everyone has the time to spare for the project. If you would like to donate
 money then you can do so by sending it to the lead developer
 [Benjamin Berg](/imprint) via paypal.
 
-{{% paypal "benjamin-pp@sipsolutions.net" %}}
+{{< paypal "benjamin-pp@sipsolutions.net" >}}
 
 ## Documentation
 
