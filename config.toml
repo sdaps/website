@@ -20,7 +20,7 @@ enableInlineShortcodes = true
 	repo_url = "https://github.com/sdaps/sdaps"
 	custom_download_url = "https://sdaps.org/getting-started/"
 
-	version = "1.9.7"
+	version = "1.9.8"
 	logo = "images/sdaps.png"
 	favicon = "images/sdaps.svg"
 
