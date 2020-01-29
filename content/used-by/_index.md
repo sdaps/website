@@ -26,6 +26,14 @@ the Sikshana Foundation has been recognized as the “IT Backbone to Edu Dept”
 
 ## United States
 
+![](/files/innovation_law_lab_logo.png)
+
+Innovation Law Lab is a national collaboration of lawyers, engineers, and activists
+fighting for migrant justice.  We leverage technology, legal principles, and community
+programs to promote asylum and fundamental human rights.  SDAPS is core to our [immigration
+CourtWatch project](https://courtwatch.lawlab.cc/about) which empowers advocates to efficiently document, digitize, and analyze
+critical immigration court observations.
+
 ![](/files/nationbuider-logo-black.png)
 
 When we decided to implement scannable walk and call sheets at NationBuilder,
