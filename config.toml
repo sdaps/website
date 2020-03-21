@@ -35,7 +35,7 @@ enableInlineShortcodes = true
     email = "benjamin@sipsolutions.net"
     matrix = "https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org"
     irc = "freenode.net/sdaps"
-    mailinglist = "https://dir.gmane.org/gmane.comp.statistics.sdaps"
+    mailinglist = "contribute/#mailing-list"
 
 
 [[menu.main]]
