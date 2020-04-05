@@ -15,8 +15,8 @@ Examinations seem to be relatively common theme for SDAPS users. There are a
 lot of different ways that examinations can be done, but a couple of
 important problems are common for all examinations.
 
-{{% warning title="Attention" %}}Please also have a look at the
-[FAQ](/documentation/#faq){{% /warning %}}
+{{< warning title="Attention" >}}Please also have a look at the
+[FAQ](/documentation/#faq){{< /warning >}}
 
 ## Multipage Answer Sheets
 
