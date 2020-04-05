@@ -78,19 +78,19 @@ with "code128" and "qr" style)
 
 
 ## Similar Tools
-{{% note title="Other like-minded free software projects" %}}
+{{< note title="Other like-minded free software projects" >}}
 In no specific order:
 
 * [Auto Multiple Choice](http://auto-multiple-choice.net/) (Perl, supports randomized forms, optimized for
 examinations)
 * [G'n'T Eval](https://github.com/breunigs/gnt-eval) (Ruby, used for evaluations in Heidelberg, Germany)
 * [queXF](http://quexf.sourceforge.net/) (PHP)
-{{% /note %}}
+{{< /note >}}
 
-{{% note title="When things go wrong" %}}
+{{< note title="When things go wrong" >}}
 SDAPS assume that you also used it to create the questionnaire. If you already
 have pages that are incompatible with SDAPS, then one of the following tools
 may help:
 
 * [RescueOMR](https://www.thregr.org/~wavexx/software/RescueOMR/) (RescueOMR: batch Optical Mark Recognition without foresight)
-{{% /note %}}
+{{< /note >}}
