@@ -91,12 +91,7 @@ reportlab based reports (report):
 * reportlab
 * Python Imaging Library (PIL)
 
-ODT based questionnaires (setup/stamp):
-
-* pdftk or pyPdf (pdftk is much faster if you need questionnaire ids)
-* python-pdftools
-
-LaTeX based questionnaires (setup_tex/stamp):
+LaTeX based questionnaires (`setup tex`/`stamp`):
 
 * pdflatex and packages:
 * PGF/TikZ
@@ -107,7 +102,7 @@ LaTeX based reports:
 
 * siunitx
 
-Import of other image formats (convert, add `--convert`):
+Import of other image formats (convert, use `add PROJECT_DIR --convert`):
 
 * python-opencv
 * Poppler and introspection data
@@ -175,10 +170,10 @@ scanner and printer ready right away.
 
 ### Preface
 
-In the example we need to call the SDAPS executable. It will be called using
-`sdaps` as if it installed on the system. You can also use the `sdaps.py`
-script from the source directory instead. The `$`  denotes the shells
-prompt, everything else is output from the program.
+If you installed sdaps on your system use `sdaps` in the terminal or execute the
+`sdaps.py` script from the source directory instead (don't forget to make it
+executable via `chmod +x sdaps.py`). The `$`  denotes the shells prompt,
+everything else is output from the program.
 
 We are going to use `/tmp/project` as the surveys path. This is obviously a
 bad idea for any real project.
@@ -189,28 +184,43 @@ The first step to conduct a survey is to design the questionnaire itself.
 You'll need to take some time to first figure out what questions to ask
 before designing the questionnaire.
 
-We are going to use this [example questionnaire](/files/example.tex)
-[PDF Version](/files/example.pdf) here. If you would like to play
-around a bit with it, you can compile the LaTeX document yourself. Note
-that you need to copy the SDAPS-LaTeX data into the directory before doing
-that. It lives in the `tex` Directory of the source code or in
-`$PREFIX/share/sdaps/tex` if it is installed. Where `$PREFIX` will
-usually be `/usr` or `/usr/local`.
+We are going to use the example questionnaire in the source code repository
+in ["`examples/example.tex`"](https://github.com/sdaps/sdaps/blob/master/examples/example.tex )
+which looks like this [PDF](/files/example.pdf) after rendering.
+
+#### Render a draft
+
+If you would like to play around a bit with it, you can compile the LaTeX
+document yourself (this assumes, that you are currently in the git repo of
+sdaps source code):
+```bash
+$ mkdir project_draft && cp examples/example.tex project_draft/
+```
+Now you have a project directory with a copy of `example.tex`, which you can
+ edit as you wish. Take a look at the [LaTeX class documentation](/class-doc)
+ for elements you can use or changing paper size.
+We need the LaTeX class `sdapsclassic`, if you installed and build sdaps from
+source you can copy all files from `tex/class/build/local`:
+```bash
+$ cp -R tex/class/build/local/* project_draft/
+$ cd project_draft
+```
+Render the pdf.
+```bash
+$ pdflatex example.tex
+```
+Sometimes you have to run that last command more than once.
 
 You can familiarize yourself with the LaTeX-Document and the resulting
 PDF-file. Notice that the PDF has a "draft" text overlayed. This is because
 the barcode at the bottom is just an example and it will change once the
 project is created.
 
-Have a look at the [LaTeX](/documentation/latex) page for some more
-information about the different LaTeX macros that exists in SDAPS. You
-can also change the size of the paper using the normal LaTeX methods.
-
 ### Intializing Setup
 
-{{% warning title="Attention" %}}It is best to use the `example.tex` from this page and not a
+{{< warning title="Attention" >}}It is best to use the `example.tex` from this page and not a
 modified version! If you modify the document the example scan will not work
-later on!{{% /warning %}}
+later on!{{< /warning >}}
 
 Once we are happy with the questionnaire, we can create the survey directory
 that SDAPS uses to store all the data that belongs to the project.
@@ -219,7 +229,7 @@ This is the first time that we need to run an SDAPS command. The syntax for
 the command is generally the following:
 
 ```bash
-$ sdaps PROJECT_DIR COMMAND [arguments]
+$ sdaps COMMAND PROJECT_DIR [arguments]
 ```
 
 Where `PROJECT_DIR` is the directory for the survey, and command is the
@@ -227,14 +237,14 @@ SDAPS command that is executed. Most commands will require some arguments.
 You can always get a help by running:
 
 ```bash
-$ sdaps PROJECT_DIR COMMAND --help
+$ sdaps COMMAND PROJECT_DIR --help
 ```
 
 So we create the project using the provided `example.tex`. The tutorial
 assumes that the LaTeX file is in the current directory.
 
 ```bash
-$ sdaps /tmp/project setup_tex example.tex
+$ sdaps setup tex /tmp/project example.tex
 ------------------------------------------------------------------------------
 - SDAPS -- setup_tex
 ------------------------------------------------------------------------------
@@ -291,22 +301,26 @@ After you have a couple of printed and filled in questionnaires you need to
 scan them. There is a whole [scanning section](/documentation/scanning)
 about this. Please have a look there.
 
-You scan skip this step for now and instead use the provided
+You can skip this step for now and instead use the provided
 [example.tif](/files/example.tif) or
 [example-2.tif](/files/example-2.tif) file (the second one is required
 if you have a newer version of the multicol package).
 
 ### Add the images to the project
 
-Once you have a scan in the correct format you can add it to survey directory
-that was created earlier. This is done using the `add` command:
+You can add scans to the survey directory that was created earlier. This is
+done using the `add` command. SDAPS uses `.tif` files as default for `add`,
+so you need to add the option `--convert`, if your scanner (like most of them)
+give you pdfs:
 
 ``` bash
-$ sdaps /tmp/project add example.tif
+$ sdaps add /tmp/project example-scan.pdf --convert
 ----------------------------------------
 - SDAPS -- add
 ----------------------------------------
-Processing example.tif
+Converting input files into a single temporary file.
+~/example-scan.pdf: Not a TIFF or MDI file, bad magic number 20517 (0x5025).
+Processing /tmp/sdaps-convert-abc123.tif
 Done
 ```
 
@@ -315,11 +329,13 @@ copied into the project directory as `1.tif`.
 
 You can repeat this step if you have multiple scans.
 
-{{% warning title="Attention" %}}Do **not** remove or modify the copied TIFF
+{{< warning title="Attention" >}}Do **not** remove or modify the copied TIFF
 files. SDAPS stores information that references these files (ie. it creates a
 record for each page). If you accidentally added a file, you can recreate the
-project and start from scratch.{{% /warning %}}
+project and start from scratch.{{< /warning >}}
 
+If you run into errors, because of the page count of your pdfs, take a look
+at ["Multipage Answer Sheets"](/documentation/examinations).
 
 ### Running the optical mark recognition
 
@@ -327,7 +343,7 @@ The next step is to run the optical mark recognition. This works using the
 `recognize` command. So from the command line again we run:
 
 ``` bash
-$ sdaps /tmp/project recognize
+$ sdaps recognize /tmp/project
 -------------------------------------------------
 - SDAPS -- recognize
 -------------------------------------------------
@@ -346,10 +362,10 @@ Sometimes the computer might not correctly identify the state of a checkbox
 (SDAPS sometimes has some trouble because of the feature to uncheck a box by
 filling it out).
 
-Tocorrect any errors we can use the graphical user interface. We start it using
+To correct any errors we can use the graphical user interface. We start it using
 
 ``` bash
-$ sdaps /tmp/project gui
+$ sdaps gui /tmp/project
 ----------------------------------
 - SDAPS -- gui
 ----------------------------------
@@ -357,7 +373,7 @@ $ sdaps /tmp/project gui
 
 There is a much more [complete section](/documentation/gui) about it. You can quickly go trough
 all images and correct any errors using the mouse. When the view is focused
-you can go forward/backward using Enter and Shift+Enter.
+you can go forward/backward using `Enter` and `Shift`+`Enter`.
 
 There is an estimation for the quality of the recognition. You can sort the
 data using this estimation and only go trough the first couple of pages. The
@@ -368,7 +384,7 @@ amount of time to spend on this will depend on the required accuracy.
 To create a PDF report with the results simply run:
 
 ``` bash
-$ sdaps /tmp/project report
+$ sdaps report reportlab /tmp/project
 ----------------------------------
 - SDAPS -- report
 ----------------------------------
@@ -382,9 +398,9 @@ Note that we can also do partial reports by using filters. Just a quick
 example (please refer to the rest of the documentation for an explanation):
 
 ``` bash
-$ sdaps /tmp/project report -f '_1_2_3 == 5'
+$ sdaps report tex /tmp/project -f '_1_2_3 == 5'
 --------------------------------------------
-- SDAPS -- report
+- SDAPS -- report_tex
 --------------------------------------------
 ```
 
@@ -397,9 +413,9 @@ Obviously sometimes it might be necessary to feed the data into another
 program. For this the CSV export command was created:
 
 ``` bash
-$ sdaps /tmp/project csv export
+$ sdaps export csv /tmp/project
 --------------------------------------------
-- SDAPS -- csvdata
+- SDAPS -- csvdata_export
 --------------------------------------------
 ```
 
@@ -425,7 +441,7 @@ choice of either creating numeric random IDs, or supplying a set of IDs
 For example, to create 15 questionnaires with randomized IDs you can run
 
 ``` bash
-$ sdaps /tmp/project stamp -r 15
+$ sdaps stamp /tmp/project -r 15
 ```
 
 To specify non-random IDs create a file with one ID per line. It might look
@@ -440,7 +456,7 @@ Some Name
 Then run the stamp command, with the created file as an argument:
 
 ``` bash
-$ sdaps /tmp/project stamp -f ids.txt
+$ sdaps stamp /tmp/project -f ids.txt
 ```
 
 Both commands will create a new `stamp_X.pdf` file (where X is a number)
@@ -463,15 +479,15 @@ As mentioned before, you can create a PDF to see if the values read from the
 designed questionnaire are all correct (checkbox positions, etc.). To use run:
 
 ``` bash
-$ sdaps /tmp/project annotate
+$ sdaps annotate /tmp/project
 ```
 
 The file `annotated_questionnaire.pdf` is created. Might be a bit ugly,
 but one can easily check that everything is good.
 
-{{% warning title="Attention" %}}This command requires the GObject
+{{< warning title="Attention" >}}This command requires the GObject
 Introspection binding information for poppler to be installed.
-{{% /warning %}}
+{{< /warning >}}
 
 #### Reorder
 
@@ -485,19 +501,19 @@ so that everything is together again.
 First identify all pages ie. read all the barcodes:
 
 ```bash
-$ sdaps /tmp/project recognize --identify
+$ sdaps recognize /tmp/project --identify
 ```
 
 Then reorder the pages:
 
 ```bash
-$ sdaps /tmp/project reorder
+$ sdaps reorder /tmp/project
 ```
 
 And when that is done you can do the normal "recognize" step:
 
 ```bash
-$ sdaps /tmp/project recognize
+$ sdaps recognize /tmp/project
 ```
 
 #### Using a camera for input
@@ -512,8 +528,8 @@ if you have a newer version of the multicol package). To try it, extract the
 archive (in this example to /tmp/ and then run the following commands:
 
 ``` bash
-$ sdaps /tmp/project convert --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif
-$ sdaps /tmp/project add /tmp/out.tif
+$ sdaps convert /tmp/project --3d-transform /tmp/cellphone/*.jpg --output /tmp/out.tif
+$ sdaps add /tmp/project /tmp/out.tif
 ```
 
 The `--3d-transform` is important as the SDAPS main Program only does a
@@ -522,18 +538,18 @@ will not be taken exactly from above).
 
 After this, the normal recognize step is done.
 
-{{% warning title="Attention" %}}This only works if the tolerance is large
+{{< warning title="Attention" >}}This only works if the tolerance is large
 enough. You need a version above 1.1.4 or git, or you have to modify
 `defs.py` and change the value of `corner_mark_min_length` to
-something smaller (e.g. 15).{{% /warning %}}
+something smaller (e.g. 15).{{< /warning >}}
 
 ### LaTeX based report
 
 You can create a report that is rendered using LaTeX.
 
 ```bash
-$ sdaps /tmp/project report_tex
+$ sdaps report tex /tmp/project
 ```
 
-{{% warning title="Attention" %}}This command requires the siunitx LaTeX
-package to work properly.{{% /warning %}}
+{{< warning title="Attention" >}}This command requires the siunitx LaTeX
+package to work properly.{{< /warning >}}
