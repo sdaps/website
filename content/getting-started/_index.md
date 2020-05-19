@@ -17,7 +17,7 @@ continue.
 The tutorial uses the path `/tmp/project` which will be automatically deteled
 (e.g. when you reboot the computer).
 
-See [Installation](install) if you have not yet installed SDAPS.
+See [Installation](../install) if you have not yet installed SDAPS.
 
 # Overview
 
@@ -32,6 +32,6 @@ The following topics are covered:
  * [Creating a report and exporting data](export)
  * [Other things to try](more)
 
-Please make sure you have SDAPS [installed](install) before going through
+Please make sure you have SDAPS [installed](../install) before going through
 getting started guide.
 
