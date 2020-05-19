@@ -3,10 +3,6 @@ title: Setting up a SDAPS Project
 layout: single
 ---
 
-{{< warning title="Attention" >}}It is best to use the `example.tex` from this page and not a
-modified version! If you modify the document the example scan will not work
-later on!{{< /warning >}}
-
 Once we are happy with the questionnaire, we can create the survey directory
 that SDAPS uses to store all the data that belongs to the project.
 

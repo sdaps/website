@@ -14,26 +14,36 @@ which looks like this [PDF](/files/example.pdf) after rendering.
 
 ## Render a draft
 
-If you would like to play around a bit with it, you can compile the LaTeX
-document yourself (this assumes, that you are currently in the git repo of
-sdaps source code):
+{{< note >}}
+These steps will become simpler in the near future as SDAPS is now
+[available in CTAN](https://ctan.org/pkg/sdaps) and will be included in TeX Live.
+Once that happens, you can compile your SDAPS using LaTeX document in the same way as any other one.
+{{< /note >}}
+
+It makes sense to setup an environment where you can compile the LaTeX document
+normally. To do so, it is recommended creating a directory and then copying in
+the support files. You can then store the `example.tex` into the same folder,
+the following shell commands will accomplish these steps:
 ```bash
-$ mkdir project_draft && cp examples/example.tex project_draft/
-```
-Now you have a project directory with a copy of `example.tex`, which you can
- edit as you wish. Take a look at the [LaTeX class documentation](/class-doc)
- for elements you can use or changing paper size.
-We need the LaTeX class `sdapsclassic`, if you installed and build sdaps from
-source you can copy all files from `tex/class/build/local`:
-```bash
-$ cp -R tex/class/build/local/* project_draft/
+$ mkdir project_draft
 $ cd project_draft
+$ wget https://github.com/sdaps/sdaps/raw/master/examples/example.tex
+$ cp -R /usr/share/sdaps/tex/* .
 ```
-Render the pdf.
+
+Now you have a directory with a copy of `example.tex`, which you can edit as
+you wish. Take a look at the [LaTeX class documentation](/class-doc)
+for available options, question types and other features. Also note that
+most normal LaTeX options to modify document properties such as paper size or
+duplex/simplex printing (twoside/oneside) work as usual.
+
+Try rendering the PDF using:
 ```bash
 $ pdflatex example.tex
 ```
-Sometimes you have to run that last command more than once.
+SDAPS requires running pdflatex multiple times. It is recommended to run it
+for three times or to use other tools (such as many LaTeX editors) which will
+automatically detect the number of runs necessary.
 
 You can familiarize yourself with the LaTeX-Document and the resulting
 PDF-file. Notice that the PDF has a "draft" text overlayed. This is because

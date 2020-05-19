@@ -3,13 +3,25 @@ title: Adding Scans to a Project
 layout: single
 ---
 
+{{< note title="Trying it without a printer/scanner" >}}
+If you do not have a printer and scanner available, you can use the following
+files instead:
+
+ * [prepared example project](/files/project_example.zip)
+ * [example scan](/files/example-scan.pdf)
+
+You will need to unpack the zip file. The contained directory is a prepared
+SDAPS project directory as created in the setup step. Use this directory
+instead of `/tmp/project` for the commands.
+{{< /note >}}
+
 You can add scans to the survey directory that was created earlier. This is
 done using the `add` command. SDAPS uses `.tif` files as default for `add`,
 so you need to add the option `--convert`, if your scanner (like most of them)
 give you pdfs:
 
 ``` bash
-$ sdaps add /tmp/project example-scan.pdf --convert
+$ sdaps add /tmp/project --convert example-scan.pdf
 ----------------------------------------
 - SDAPS -- add
 ----------------------------------------
@@ -19,13 +31,14 @@ Processing /tmp/sdaps-convert-abc123.tif
 Done
 ```
 
-If everything worked fine you will see no further output. The original file is
-copied into the project directory as `1.tif`.
+If everything worked fine you will see no further output. The new scan is
+copied into the project directory as `1.tif`. If you used `--convert` then this
+is a monochrome version of the scan.
 
 You can repeat this step if you have multiple scans.
 
 {{< warning title="Attention" >}}Do **not** remove or modify the copied TIFF
-files. SDAPS stores information that references these files (ie. it creates a
+files. SDAPS stores information that references these files (i.e. it creates a
 record for each page). If you accidentally added a file, you can recreate the
 project and start from scratch.{{< /warning >}}
 
