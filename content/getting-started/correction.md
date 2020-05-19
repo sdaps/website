@@ -33,11 +33,11 @@ amount of time to spend on this will depend on the required accuracy.
 The following topics are covered:
 
  * [Designing the Questionnaire](../design)
- * [Creating a SDAPS Project](../setup) (this page)
+ * [Creating a SDAPS Project](../setup)
  * [Printing and Scanning](../print-scan)
  * [Adding Scans to a Project](../add)
  * [Running the optical mark recognition](../recognize)
- * [Manual error correction](../correction)
+ * [Manual error correction](../correction) (this page)
  * [Creating a report and exporting data](../export)
- * [Other things to try](../more) (this page)
+ * [Other things to try](../more)
 
