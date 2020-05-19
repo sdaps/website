@@ -9,7 +9,7 @@ You'll need to take some time to first figure out what questions to ask
 before designing the questionnaire.
 
 We are going to use the example questionnaire in the source code repository
-in ["`examples/example.tex`"](https://github.com/sdaps/sdaps/blob/master/examples/example.tex )
+in ["`examples/example.tex`"](https://github.com/sdaps/sdaps/blob/master/examples/example.tex)
 which looks like this [PDF](/files/example.pdf) after rendering.
 
 ## Render a draft
