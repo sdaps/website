@@ -40,4 +40,18 @@ PDF-file. Notice that the PDF has a "draft" text overlayed. This is because
 the barcode at the bottom is just an example and it will change once the
 project is created.
 
+# Overview
+
+![](/images/sdaps-steps-0001.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design) (this page)
+ * [Creating a SDAPS Project](../setup)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more)
 

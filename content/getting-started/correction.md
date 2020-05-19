@@ -26,4 +26,18 @@ There is an estimation for the quality of the recognition. You can sort the
 data using this estimation and only go trough the first couple of pages. The
 amount of time to spend on this will depend on the required accuracy.
 
+# Overview
+
+![](/images/sdaps-steps-0005.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup) (this page)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more) (this page)
 

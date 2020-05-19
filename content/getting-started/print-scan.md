@@ -28,3 +28,18 @@ You can skip this step for now and instead use the provided
 if you have a newer version of the multicol package).
 
 
+# Overview
+
+![](/images/sdaps-steps-0003.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup)
+ * [Printing and Scanning](../print-scan) (this page)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more)
+

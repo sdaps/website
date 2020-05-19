@@ -33,3 +33,18 @@ If you run into errors, because of the page count of your pdfs, take a look
 at ["Multipage Answer Sheets"](/documentation/examinations).
 
 
+# Overview
+
+![](/images/sdaps-steps-0003.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add) (this page)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more)
+

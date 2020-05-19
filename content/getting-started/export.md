@@ -56,3 +56,20 @@ $ sdaps report tex /tmp/project
 
 {{< warning title="Attention" >}}This command requires the siunitx LaTeX
 package to work properly.{{< /warning >}}
+
+
+# Overview
+
+![](/images/sdaps-steps-0006.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup) (this page)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export) (this page)
+ * [Other things to try](../more)
+

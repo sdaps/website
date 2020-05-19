@@ -1,0 +1,112 @@
+% getikz library backgrounds,fit,positioning,calc,arrows
+% getikz enable true
+
+\tikzset{
+    >=stealth,
+    base/.style={
+        rounded corners=1ex,
+        draw=black
+    },
+    sig/.style={->,rounded corners=0.5ex},
+    doc/.style={fill=green!35},
+    sdaps/.style={fill=blue!25},
+    people/.style={fill=magenta!25},
+    frame/.style={inner sep=1.5ex, rounded corners=0.5ex},
+}
+
+\def\picture{
+\begin{tikzpicture}[node distance=2ex,/tikzinclude/figure=main]
+  % On main layer:
+  \node[base,doc,align=center,text width=6em] (tex) {LaTeX \\ Questionnaire};
+
+  \node[base,sdaps,right=of tex,text width=8ex] (import) {SDAPS Project};
+
+  \draw[sig] (tex) -- (import);
+
+  \node[base,node distance=4ex,right=of import] (print) {Printing};
+
+  \draw[sig] (import) -- (print);
+
+  \node[base,node distance=6ex,right=of print] (pc) {c};
+  \node[base,on grid,node distance=8ex,above=of pc] (pa) {a};
+  \node[base,on grid,node distance=4ex,above=of pc] (pb) {b};
+  \node[base,on grid,node distance=4ex,below=of pc] (pd) {d};
+  \node[base,on grid,node distance=8ex,below=of pc] (pe) {e};
+
+  \node[node distance=1ex,above=of pa] (people) {People};
+
+  \node[base,node distance=6ex,right=of pc] (scan) {Scan};
+
+  \draw[sig] (print) -- (pa) -- (scan);
+  \draw[sig] (print) -- (pb) -- (scan);
+  \draw[sig] (print) -- (pc) -- (scan);
+  \draw[sig] (print) -- (pd) -- (scan);
+  \draw[sig] (print) -- (pe) -- (scan);
+
+  \node[base,node distance=4ex,right=of scan] (omr) {OMR};
+
+  \node[base,node distance=5ex,right=of omr,text width=14ex] (correct) {Manual Error\\Correction};
+
+  \node[right=of correct] (correct out) {};
+
+  \node[base,node distance=6ex,right=of correct out,yshift=3ex] (pdf) {PDF Report};
+  \node[base,node distance=6ex,right=of correct out,yshift=-3ex] (csv) {CSV Export};
+
+  \draw[sig] (scan) -- (omr);
+
+  \draw[sig] (omr) -- (correct);
+  \draw[sig] (correct) -- (correct out.center) -- (csv.west);
+  \draw[sig] (correct) -- (correct out.center) -- (pdf.west);
+  \draw[sig] (omr.east) -| ++(2.5ex,-6ex) -| node (blub) {} (correct out.center);
+
+  \node[node distance=6ex,above=of omr.west,anchor=west] (sdaps label) {SDAPS};
+
+  \begin{scope}[on background layer]
+    \node[print frame,fit=(print) (scan) (pa) (pe),frame] (print frame) {};
+
+    %\node[base,fit=(odt) (tex) (file),doc] (def) {};
+    \node[base,people,fit=(pa) (pe) (people)] (people frame) {};
+    \node[base,fit=(omr) (correct out) (correct) (blub) (sdaps label),sdaps] {};
+
+    \node[tex frame,fit=(tex),frame] (tex frame) {};
+    \node[import frame,fit=(import),frame] (import frame) {};
+    \node[omr frame,fit=(omr),frame] (omr frame) {};
+    \node[correct frame,fit=(correct),frame] (correct frame) {};
+    \node[export frame,fit=(pdf) (csv),frame] (export frame) {};
+  \end{scope}
+
+\end{tikzpicture}}
+
+
+\picture
+
+\tikzset{
+    tex frame/.style={fill=red!25},
+}
+\picture
+\tikzset{
+    tex frame/.style={},
+    import frame/.style={fill=red!25},
+}
+\picture
+\tikzset{
+    import frame/.style={},
+    print frame/.style={fill=red!25},
+}
+\picture
+\tikzset{
+    print frame/.style={},
+    omr frame/.style={fill=red!25},
+}
+\picture
+\tikzset{
+    omr frame/.style={},
+    correct frame/.style={fill=red!25},
+}
+\picture
+\tikzset{
+    correct frame/.style={},
+    export frame/.style={fill=red!25},
+}
+\picture
+

@@ -21,6 +21,8 @@ See [Installation](../install) if you have not yet installed SDAPS.
 
 # Overview
 
+![](/images/sdaps-steps-0000.png)
+
 The following topics are covered:
 
  * [Designing the Questionnaire](design)

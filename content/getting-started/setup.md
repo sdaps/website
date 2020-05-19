@@ -67,4 +67,18 @@ The rest of the output is a textual representation of the questionnaire. We
 can ignore it, especially because the "annotate" command creates a much nicer
 view of everything.
 
+# Overview
+
+![](/images/sdaps-steps-0002.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup) (this page)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more)
 

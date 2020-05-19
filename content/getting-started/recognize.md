@@ -21,3 +21,18 @@ each image. The progress bar shows how much time it is expected to take.
 Usually it will take less than a second for a two page questionnaire.
 
 
+# Overview
+
+![](/images/sdaps-steps-0004.png)
+
+The following topics are covered:
+
+ * [Designing the Questionnaire](../design)
+ * [Creating a SDAPS Project](../setup)
+ * [Printing and Scanning](../print-scan)
+ * [Adding Scans to a Project](../add)
+ * [Running the optical mark recognition](../recognize) (this page)
+ * [Manual error correction](../correction)
+ * [Creating a report and exporting data](../export)
+ * [Other things to try](../more)
+
