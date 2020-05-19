@@ -3,6 +3,11 @@ title: Other things to try
 layout: single
 ----
 
+{{< warning title="Oudated!" >}}
+This page requires updates. There are no example documents for most of this page
+and the examples that are available do not work currently!
+{{< /warning >}}
+
 #### Questionnaire-ID
 
 If it is required, you can put a unique barcode on every created questionnaire.
