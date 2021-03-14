@@ -154,7 +154,7 @@ that each student gets the correct printout.
 To create the printout run
 
 ``` bash
-$ sdaps PROJECT stamp -f STUDENT_IDS
+$ sdaps stamp PROJECT -f STUDENT_IDS
 ```
 
 where STUDENT_IDS is a file containing the barcode value for each student.

@@ -38,7 +38,7 @@ Scanners tested so far:
 > Scanning can be done with:
 
 ``` bash
-scanimage -d canon_dr:libusb:002:003  --source "ADF Duplex" --mode Lineart --resolution 300 -l 0 -t 0 -x 210 -y 297 --page-height 297 --batch='out%05d.pnm' --batch-count=10 --threshold 150 --brightness -40
+$ scanimage -d canon_dr:libusb:002:003  --source "ADF Duplex" --mode Lineart --resolution 300 -l 0 -t 0 -x 210 -y 297 --page-height 297 --batch='out%05d.pnm' --batch-count=10 --threshold 150 --brightness -40
 ```
 
 * Sharp MX-M753U. Directly outputs a correct TIFF.
@@ -61,7 +61,7 @@ With version 1.1.7 of SDAPS the easiest method is to use the SDAPS ``add``
 command. Simply do the following:
 
 ``` bash
-$ sdaps PROJECT add --convert FILE1 [FILE2 [...]]
+$ sdaps add PROJECT --convert FILE1 [FILE2 [...]]
 ```
 
 This command requires the OpenCV library (python-opencv) for image file
@@ -77,7 +77,7 @@ and generates a useable TIFF file. Can also be used to de-skew photographs
 monochrome. For example:
 
 ``` bash
-convert scan-*.tiff -threshold 30% -monochrome -units PixelsPerInch -density 300 -compress none scans.tiff
+$ convert scan-*.tiff -threshold 30% -monochrome -units PixelsPerInch -density 300 -compress none scans.tiff
 ```
 
 * tiffcp: Concatenate many TIFF files into one to pass it to SDAPS.
@@ -100,13 +100,13 @@ like one that might be produced by a phone camera. This is experimental
 code, but it should work fine under most conditions.
 
 ``` bash
-$ sdaps PROJECT convert input_file1.jpg input_file2.jpg [...] -o output.tif
+$ sdaps convert PROJECT input_file1.jpg input_file2.jpg [...] -o output.tif
 ```
 
 To enable de-skew, add the ``--3d-transform`` option.
 
 ``` bash
-$ sdaps PROJECT convert --3d-transform input_file1.jpg input_file2.jpg [...] -o output.tif
+$ sdaps convert PROJECT --3d-transform input_file1.jpg input_file2.jpg [...] -o output.tif
 ```
 
 ### Conversion using imagemagic
@@ -168,7 +168,7 @@ It appears that sometimes SDAPS may have trouble with compressed TIFF files.
 If this is the case, then you can also uncompress the file using imagemagic:
 
 ``` bash
-convert INPUT_FILES -compress none output.tif
+$ convert INPUT_FILES -compress none output.tif
 ```
 
 ## Other resolutions

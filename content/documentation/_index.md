@@ -12,9 +12,7 @@ documentation (and optionally installing it into the system) you can execute it.
 * Run ``./sdaps.py`` from the source directory otherwise.
 
 With ``--help`` you can get a list of commands. To get more information about
-one of these commands run SDAPS with ``sdaps X command --help``. The X can be
-any string, it just needs to be there as SDAPS expects a path to a project
-directory.
+one of these commands run SDAPS with ``sdaps command --help``.
 
 ### Important Commands
 Commands                   | Explanation
@@ -65,7 +63,7 @@ sheet. (new since 1.1.2)
 
 Example call of the "report" command:
 ``` bash
-$ sdaps some_project report --filter "(0 in _1_2 or _2_1 == 1) and global_id=='some name'"
+$ sdaps report some_project --filter "(0 in _1_2 or _2_1 == 1) and global_id=='some name'"
 ```
 
 ## SDAPS Project Directory
