@@ -37,9 +37,9 @@ If you have any questions or comments related to SDAPS (usage, development, or
 anything else) then the [mailing list](/contribute#mailing-list) is a good
 place to post these. Please consider subscribing to this list if you are
 thinking about using SDAPS in the future or should you need some assistance.
-You can also look around on irc [#sdaps on freenode](irc://freenode.net/sdaps)
-([webchat](http://webchat.freenode.net/?channels=sdaps),
-[matrix](https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org)) .
+You can also look around on irc [#sdaps on libera.chat](ircs://libera.chat/sdaps)
+([webchat](https://web.libera.chat/#sdaps),
+[matrix](https://matrix.to/#/!rlQINmavFJNyHVPJDE:libera.chat)).
 
 For an introduction of how SDAPS is used and what can be done with it you can
 look at the [Tutorial](/getting-started) and [Documentation](/documentation).

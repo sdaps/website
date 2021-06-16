@@ -11,9 +11,9 @@ Don't hesitate to write an e-mail or drop by on IRC if you are thinking about
 contributing!
 
 ### IRC
-For real time communication you can join our IRC in [#sdaps on freenode](irc://freenode.net/sdaps)
-([webchat](http://webchat.freenode.net/?channels=sdaps),
-[matrix](https://matrix.to/#/!ycTzzbwRIINFSJQltE:matrix.org)).
+For real time communication you can join our IRC in [#sdaps on libera.chat](ircs://libera.chat/sdaps)
+([webchat](https://web.libera.chat/#sdaps),
+[matrix](https://matrix.to/#/!rlQINmavFJNyHVPJDE:libera.chat)).
 Please keep in mind that while IRC is a real time communication
 system, people may not be around or simply might not have any time to reply
 immediately.
