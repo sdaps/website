@@ -37,7 +37,7 @@ If you have any questions or comments related to SDAPS (usage, development, or
 anything else) then the [mailing list](/contribute#mailing-list) is a good
 place to post these. Please consider subscribing to this list if you are
 thinking about using SDAPS in the future or should you need some assistance.
-You can also look around on irc [#sdaps on libera.chat](ircs://libera.chat/sdaps)
+You can also look around on irc [#sdaps on libera.chat](ircs://irc.libera.chat/sdaps)
 ([webchat](https://web.libera.chat/#sdaps),
 [matrix](https://matrix.to/#/!rlQINmavFJNyHVPJDE:libera.chat)).
 

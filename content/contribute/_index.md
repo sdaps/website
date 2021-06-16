@@ -11,7 +11,7 @@ Don't hesitate to write an e-mail or drop by on IRC if you are thinking about
 contributing!
 
 ### IRC
-For real time communication you can join our IRC in [#sdaps on libera.chat](ircs://libera.chat/sdaps)
+For real time communication you can join our IRC in [#sdaps on libera.chat](ircs://irc.libera.chat/sdaps)
 ([webchat](https://web.libera.chat/#sdaps),
 [matrix](https://matrix.to/#/!rlQINmavFJNyHVPJDE:libera.chat)).
 Please keep in mind that while IRC is a real time communication

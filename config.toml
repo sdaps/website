@@ -34,7 +34,7 @@ enableInlineShortcodes = true
 	github  = "sdaps"
     email = "benjamin@sipsolutions.net"
     matrix = "https://matrix.to/#/!rlQINmavFJNyHVPJDE:libera.chat"
-    irc = "libera.chat/sdaps"
+    irc = "irc.libera.chat/sdaps"
     mailinglist = "contribute/#mailing-list"
 
 
