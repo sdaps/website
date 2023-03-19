@@ -17,7 +17,7 @@ layout: single
 | Debian
 | ----------------
 | ![](/images/debian.png)
-| Install the PPA for **ubuntu** or click on the instructions to build it from source under the tables.
+| You may be able to install the PPA for **Ubuntu**, or build from source.
 
 | Fedora
 | ----------------
@@ -28,6 +28,7 @@ layout: single
   `sudo dnf install sdaps`
   {{< /spoiler >}}
 
+<!--
 | ArchLinux
 | ----------------
 | [![](/images/arch.png)](https://aur.archlinux.org/packages/sdaps-git)
@@ -60,101 +61,15 @@ layout: single
 
 | From Source
 | ----------------
-| You can find sdaps tarballs [here](/releases/) and the instructions down below.
-
-{{< spoiler "Open instructions for building from source" >}}
-
-Instructions:
-
-### General Dependencies
-
-SDAPS has a number of dependencies. In some circumstances not all of them will
-be needed, but it is probably a good idea to just install everything.
-
-general (including recognize):
-
-* Python 3
-* distutils and distutils-extra
-* python-cairo (including development files)
-* libtiff (including development files)
-* pkg-config
-* python-zbar for "code128" style
-* python development files
-
-graphical user interface (gui):
-
-* GTK+ and introspection data
-* python-gi
-
-reportlab based reports (report):
-
-* reportlab
-* Python Imaging Library (PIL)
-
-LaTeX based questionnaires (`setup tex`/`stamp`):
-
-* pdflatex and packages:
-* PGF/TikZ
-* translator (part of beamer)
-* and more
-
-LaTeX based reports:
-
-* siunitx
-
-Import of other image formats (convert, use `add PROJECT_DIR --convert`):
-
-* python-opencv
-* Poppler and introspection data
-* python-gi
-
-Debug output (annotate):
-
-* Poppler and introspection data
-* python-gi
+| You can find sdaps tarballs [here](/releases/). Please see the included README file for instructions.
+-->
 
 
-#### Debian Wheezy/Jessie
+### Installing from source
 
-On Debian Wheezy/Jessie you should install the following packages:
-```bash
-python-distutils-extra python-cairo-dev libtiff5-dev libcairo2-dev \
-libglib2.0-dev python2.7-dev python-zbar python-gi python-gi-cairo \
-gir1.2-gtk-3.0 python-reportlab python-imaging gir1.2-poppler-0.18 \
-python-opencv pdftk # (pdftk or python-pypdf)
-```
+You can find sdaps tarballs [here](/releases/). Please see the included [README file](https://github.com/sdaps/sdaps#installation) for instructions.
 
-for the LaTeX class:
-```bash
-texlive texlive-latex-extra texlive-latex-recommended pgf latex-beamer \
-# latex-beamer: (used for translations)
-```
-
-Other debian based distributions (Ubuntu, Mint) should have very similar
-package names. For some packages there are also alternatives:
-
-* `libtiff4` development files instead of libtiff5
-* `python-gobject` instead of python-gi
-* `gir1.0-gtk-3.0` or similar (different GObject Introspection version)
-
-
-### Setup
-
-Clone the repo while installing the submodules with `--recursive`:
+To build the current development version, grab it using
 ```bash
 git clone --recursive https://github.com/sdaps/sdaps.git
 ```
-
-If you want to install sdaps, so you can use it from the general command line,
-then change in the cloned repo folder:
-```bash
-./setup.py install
-```
-or if you want to run it directly from the cloned folder:
-```bash
-./setup.py build
-```
-
-{{< /spoiler >}}
-
-
